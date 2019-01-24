@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="梦溪笔谈">
 <meta property="og:description" content="hexo操作方法（创建博客）安装步骤 npm安装的时候，默认会访问npmjs.org这个网站，国外的，把镜像地址改成了淘宝的。  修改npm镜像地址   12npm config set registry https://registry.npm.taobao.org --globalnpm config set disturl https://npm.taobao.org/dist --glob">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-24T15:40:38.217Z">
+<meta property="og:updated_time" content="2019-01-24T15:46:56.742Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo发布操作方法">
 <meta name="twitter:description" content="hexo操作方法（创建博客）安装步骤 npm安装的时候，默认会访问npmjs.org这个网站，国外的，把镜像地址改成了淘宝的。  修改npm镜像地址   12npm config set registry https://registry.npm.taobao.org --globalnpm config set disturl https://npm.taobao.org/dist --glob">
@@ -114,19 +114,19 @@
 <h3 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h3><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo中文文档</a></p>
 <p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">hexo next主题文档</a></p>
 <p><a href="http://www.jianshu.com/p/f054333ac9e6" target="_blank" rel="noopener">hexo的next主题个性化教程:打造炫酷网站</a></p>
-<h2 id="博客内容格式设置（在md文件的最上方设置即可）"><a href="#博客内容格式设置（在md文件的最上方设置即可）" class="headerlink" title="博客内容格式设置（在md文件的最上方设置即可）"></a>博客内容格式设置（在md文件的最上方设置即可）</h2><blockquote>
-<p>上传到git的文件是public文件夹的内容（不需要管）</p>
-<p>自己的的md文件放到<code>source/_posts</code>文件夹中，注意：如果需要配置域名操作，需要在source文件夹中放CNAME文件（这个文件没有后缀名），内容写上自己的域名即可（ruiweitang.com）</p>
-</blockquote>
+<h2 id="博客内容格式设置（在md文件的最上方设置即可）"><a href="#博客内容格式设置（在md文件的最上方设置即可）" class="headerlink" title="博客内容格式设置（在md文件的最上方设置即可）"></a>博客内容格式设置（在md文件的最上方设置即可）</h2><ul>
+<li>上传到git的文件是public文件夹的内容（不需要管）</li>
+<li>自己的的md文件放到<code>source/_posts</code>文件夹中，注意：如果需要配置域名操作，需要在source文件夹中放CNAME文件（这个文件没有后缀名），内容写上自己的域名即可（ruiweitang.com）</li>
+</ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 我的第一篇博客<span class="comment">//(注意冒号后面有一个空格不能丢。)</span></span><br><span class="line">date: <span class="number">2017</span><span class="number">-10</span><span class="number">-28</span> <span class="number">01</span>:<span class="number">12</span>:<span class="number">29</span> <span class="comment">//指定博客的日期</span></span><br><span class="line">tags: </span><br><span class="line">  - 学习</span><br><span class="line">  - 随笔</span><br><span class="line">  - 心情</span><br><span class="line">categories: </span><br><span class="line">  - javascript</span><br><span class="line">---</span><br><span class="line"># 我是大标题</span><br><span class="line">这后面的内容就跟普通的markdown文件没什么区别</span><br></pre></td></tr></table></figure>
 <h3 id="上传到git的发布配置"><a href="#上传到git的发布配置" class="headerlink" title="上传到git的发布配置"></a>上传到git的发布配置</h3><p>安装hexo的部署工具<code>npm install hexo-deployer-git --save</code></p>
 <p>修改<code>_config.yml</code>文件</p>
-<p>​<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 梦溪笔谈</span><br><span class="line">subtitle: </span><br><span class="line">description: 棠哥的测试博客</span><br><span class="line">keywords:</span><br><span class="line">author: 棠哥</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone:</span><br><span class="line"></span><br><span class="line"># 发布配置</span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:ruiweitang/ruiweitang.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  message:</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 梦溪笔谈</span><br><span class="line">subtitle: </span><br><span class="line">description: 棠哥的测试博客</span><br><span class="line">keywords:</span><br><span class="line">author: 棠哥</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone:</span><br><span class="line"></span><br><span class="line"># 发布配置</span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:ruiweitang/ruiweitang.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  message:</span><br></pre></td></tr></table></figure>
 <h3 id="之后的操作非常简单了（-每次需要操作的以下几步）"><a href="#之后的操作非常简单了（-每次需要操作的以下几步）" class="headerlink" title="之后的操作非常简单了（ 每次需要操作的以下几步）"></a>之后的操作非常简单了（ 每次需要操作的以下几步）</h3><ol>
 <li>把写好的md文件放到<code>\source\_posts</code> 文件夹中，md文件中的图片路径记得需要改为从根目录开始\，把md文件中的图片放到images文件夹中</li>
 <li>在总的根目录打开命令台，放好md文件之后，输入两个命令几个<ul>
 <li>hexo g：生成静态页面</li>
-<li>hexo d：发布博客（把静态页面发送到git上）<br><code>`</code></li>
+<li>hexo d：发布博客（把静态页面发送到git上）</li>
 </ul>
 </li>
 </ol>
@@ -134,7 +134,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/24/2-hexo发布操作方法/" data-id="cjrasclke000070fz1icz58qm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/24/2-hexo发布操作方法/" data-id="cjrask8ge000098fzsosxg4q3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/操作方法/">操作方法</a></li></ul>
