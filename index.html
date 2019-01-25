@@ -376,7 +376,7 @@
 <h4 id="设置语言"><a href="#设置语言" class="headerlink" title="设置语言"></a>设置语言</h4><p>编辑 <strong>站点配置文件</strong>，将language设置成你需要的语言，我用的是简体中文：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-Hans</span><br></pre></td></tr></table></figure>
 <p>目前NexT支持的语言如以下表所示：</p>
-<p><img src="../images/4209226-60da4a20a211915b.png" alt="4209226-60da4a20a211915b"></p>
+<p><img src="/images/4209226-60da4a20a211915b.png" alt="4209226-60da4a20a211915b"></p>
 <h4 id="设置菜单"><a href="#设置菜单" class="headerlink" title="设置菜单"></a>设置菜单</h4><p>菜单配置包括三个部分，</p>
 <ol>
 <li>第一是菜单项名称</li>
@@ -386,7 +386,7 @@
 <p>编辑 <strong>主题配置文件</strong>，找到menu字段：</p>
 <h5 id="设定菜单项名称"><a href="#设定菜单项名称" class="headerlink" title="设定菜单项名称"></a>设定菜单项名称</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home                          #首页</span><br><span class="line">  archives: /archives/ || archive          #归档</span><br><span class="line">  categories: /categories/ || th           #分类</span><br><span class="line">  tags: /tags/ || tags                     #标签</span><br><span class="line">  about: /about/ || user                   #关于</span><br><span class="line">  #schedule: /schedule/ || calendar        #日程表</span><br><span class="line">  #sitemap: /sitemap.xml || sitemap        #站点地图</span><br><span class="line">  #commonweal: /404/ || heartbeat          #公益404</span><br><span class="line">  </span><br><span class="line"> # 需要哪个菜单就打开哪个菜单</span><br><span class="line"> # 属性值最后一个是相匹配的图标名</span><br></pre></td></tr></table></figure>
 <p>NexT默认的菜单项有（解注释即可显示）：</p>
-<p><img src="../images/4209226-ce8404be121f470d.webp" alt="4209226-ce8404be121f470d"></p>
+<p><img src="\images\4209226-ce8404be121f470d.webp" alt="4209226-ce8404be121f470d"></p>
 <h5 id="设置菜单的显示文本"><a href="#设置菜单的显示文本" class="headerlink" title="设置菜单的显示文本"></a>设置菜单的显示文本</h5><p>需要到next目录下的<code>language/zh-Hans.yml</code>（以简体中文为例）文件中，找到menu字段，设置如下（<strong>这一步一般是弄好的，不用管</strong>）：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: 首页</span><br><span class="line">  archives: 归档</span><br><span class="line">  categories: 分类</span><br><span class="line">  tags: 标签</span><br><span class="line">  about: 关于</span><br><span class="line">  search: 搜索</span><br><span class="line">  commonweal: 公益404</span><br></pre></td></tr></table></figure>
 <h5 id="设定菜单项图标"><a href="#设定菜单项图标" class="headerlink" title="设定菜单项图标"></a>设定菜单项图标</h5><ul>
@@ -574,7 +574,7 @@
 <p>修改<code>_config.yml</code>文件</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 梦溪笔谈</span><br><span class="line">subtitle: </span><br><span class="line">description: 棠哥的测试博客</span><br><span class="line">keywords:</span><br><span class="line">author: 棠哥</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone:</span><br><span class="line"></span><br><span class="line"># 发布配置</span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:ruiweitang/ruiweitang.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  message:</span><br></pre></td></tr></table></figure>
 <h3 id="之后的操作非常简单了（-每次需要操作的以下几步）"><a href="#之后的操作非常简单了（-每次需要操作的以下几步）" class="headerlink" title="之后的操作非常简单了（ 每次需要操作的以下几步）"></a>之后的操作非常简单了（ 每次需要操作的以下几步）</h3><ol>
-<li>把写好的md文件放到<code>\source\_posts</code> 文件夹中(<strong>或者直接hexo n</strong>)，md文件中的图片路径记得需要改为从根目录开始/或者../也可以，（刚刚发现），把md文件中的图片放到images文件夹中</li>
+<li>把写好的md文件放到<code>\source\_posts</code> 文件夹中(<strong>或者直接hexo n</strong>)，md文件中的图片路径记得需要改为从根目录开始\ （<em>**</em>），把md文件中的图片放到images文件夹中</li>
 <li>在总的根目录打开命令台，放好md文件之后，输入两个命令几个<ul>
 <li>hexo g：生成静态页面</li>
 <li>hexo d：发布博客（把静态页面发送到git上）</li>
@@ -905,7 +905,7 @@
 <li><p>自己项目可以试着推送到自己的git上，算是自己成长的积累。</p>
 </li>
 <li><p>面试有的时候会要求在git上有自己的作品，有自己的项目。作为一个有多年工作经验的程序员，很多都会在git上传自己的作品。</p>
-<p><img src="../images/1-1525400848826.PNG" alt="1"></p>
+<p><img src="\images\1-1525400848826.PNG" alt="1"></p>
 </li>
 </ul>
 <h2 id="学习要求"><a href="#学习要求" class="headerlink" title="学习要求"></a>学习要求</h2><ul>
@@ -937,7 +937,7 @@
 <p>常见的版本控制系统有：cvs、svn、<strong>git</strong> </p>
 <h2 id="版本控制系统的分类"><a href="#版本控制系统的分类" class="headerlink" title="版本控制系统的分类"></a>版本控制系统的分类</h2><h4 id="本地版本控制系统"><a href="#本地版本控制系统" class="headerlink" title="本地版本控制系统"></a>本地版本控制系统</h4><p>本地版本控制系统就是在一台机器上，记录版本的不同变化，保证内容不会丢失。</p>
 <p>缺点：如果多人开发，每个人都在不同的系统和电脑上开发，没办法协同工作。</p>
-<p><img src="../images/vcs.png" alt="vcs"></p>
+<p><img src="\images\vcs.png" alt="vcs"></p>
 <h4 id="集中式版本控制系统"><a href="#集中式版本控制系统" class="headerlink" title="集中式版本控制系统"></a>集中式版本控制系统</h4><p>svn/cvs都是集中式的版本控制系统。</p>
 <ol>
 <li>需要一个中央服务器来管理代码的的版本和备份。</li>
@@ -945,7 +945,7 @@
 <li>依赖与网络环境，如果连不上中央服务器，就无法提交和获取代码。</li>
 <li>如果中央服务器宕机，所有人都无法工作。</li>
 </ol>
-<p><img src="../images/jzs.png" alt="jzs"></p>
+<p><img src="\images\jzs.png" alt="jzs"></p>
 <h4 id="分布式版本控制系统"><a href="#分布式版本控制系统" class="headerlink" title="分布式版本控制系统"></a>分布式版本控制系统</h4><p>git是分布式的版本控制系统。</p>
 <ol>
 <li>需要一台服务器作为代码仓库。</li>
@@ -953,13 +953,13 @@
 <li>不需要网络就可以进行工作。</li>
 <li>当连接网络时，用户可以选择将自己的服务器与代码仓库进行同步。</li>
 </ol>
-<p><img src="../images/fbs.png" alt="fbs"></p>
+<p><img src="\images\fbs.png" alt="fbs"></p>
 <h2 id="git介绍"><a href="#git介绍" class="headerlink" title="git介绍"></a>git介绍</h2><blockquote>
 <p>Git是一款免费、开源的<strong>分布式</strong> <strong>版本控制系统</strong> ，用于敏捷高效地处理任何或小或大的项目。</p>
 </blockquote>
 <p>Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</p>
-<p><img src="../images/捕获.PNG" alt="捕获"></p>
-<h2 id="git的使用方式"><a href="#git的使用方式" class="headerlink" title="git的使用方式"></a>git的使用方式</h2><p><img src="../images/gitinstall.png" alt="gitinstall"></p>
+<p><img src="\images\捕获.PNG" alt="捕获"></p>
+<h2 id="git的使用方式"><a href="#git的使用方式" class="headerlink" title="git的使用方式"></a>git的使用方式</h2><p><img src="\images\gitinstall.png" alt="gitinstall"></p>
 <p>git是用法方式主要有两种。</p>
 <ul>
 <li>git gui，即图形化界面的方式。</li>
@@ -1002,7 +1002,7 @@
 <p>工作区：我们书写代码的地方，工作的目录就叫工作区。</p>
 <p>暂存区：使用add命令，在<code>.git</code>目录中的一个索引文件，记录修改的文件</p>
 <p>本地仓库区：将保存在暂存区域的内容永久转储到 Git 仓库中，生成版本号。生成版本号之后，就可以任何的回退到某一个具体的版本。</p>
-<p><img src="../images/1.jpg" alt="1"></p>
+<p><img src="\images\1.jpg" alt="1"></p>
 <h2 id="git命令详解"><a href="#git命令详解" class="headerlink" title="git命令详解"></a>git命令详解</h2><h4 id="git-add-重点"><a href="#git-add-重点" class="headerlink" title="git add(重点)"></a>git add(重点)</h4><ul>
 <li>作用：让git追踪一个新的文件，并且将文件由 工作区 添加到 暂存区，暂存文件</li>
 <li>命令：<code>git add 文件名/目录名</code><ul>
@@ -1059,17 +1059,17 @@
 <p>注册步骤：</p>
 <ol>
 <li><p>打开<a href="https://github.com/" target="_blank" rel="noopener">github官网</a>：</p>
-<p><img src="../images/2.PNG" alt="2"></p>
+<p><img src="\images\2.PNG" alt="2"></p>
 </li>
 <li><p>填写信息，进行注册：</p>
-<p><img src="../images/3.PNG" alt="3"></p>
-<p><img src="../images/5.PNG" alt="5"></p>
+<p><img src="\images\3.PNG" alt="3"></p>
+<p><img src="\images\5.PNG" alt="5"></p>
 <ol start="3">
 <li><p>登录：</p>
-<p><img src="../images/1-1525414182782.PNG" alt="1"></p>
-<p><img src="../images/6.PNG" alt="6"></p>
-<p><img src="../images/7.PNG" alt="7"></p>
-<p><img src="../images/8.PNG" alt="8"></p>
+<p><img src="\images\1-1525414182782.PNG" alt="1"></p>
+<p><img src="\images\6.PNG" alt="6"></p>
+<p><img src="\images\7.PNG" alt="7"></p>
+<p><img src="\images\8.PNG" alt="8"></p>
 </li>
 </ol>
 </li>
@@ -1107,7 +1107,7 @@
 <li>ssh协议：<a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a>:ruiweitang/gitStudy.git`   可以配置免密码登录</li>
 </ul>
 <p>每次push或者pull代码，如果使用https协议，那么都需要输入用户名和密码进行身份的确认，非常麻烦。</p>
-<p><img src="../images/9.PNG" alt="9"></p>
+<p><img src="\images\9.PNG" alt="9"></p>
 <ul>
 <li>github为了账户的安全，需要对每一次push请求都要验证用户的身份，只有合法的用户才可以push</li>
 <li>使用ssh协议，配置ssh免密码，可以做到免密码往github推送代码</li>

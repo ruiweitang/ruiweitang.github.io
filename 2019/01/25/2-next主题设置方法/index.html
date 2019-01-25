@@ -87,13 +87,13 @@
 <meta property="og:site_name" content="梦溪笔谈">
 <meta property="og:description" content="下载主题：通过clone最新版本 可以通过git pull 来下载，而不用再次下载压缩包替换（我还是用下载的方法的）在站点根目录 1git clone https://github.com/iissnan/hexo -theme-next themes/next 下载压缩包 Next版本的发布页面 选择下载 Download 区域下的 Source Code (zip) 到本地 解压重命名为nex">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/01/25/images/4209226-60da4a20a211915b.png">
-<meta property="og:image" content="http://yoursite.com/2019/01/25/images/4209226-ce8404be121f470d.webp">
-<meta property="og:updated_time" content="2019-01-25T11:10:21.094Z">
+<meta property="og:image" content="http://yoursite.com/images/4209226-60da4a20a211915b.png">
+<meta property="og:image" content="http://yoursite.com/images/4209226-ce8404be121f470d.webp">
+<meta property="og:updated_time" content="2019-01-25T12:10:42.059Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="next主题设置方法">
 <meta name="twitter:description" content="下载主题：通过clone最新版本 可以通过git pull 来下载，而不用再次下载压缩包替换（我还是用下载的方法的）在站点根目录 1git clone https://github.com/iissnan/hexo -theme-next themes/next 下载压缩包 Next版本的发布页面 选择下载 Download 区域下的 Source Code (zip) 到本地 解压重命名为nex">
-<meta name="twitter:image" content="http://yoursite.com/2019/01/25/images/4209226-60da4a20a211915b.png">
+<meta name="twitter:image" content="http://yoursite.com/images/4209226-60da4a20a211915b.png">
 
 
 
@@ -376,7 +376,7 @@
 <h4 id="设置语言"><a href="#设置语言" class="headerlink" title="设置语言"></a>设置语言</h4><p>编辑 <strong>站点配置文件</strong>，将language设置成你需要的语言，我用的是简体中文：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-Hans</span><br></pre></td></tr></table></figure>
 <p>目前NexT支持的语言如以下表所示：</p>
-<p><img src="../images/4209226-60da4a20a211915b.png" alt="4209226-60da4a20a211915b"></p>
+<p><img src="/images/4209226-60da4a20a211915b.png" alt="4209226-60da4a20a211915b"></p>
 <h4 id="设置菜单"><a href="#设置菜单" class="headerlink" title="设置菜单"></a>设置菜单</h4><p>菜单配置包括三个部分，</p>
 <ol>
 <li>第一是菜单项名称</li>
@@ -386,7 +386,7 @@
 <p>编辑 <strong>主题配置文件</strong>，找到menu字段：</p>
 <h5 id="设定菜单项名称"><a href="#设定菜单项名称" class="headerlink" title="设定菜单项名称"></a>设定菜单项名称</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home                          #首页</span><br><span class="line">  archives: /archives/ || archive          #归档</span><br><span class="line">  categories: /categories/ || th           #分类</span><br><span class="line">  tags: /tags/ || tags                     #标签</span><br><span class="line">  about: /about/ || user                   #关于</span><br><span class="line">  #schedule: /schedule/ || calendar        #日程表</span><br><span class="line">  #sitemap: /sitemap.xml || sitemap        #站点地图</span><br><span class="line">  #commonweal: /404/ || heartbeat          #公益404</span><br><span class="line">  </span><br><span class="line"> # 需要哪个菜单就打开哪个菜单</span><br><span class="line"> # 属性值最后一个是相匹配的图标名</span><br></pre></td></tr></table></figure>
 <p>NexT默认的菜单项有（解注释即可显示）：</p>
-<p><img src="../images/4209226-ce8404be121f470d.webp" alt="4209226-ce8404be121f470d"></p>
+<p><img src="\images\4209226-ce8404be121f470d.webp" alt="4209226-ce8404be121f470d"></p>
 <h5 id="设置菜单的显示文本"><a href="#设置菜单的显示文本" class="headerlink" title="设置菜单的显示文本"></a>设置菜单的显示文本</h5><p>需要到next目录下的<code>language/zh-Hans.yml</code>（以简体中文为例）文件中，找到menu字段，设置如下（<strong>这一步一般是弄好的，不用管</strong>）：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: 首页</span><br><span class="line">  archives: 归档</span><br><span class="line">  categories: 分类</span><br><span class="line">  tags: 标签</span><br><span class="line">  about: 关于</span><br><span class="line">  search: 搜索</span><br><span class="line">  commonweal: 公益404</span><br></pre></td></tr></table></figure>
 <h5 id="设定菜单项图标"><a href="#设定菜单项图标" class="headerlink" title="设定菜单项图标"></a>设定菜单项图标</h5><ul>
