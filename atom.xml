@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-14T08:27:31.930Z</updated>
+  <updated>2019-02-14T08:53:26.585Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://yoursite.com/2019/02/14/demo/"/>
     <id>http://yoursite.com/2019/02/14/demo/</id>
     <published>2019-02-14T08:07:16.000Z</published>
-    <updated>2019-02-14T08:27:31.930Z</updated>
+    <updated>2019-02-14T08:53:26.585Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="课堂测试demo"><a href="#课堂测试demo" class="headerlink" title="课堂测试demo"></a>课堂测试demo</h1>  <form><br>    输入一个网址，浏览器会自动校验网址的格式，格式不对不能提交！<br><br>    请输入一个网址： <input type="url"><br><br><br><br>输入一个邮箱，浏览器会自动校验邮箱格式，格式不对不能提交<br><br>请输入邮箱：<input type="email"><br><br><br><br>选择一个日期，样式由浏览器默认实现<br><br>请选择日期：<input type="date"><br><br><br><br>输入手机号码（只有在移动端点击时会自动弹出数字输入框）<br><br>请输入手机号码：<input type="tel"><br><br><br><br>输入一个数字。<br><br>请输入数字：<input type="number"><br><br><br><br><input type="submit"><br><br><br><br>  </form>]]></content>
+    <content type="html"><![CDATA[<h1 id="课堂测试demo"><a href="#课堂测试demo" class="headerlink" title="课堂测试demo"></a>课堂测试demo</h1>  <form><br>   <code>&lt;input type=&quot;url&quot; &gt;</code> 输入一个网址，浏览器会自动校验网址的格式，格式不对不能提交！<br><br>    请输入一个网址： <input type="url"><br><br><br><br><code>&lt;input type=&quot;email&quot;&gt;</code> 输入一个邮箱，浏览器会自动校验邮箱格式，格式不对不能提交<br><br>请输入邮箱：<input type="email"><br><br><br><br><code>&lt;input type=&quot;date&quot;&gt;</code> 选择一个日期，样式由浏览器默认实现<br><br>请选择日期：<input type="date"><br><br><br><br><code>&lt;input type=&quot;tel&quot;&gt;</code> 输入手机号码（只有在移动端点击时会自动弹出数字输入框）<br><br>请输入手机号码：<input type="tel"><br><br><br><br><code>&lt;input type=&quot;number&quot;&gt;</code> 输入一个数字。<br><br>请输入数字：<input type="number"><br><br><br><br><input type="submit"><br><br><br><br>  </form>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;课堂测试demo&quot;&gt;&lt;a href=&quot;#课堂测试demo&quot; class=&quot;headerlink&quot; title=&quot;课堂测试demo&quot;&gt;&lt;/a&gt;课堂测试demo&lt;/h1&gt;  &lt;form&gt;&lt;br&gt;    输入一个网址，浏览器会自动校验网址的格式，格式不对不能提交！&lt;br
+        &lt;h1 id=&quot;课堂测试demo&quot;&gt;&lt;a href=&quot;#课堂测试demo&quot; class=&quot;headerlink&quot; title=&quot;课堂测试demo&quot;&gt;&lt;/a&gt;课堂测试demo&lt;/h1&gt;  &lt;form&gt;&lt;br&gt;   &lt;code&gt;&amp;lt;input type=&amp;quot;url&amp;quo
       
     
     </summary>
