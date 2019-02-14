@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-25T12:10:42.059Z</updated>
+  <updated>2019-02-14T08:11:44.417Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>demo</title>
+    <link href="http://yoursite.com/2019/02/14/demo/"/>
+    <id>http://yoursite.com/2019/02/14/demo/</id>
+    <published>2019-02-14T08:07:16.000Z</published>
+    <updated>2019-02-14T08:11:44.417Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="课堂测试demo"><a href="#课堂测试demo" class="headerlink" title="课堂测试demo"></a>课堂测试demo</h1>  <form><br>    <input type="tel"><br>  </form>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;课堂测试demo&quot;&gt;&lt;a href=&quot;#课堂测试demo&quot; class=&quot;headerlink&quot; title=&quot;课堂测试demo&quot;&gt;&lt;/a&gt;课堂测试demo&lt;/h1&gt;  &lt;form&gt;&lt;br&gt;    &lt;input type=&quot;tel&quot;&gt;&lt;br&gt;  &lt;/form&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="课堂测试demo" scheme="http://yoursite.com/tags/%E8%AF%BE%E5%A0%82%E6%B5%8B%E8%AF%95demo/"/>
+    
+  </entry>
   
   <entry>
     <title>next主题设置方法</title>
