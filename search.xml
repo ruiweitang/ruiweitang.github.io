@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[demo]]></title>
     <url>%2F2019%2F02%2F14%2Fdemo%2F</url>
-    <content type="text"><![CDATA[课堂测试demo]]></content>
+    <content type="text"><![CDATA[课堂测试demo 输入一个网址，浏览器会自动校验网址的格式，格式不对不能提交！ 请输入一个网址： 输入一个邮箱，浏览器会自动校验邮箱格式，格式不对不能提交请输入邮箱：选择一个日期，样式由浏览器默认实现请选择日期：输入手机号码（只有在移动端点击时会自动弹出数字输入框）请输入手机号码：输入一个数字。请输入数字：]]></content>
       <tags>
         <tag>课堂测试demo</tag>
       </tags>
