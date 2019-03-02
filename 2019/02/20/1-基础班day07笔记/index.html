@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="授课笔记," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="梦溪笔谈" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="学习目标   能够说出盒子模型的组成（content、padding、border、margin）    能够使用border的相关属性（width、color、style）    能够使用border-collapse实现边框合并    能够计算盒子的实际大小（content+padding+border）    能够说出*{margin:0;padding:0;}的作用  。。。。。。  理解">
+<meta name="keywords" content="授课笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基础班day07笔记">
+<meta property="og:url" content="http://yoursite.com/2019/02/20/1-基础班day07笔记/index.html">
+<meta property="og:site_name" content="梦溪笔谈">
+<meta property="og:description" content="学习目标   能够说出盒子模型的组成（content、padding、border、margin）    能够使用border的相关属性（width、color、style）    能够使用border-collapse实现边框合并    能够计算盒子的实际大小（content+padding+border）    能够说出*{margin:0;padding:0;}的作用  。。。。。。  理解">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/t1.png">
+<meta property="og:image" content="http://yoursite.com/images/20171105195348.jpg">
+<meta property="og:image" content="http://yoursite.com/images/box.jpg">
+<meta property="og:image" content="http://yoursite.com/images/细线表格.png">
+<meta property="og:image" content="http://yoursite.com/images/box1.png">
+<meta property="og:image" content="http://yoursite.com/images/边框练习.png">
+<meta property="og:image" content="http://yoursite.com/images/效果-1537767437391.png">
+<meta property="og:image" content="http://yoursite.com/images/导航-1537767908758.png">
+<meta property="og:image" content="http://yoursite.com/images/04-练习-新闻列表.png">
+<meta property="og:image" content="http://yoursite.com/images/05-练习-爱宠知识.png">
+<meta property="og:updated_time" content="2019-03-02T04:38:26.312Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基础班day07笔记">
+<meta name="twitter:description" content="学习目标   能够说出盒子模型的组成（content、padding、border、margin）    能够使用border的相关属性（width、color、style）    能够使用border-collapse实现边框合并    能够计算盒子的实际大小（content+padding+border）    能够说出*{margin:0;padding:0;}的作用  。。。。。。  理解">
+<meta name="twitter:image" content="http://yoursite.com/images/t1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/20/1-基础班day07笔记/"/>
+
+
+
+
+
+  <title>基础班day07笔记 | 梦溪笔谈</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3098f283255b5d06bb9bf71621a4a003";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">梦溪笔谈</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/20/1-基础班day07笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="棠哥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/master.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="梦溪笔谈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">基础班day07笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-20T10:07:00+08:00">
+                2019-02-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.7k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 能够说出盒子模型的组成（content、padding、border、margin）</li>
+</ul>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 能够使用border的相关属性（width、color、style）</li>
+</ul>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 能够使用border-collapse实现边框合并</li>
+</ul>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 能够计算盒子的实际大小（content+padding+border）</li>
+</ul>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 能够说出*{margin:0;padding:0;}的作用</li>
+</ul>
+<p>。。。。。。</p>
+</blockquote>
+<p><strong>理解上课的知识点</strong>……</p>
+<h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><blockquote>
+<p>一种思维方式（万物皆盒子）</p>
+</blockquote>
+<p><img src="\images\t1.png" alt="t1"></p>
+<h3 id="盒子模型的组成"><a href="#盒子模型的组成" class="headerlink" title="盒子模型的组成"></a>盒子模型的组成</h3><blockquote>
+<p>盒子模型的四个组成部分</p>
+</blockquote>
+<p><img src="\images\20171105195348.jpg" alt=""></p>
+<p><strong>生活中的盒子：</strong></p>
+<p><img src="\images\box.jpg" alt="box"></p>
+<hr>
+<p><strong>回到代码的总结：</strong></p>
+<ul>
+<li>内容：<code>content</code> 即<strong>盒子里面的文字或者标签</strong></li>
+<li>内边距：<code>padding</code> 即<strong>盒子边框到内容之间的距离</strong></li>
+<li>边框：<code>border</code> 即<strong>盒子的边框</strong></li>
+<li>外边距：<code>margin</code> 即<strong>盒子与盒子之间的距离</strong></li>
+</ul>
+<h2 id="边框（border）"><a href="#边框（border）" class="headerlink" title="边框（border）"></a>边框（border）</h2><h3 id="border相关属性"><a href="#border相关属性" class="headerlink" title="border相关属性"></a>border相关属性</h3><ul>
+<li><strong>border-width</strong>：边框的宽度</li>
+<li><strong>border-style</strong>：边框的样式<ul>
+<li><strong>solid</strong>：实线 （用的最多）</li>
+<li><strong>dashed</strong>：虚线</li>
+<li><strong>dotted</strong>：点线</li>
+</ul>
+</li>
+<li><strong>border-color</strong>：边框的颜色</li>
+</ul>
+<h3 id="border的连写"><a href="#border的连写" class="headerlink" title="border的连写"></a>border的连写</h3><p><strong>代码：</strong> <code>border:1px solid #000;</code></p>
+<p><strong>书写顺序</strong> ：</p>
+<p><code>border: 边框宽度  边框样式 边框颜色;</code></p>
+<h3 id="单方向设置border"><a href="#单方向设置border" class="headerlink" title="单方向设置border"></a>单方向设置border</h3><blockquote>
+<p>单独设置盒子的一条边框</p>
+</blockquote>
+<p><strong>代码：</strong> <code>border-left:1px solid #000;</code></p>
+<p><code>border-方位名词：边框粗细  边框样式  边框颜色；</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">border-left 左边框</span><br><span class="line">border-right 右边框</span><br><span class="line">border-top 上边框</span><br><span class="line">border-bottom 下边框</span><br></pre></td></tr></table></figure>
+<h3 id="边框合并（border-collapse）"><a href="#边框合并（border-collapse）" class="headerlink" title="边框合并（border-collapse）"></a>边框合并（border-collapse）</h3><blockquote>
+<p>也叫做细线表格</p>
+<p>之前使用表格属性设置表格的样式，其实不推荐使用样式属性，那我们使用css改写之前的效果</p>
+</blockquote>
+<h5 id="ヾ-๑╹◡╹-ﾉ”使用css改写之前的表格案例"><a href="#ヾ-๑╹◡╹-ﾉ”使用css改写之前的表格案例" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”使用css改写之前的表格案例"></a>ヾ(๑╹◡╹)ﾉ”使用css改写之前的表格案例</h5><p><strong>代码：</strong> <code>border-collapse:collapse；</code></p>
+<p><strong>效果：</strong></p>
+<blockquote>
+<p>让表格的边框变成真正的一条边框</p>
+</blockquote>
+<p><img src="\images\细线表格.png" width="500px"></p>
+<h2 id="盒子大小的初级计算公式"><a href="#盒子大小的初级计算公式" class="headerlink" title="盒子大小的初级计算公式"></a>盒子大小的初级计算公式</h2><blockquote>
+<p>学完border之后，可以学习盒子大小的初级计算公式</p>
+</blockquote>
+<p><strong>需求：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 需求 : </span></span><br><span class="line"><span class="comment">	盒子尺寸 400*400 , 背景绿色, 边框: 10px 实线 黑色 </span></span><br><span class="line"><span class="comment">--&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>设置的width和height其实是内容的宽高</li>
+<li>设置border会撑大盒子</li>
+</ul>
+<p><strong>使用开发者工具查看盒子模型</strong></p>
+<blockquote>
+<p>谷歌浏览器会帮构建出一个盒子模型</p>
+<p>并且鼠标移入某部分的时候，页面中的对应的盒子的部分会高亮</p>
+</blockquote>
+<p><img src="\images\box1.png" alt="box1"></p>
+<p><strong>盒子大小的初级计算公式：</strong></p>
+<p><code>盒子的宽度 = 左边框 + 内容的宽度 + 右边框</code></p>
+<p>高度同理</p>
+<p><strong>问题：</strong>现在设置完border之后盒子会撑大，怎么样才能满足需求呢？</p>
+<p><strong>解决：</strong> 手动内减</p>
+<blockquote>
+<p>手动计算多余的值，然后在内容中减去即可</p>
+</blockquote>
+<p>结果就是：</p>
+<ul>
+<li>盒子内容：380*380。即width和height都是380px</li>
+</ul>
+<h5 id="ヾ-๑╹◡╹-ﾉ”写一个小盒子（由内容和边框组成）"><a href="#ヾ-๑╹◡╹-ﾉ”写一个小盒子（由内容和边框组成）" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”写一个小盒子（由内容和边框组成）"></a>ヾ(๑╹◡╹)ﾉ”写一个小盒子（由内容和边框组成）</h5><p><img src="\images\边框练习.png" alt="    边框练习"></p>
+<h5 id="ヾ-๑╹◡╹-ﾉ”不low导航"><a href="#ヾ-๑╹◡╹-ﾉ”不low导航" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”不low导航~"></a>ヾ(๑╹◡╹)ﾉ”不low导航~</h5><p><img src="\images\效果-1537767437391.png" alt="效果"></p>
+<h2 id="内边距（padding）"><a href="#内边距（padding）" class="headerlink" title="内边距（padding）"></a>内边距（padding）</h2><blockquote>
+<p>盒子边框与内容之间的距离（可以控制内容与边框之间的距离）</p>
+</blockquote>
+<h3 id="padding的取值"><a href="#padding的取值" class="headerlink" title="padding的取值"></a>padding的取值</h3><ul>
+<li><strong>一个值：</strong> <code>padding：10px;</code><ul>
+<li><strong>上右下左</strong>都设置为10px</li>
+</ul>
+</li>
+<li><strong>两个值：</strong> <code>padding：10px 20px;</code><ul>
+<li><strong>上下</strong>设置为10px</li>
+<li><strong>左右</strong>设置为20px</li>
+</ul>
+</li>
+<li><strong>三个值：</strong> <code>padding：10px 20px 30px;</code> <ul>
+<li><strong>上</strong>设置为10px</li>
+<li><strong>左右</strong>设置为20px</li>
+<li><strong>下</strong>设置为30px</li>
+</ul>
+</li>
+<li><strong>四个值：</strong> <code>padding：10px 20px 30px 40px;</code><ul>
+<li><strong>上</strong>设置为10px</li>
+<li><strong>右</strong>设置为20px</li>
+<li><strong>下</strong>设置为30px</li>
+<li><strong>左</strong>设置为40px</li>
+</ul>
+</li>
+</ul>
+<p><strong>记忆规则：</strong> 从上开始顺时针赋值，如果没有赋值的，看对面的</p>
+<h3 id="单方向设置padding"><a href="#单方向设置padding" class="headerlink" title="单方向设置padding"></a>单方向设置padding</h3><blockquote>
+<p>单独设置盒子的一边padding</p>
+</blockquote>
+<p><strong>代码：</strong> <code>padding-left:10px;</code></p>
+<p><code>padding-方位名词：边框粗细  边框样式  边框颜色；</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">padding-top 上内边距</span><br><span class="line">padding-right 右内边距</span><br><span class="line">padding-bottom 下内边距</span><br><span class="line">padding-left 左内边距</span><br></pre></td></tr></table></figure>
+<h2 id="盒子大小的终极计算公式"><a href="#盒子大小的终极计算公式" class="headerlink" title="盒子大小的终极计算公式"></a>盒子大小的终极计算公式</h2><blockquote>
+<p>学完padding之后，可以学习盒子大小的终极计算公式了</p>
+</blockquote>
+<p><strong>需求：</strong> </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 需求 : </span></span><br><span class="line"><span class="comment">	盒子尺寸 300*300 , 背景粉色, 上下左右20px的padding , 边框: 10px 实线 黑色 </span></span><br><span class="line"><span class="comment">--&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>width和height设置的是内容的宽高</li>
+<li>border会撑大盒子</li>
+<li>padding也会撑大盒子</li>
+</ul>
+<p><strong>盒子大小的终极计算公式：</strong></p>
+<p><code>盒子的宽度 = 左border+ 左padding + 内容的宽度 + 右padding + 右border</code></p>
+<p>高度同理</p>
+<p><strong>问题：</strong> 现在设置完border和padding之后盒子会撑大，怎样才能满足需求呢？</p>
+<blockquote>
+<p>同样也是手动计算多余的值，然后在内容中减去即可</p>
+</blockquote>
+<p>结果就是：</p>
+<ul>
+<li>盒子内容：240*240。即width和height都是380px</li>
+</ul>
+<hr>
+<h3 id="不会撑大盒子的特殊情况"><a href="#不会撑大盒子的特殊情况" class="headerlink" title="不会撑大盒子的特殊情况"></a>不会撑大盒子的特殊情况</h3><p>两个互相嵌套的块级元素，如果子盒子没有设置宽度，此时子盒子的宽度默认就是父盒子的宽度。当给子盒子设置以下属性时，子盒子的宽度不会被撑大。</p>
+<ul>
+<li>padding-left</li>
+<li>padding-right</li>
+<li>border-left</li>
+<li>border-right</li>
+</ul>
+<h5 id="ヾ-๑╹◡╹-ﾉ”新浪导航（不low导航升级版）"><a href="#ヾ-๑╹◡╹-ﾉ”新浪导航（不low导航升级版）" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”新浪导航（不low导航升级版）~"></a>ヾ(๑╹◡╹)ﾉ”新浪导航（不low导航升级版）~</h5><blockquote>
+<p>用之前的方法，当a标签的文字数量不确定时，页面会有问题。</p>
+<p>普遍的方法应该使用padding</p>
+</blockquote>
+<p><img src="\images\导航-1537767908758.png" alt="导航"></p>
+<h2 id="CSS3盒模型（自动内减→box-sizing）"><a href="#CSS3盒模型（自动内减→box-sizing）" class="headerlink" title="CSS3盒模型（自动内减→box-sizing）"></a>CSS3盒模型（自动内减→box-sizing）</h2><blockquote>
+<p>在实际项目中会大量的用到盒子模型，如果每个盒子都去手动内减，就和不方便，此时我们可以让浏览器帮咱们自动内减</p>
+<p>CSS3的新属性：box-sizing可以完成自动内减的效果</p>
+</blockquote>
+<p><strong>需求：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 需求 : </span></span><br><span class="line"><span class="comment">	盒子尺寸 400*400 , 背景绿色, 边框: 10px 实线 黑色  padding:20px</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>手动内减</p>
+<blockquote>
+<p>项目中计算量太大，很麻烦</p>
+</blockquote>
+</li>
+<li><p>自动内减</p>
+<blockquote>
+<p>给盒子设置 <code>box-sizing:border-box</code> 属性。此时设置的<code>width</code>和<code>height</code>就是盒子的实际宽度</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="ヾ-๑╹◡╹-ﾉ”新闻列表案例"><a href="#ヾ-๑╹◡╹-ﾉ”新闻列表案例" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”新闻列表案例"></a>ヾ(๑╹◡╹)ﾉ”新闻列表案例</h5><blockquote>
+<p>熟悉border和padding的使用</p>
+</blockquote>
+<p><img src="\images\04-练习-新闻列表.png" alt="04-练习-新闻列表"></p>
+<h2 id="外边距（margin）"><a href="#外边距（margin）" class="headerlink" title="外边距（margin）"></a>外边距（margin）</h2><blockquote>
+<p>盒子与盒子之间的距离（可以控制盒子的位置）</p>
+</blockquote>
+<h3 id="margin的取值"><a href="#margin的取值" class="headerlink" title="margin的取值"></a>margin的取值</h3><ul>
+<li><strong>一个值：</strong> <code>margin：10px;</code><ul>
+<li><strong>上右下左</strong>都设置为10px</li>
+</ul>
+</li>
+<li><strong>两个值：</strong> <code>margin：10px 20px;</code><ul>
+<li><strong>上下</strong>设置为10px</li>
+<li><strong>左右</strong>设置为20px</li>
+</ul>
+</li>
+<li><strong>三个值：</strong> <code>margin：10px 20px 30px;</code> <ul>
+<li><strong>上</strong>设置为10px</li>
+<li><strong>左右</strong>设置为20px</li>
+<li><strong>下</strong>设置为30px</li>
+</ul>
+</li>
+<li><strong>四个值：</strong> <code>margin：10px 20px 30px 40px;</code><ul>
+<li><strong>上</strong>设置为10px</li>
+<li><strong>右</strong>设置为20px</li>
+<li><strong>下</strong>设置为30px</li>
+<li><strong>左</strong>设置为40px</li>
+</ul>
+</li>
+</ul>
+<p><strong>记忆规则：</strong> 从上开始顺时针赋值，如果没有赋值的，看对面的</p>
+<h3 id="单方向设置margin"><a href="#单方向设置margin" class="headerlink" title="单方向设置margin"></a>单方向设置margin</h3><blockquote>
+<p>单独设置盒子的一边margin</p>
+</blockquote>
+<p><strong>代码：</strong> <code>margin-left:10px;</code></p>
+<p><code>margin-方位名词：边框粗细  边框样式  边框颜色；</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">margin-top 上外边距</span><br><span class="line">margin-right 右外边距</span><br><span class="line">margin-bottom 下外边距</span><br><span class="line">margin-left 左外边距</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="marign单方向的应用"><a href="#marign单方向的应用" class="headerlink" title="marign单方向的应用"></a>marign单方向的应用</h3><ul>
+<li><p>上下应用</p>
+<ul>
+<li>margin-top：能让盒子下移</li>
+<li>margin-bottom：能让下面的盒子往下移</li>
+</ul>
+</li>
+<li><p>左右应用（先转换成行内块）</p>
+<ul>
+<li>margin-left：能让盒子右移</li>
+<li>margin-right：能让右边的盒子往右移动</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="清除默认内外边距"><a href="#清除默认内外边距" class="headerlink" title="清除默认内外边距"></a>清除默认内外边距</h3><blockquote>
+<p>浏览器会默认给一些标签设置margin和padding，在项目开始之前需要清除这些标签默认的margin和padding，留给自己设置。</p>
+</blockquote>
+<p>比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">body 标签: 自带 margin: 8px; 的属性</span><br><span class="line">p 标签: 默认带有 margin: font-size 的值</span><br><span class="line">ul标签: ul 标签默认带有上下的 margin, 和 padding-left</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>因为要清除所有标签默认的内外边距，此时可以使用通配符完成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* &#123; </span><br><span class="line">	padding: 0;</span><br><span class="line">	margin: 0; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="ヾ-๑╹◡╹-ﾉ”爱宠知识案例"><a href="#ヾ-๑╹◡╹-ﾉ”爱宠知识案例" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”爱宠知识案例~"></a>ヾ(๑╹◡╹)ﾉ”爱宠知识案例~</h5><p><img src="\images\05-练习-爱宠知识.png" alt="05-练习-爱宠知识"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/授课笔记/" rel="tag"><i class="fa fa-tag"></i> 授课笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/20/1-基础班day06笔记/" rel="next" title="基础班day06笔记">
+                <i class="fa fa-chevron-left"></i> 基础班day06笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/20/1-基础班day08笔记/" rel="prev" title="基础班day08笔记">
+                基础班day08笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/master.jpg"
+                alt="棠哥" />
+            
+              <p class="site-author-name" itemprop="name">棠哥</p>
+              <p class="site-description motion-element" itemprop="description">棠哥的测试博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#学习目标"><span class="nav-number">1.</span> <span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#盒子模型"><span class="nav-number">2.</span> <span class="nav-text">盒子模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#盒子模型的组成"><span class="nav-number">2.1.</span> <span class="nav-text">盒子模型的组成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#边框（border）"><span class="nav-number">3.</span> <span class="nav-text">边框（border）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#border相关属性"><span class="nav-number">3.1.</span> <span class="nav-text">border相关属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#border的连写"><span class="nav-number">3.2.</span> <span class="nav-text">border的连写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单方向设置border"><span class="nav-number">3.3.</span> <span class="nav-text">单方向设置border</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#边框合并（border-collapse）"><span class="nav-number">3.4.</span> <span class="nav-text">边框合并（border-collapse）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”使用css改写之前的表格案例"><span class="nav-number">3.4.0.1.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ”使用css改写之前的表格案例</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#盒子大小的初级计算公式"><span class="nav-number">4.</span> <span class="nav-text">盒子大小的初级计算公式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”写一个小盒子（由内容和边框组成）"><span class="nav-number">4.0.0.1.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ”写一个小盒子（由内容和边框组成）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”不low导航"><span class="nav-number">4.0.0.2.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ”不low导航~</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内边距（padding）"><span class="nav-number">5.</span> <span class="nav-text">内边距（padding）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#padding的取值"><span class="nav-number">5.1.</span> <span class="nav-text">padding的取值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单方向设置padding"><span class="nav-number">5.2.</span> <span class="nav-text">单方向设置padding</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#盒子大小的终极计算公式"><span class="nav-number">6.</span> <span class="nav-text">盒子大小的终极计算公式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不会撑大盒子的特殊情况"><span class="nav-number">6.1.</span> <span class="nav-text">不会撑大盒子的特殊情况</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”新浪导航（不low导航升级版）"><span class="nav-number">6.1.0.1.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ”新浪导航（不low导航升级版）~</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS3盒模型（自动内减→box-sizing）"><span class="nav-number">7.</span> <span class="nav-text">CSS3盒模型（自动内减→box-sizing）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”新闻列表案例"><span class="nav-number">7.0.0.1.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ”新闻列表案例</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外边距（margin）"><span class="nav-number">8.</span> <span class="nav-text">外边距（margin）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#margin的取值"><span class="nav-number">8.1.</span> <span class="nav-text">margin的取值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单方向设置margin"><span class="nav-number">8.2.</span> <span class="nav-text">单方向设置margin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#marign单方向的应用"><span class="nav-number">8.3.</span> <span class="nav-text">marign单方向的应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清除默认内外边距"><span class="nav-number">8.4.</span> <span class="nav-text">清除默认内外边距</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”爱宠知识案例"><span class="nav-number">8.4.0.1.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ”爱宠知识案例~</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">棠哥</span>
+
+  
+</div>
+
+
+  <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+ <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div> -->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <!-- 点击出现大气泡的效果 -->
+  
+</body>
+</html>
