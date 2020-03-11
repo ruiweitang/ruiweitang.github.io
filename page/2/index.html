@@ -298,6 +298,308 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/20/1-基础班day12笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="棠哥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/master.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="梦溪笔谈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/20/1-基础班day12笔记/" itemprop="url">基础班day12笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-20T10:12:00+08:00">
+                2019-02-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.3k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 能够使用ps进行基本操作</li>
+</ul>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 能够完成项目基本目录搭建</li>
+</ul>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 能够完成品优购头部</li>
+</ul>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 能够完成品优购导航</li>
+</ul>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 能够设置盒子的边框圆角</li>
+</ul>
+<p>。。。。。。</p>
+</blockquote>
+<p><strong>理解上课的知识点……</strong></p>
+<h2 id="CSS3边框圆角（border-radius）"><a href="#CSS3边框圆角（border-radius）" class="headerlink" title="CSS3边框圆角（border-radius）"></a>CSS3边框圆角（border-radius）</h2><blockquote>
+<p>边框圆角： <code>border-radius</code> 可以让盒子的四角变得圆润，也可以画一个圆</p>
+<p>border：边框</p>
+<p>radius：半径</p>
+</blockquote>
+<p><img src="\images\css画一个圆.png" alt="css画一个圆"></p>
+<p><strong>取值：</strong></p>
+<ul>
+<li>一个值：左上右上右下左下</li>
+<li>两个值：左上右下、右上左下</li>
+<li>三个值：左上、右上左下、右下</li>
+<li>四个值：左上、右上、右下、左下</li>
+</ul>
+<p><strong>记忆方法：</strong> 先从左上开始赋值，顺时针赋值，如果没有赋值的，看对面的。</p>
+<p><strong>常见的应用：</strong></p>
+<ul>
+<li><p><strong>画一个圆</strong></p>
+<ul>
+<li>盒子必须是一个正方形</li>
+<li>border-radius：50%</li>
+</ul>
+</li>
+<li><p><strong>胶囊按钮</strong></p>
+<ul>
+<li>盒子是一个矩形</li>
+<li>border-radius：盒子高度的一半</li>
+</ul>
+</li>
+</ul>
+<p><img src="\images\jn.png" alt="jn"></p>
+<h2 id="样式初始化的补充"><a href="#样式初始化的补充" class="headerlink" title="样式初始化的补充"></a>样式初始化的补充</h2><blockquote>
+<p>有时候会需要去除input默认的边框和textarea的自由缩放</p>
+</blockquote>
+<p><strong>去除边框：</strong></p>
+<ul>
+<li>border：none</li>
+</ul>
+<p><strong>去除input点击之后的边框轮廓线：</strong></p>
+<ul>
+<li>outline-style: none</li>
+</ul>
+<p><strong>设置禁止textarea自由缩放：</strong></p>
+<ul>
+<li>resize：none</li>
+</ul>
+<h2 id="盒子宽高的百分比设置"><a href="#盒子宽高的百分比设置" class="headerlink" title="盒子宽高的百分比设置"></a>盒子宽高的百分比设置</h2><p><strong>需求：</strong></p>
+<p>如果需要一个父盒子中的四个子盒子，宽度为父盒子的四分之一，高度为父盒子的高度，怎么去完成？</p>
+<p><strong>方案：</strong></p>
+<ul>
+<li>可以直接设置数值（自己计算）</li>
+<li>可以直接设置百分比（百分比相对于父盒子的宽高，让浏览器去计算）</li>
+</ul>
+<h2 id="品优购项目搭建"><a href="#品优购项目搭建" class="headerlink" title="品优购项目搭建"></a>品优购项目搭建</h2><blockquote>
+<p>每一个项目开始之前都要有项目的搭建。</p>
+<p>品优购作为一个<strong>有很多页面</strong>的<strong>大型的项目</strong>，每个页面都有自己对应的css文件，所以css文件需要单独放在一个<strong>css文件夹</strong>中</p>
+</blockquote>
+<p><strong>项目搭建步骤：</strong></p>
+<ul>
+<li><p>新建项目文件夹</p>
+</li>
+<li><p>新建images文件夹，把图片放在images文件夹中</p>
+</li>
+<li><p>新建css文件夹，把所有页面的css文件放入</p>
+<blockquote>
+<p>大型项目有多个页面，每个页面都有对应的css文件，为了项目的查阅方便，一般会把所有的css专门放在一个文件夹汇总</p>
+</blockquote>
+<ul>
+<li>新建index.css放入文件夹</li>
+</ul>
+</li>
+<li><p>新建页面index.html</p>
+</li>
+</ul>
+<p><strong>样式的初始化：</strong></p>
+<ul>
+<li><p>index.css中进行样式的初始化（把项目中要用的样式先写好）</p>
+<ul>
+<li><p>因为样式的初始化每个项目都是一样的，所有公司开发的时候会把样式初始化代码写成一个单独的<strong>base.css</strong>文件，开发的时候直接引入即可</p>
+<h5 id="ヾ-๑╹◡╹-ﾉ”查看公司写好的base-css的代码"><a href="#ヾ-๑╹◡╹-ﾉ”查看公司写好的base-css的代码" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”查看公司写好的base.css的代码"></a>ヾ(๑╹◡╹)ﾉ”查看公司写好的base.css的代码</h5><blockquote>
+<p>问题：为什么要进行css初始化？请举例说明</p>
+</blockquote>
+<p><strong>为什么要进行css初始化？</strong></p>
+<ol>
+<li>因为不同浏览器对于不同标签有默认样式（比如默认padding和margin、a标签默认的下划线……）</li>
+<li>开发的时候并不需要默认的样式。并且需要在不同浏览器中展示的效果是一样的</li>
+<li>所以我们一般在项目开始的时候，会去除浏览器默认的样式即：css的初始化，需要的时候自己设置样式即可。</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 举例说明 --&gt;</span></span><br><span class="line"></span><br><span class="line">1.清除标签的默认margin和padding：</span><br><span class="line">* &#123;</span><br><span class="line">    margin: 0; </span><br><span class="line">    padding: 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">2.清除li标签之前的小点：</span><br><span class="line">ul&#123;</span><br><span class="line">    list-style: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">3.清除a的下划线：</span><br><span class="line">a &#123;</span><br><span class="line">    text-decoration:none；</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">......（base.css中有一堆）</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>在index.html中通过link标签引入index.css</p>
+</li>
+</ul>
+<h2 id="页面ico图标的使用（了解）"><a href="#页面ico图标的使用（了解）" class="headerlink" title="页面ico图标的使用（了解）"></a>页面ico图标的使用（了解）</h2><blockquote>
+<p>较大的网站的title前面会有一个小的图标，这个小图标一般使用的就是ico图标</p>
+</blockquote>
+<p><strong>使用步骤：</strong></p>
+<ul>
+<li><p>获取<code>ico图标</code></p>
+<ul>
+<li>一般是由UI设计师提供.ico图片</li>
+<li>可以通过 <a href="http://www.bitbug.net/" target="_blank" rel="noopener">一些转换网站</a> 将图片上传，获取ico图标</li>
+</ul>
+</li>
+<li><p>使用<code>ico图标</code></p>
+<ul>
+<li><code>&lt;link rel=&quot;icon&quot; href=&quot; favicon.ico的路径&quot;&gt;</code> </li>
+</ul>
+</li>
+</ul>
+<p><strong>一般将ico图标放到根目录下面</strong></p>
+<h2 id="页面seo三大标签（了解）"><a href="#页面seo三大标签（了解）" class="headerlink" title="页面seo三大标签（了解）"></a>页面seo三大标签（了解）</h2><blockquote>
+<p>页面中有三个标签对于seo非常重要！</p>
+</blockquote>
+<h3 id="title：标题标签"><a href="#title：标题标签" class="headerlink" title="title：标题标签"></a>title：标题标签</h3><blockquote>
+<p>表示网页的标题，对于网页的seo权重很高！！</p>
+</blockquote>
+<p><img src="\images\title标签.png" alt=""></p>
+<p><strong>一个大型的网页，也需要有对应的title标签的：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>38期品优购<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Description：描述标签"><a href="#Description：描述标签" class="headerlink" title="Description：描述标签"></a>Description：描述标签</h3><blockquote>
+<p>是对于网页内容的描述，可以是对于标题的补充，一般文字不超过120个字。</p>
+</blockquote>
+<p><img src="\images\description标签.png" alt="description标签"></p>
+<p><strong>一个大型的网页，也需要有对应的description标签的：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"品优购-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Keywords：关键字标签"><a href="#Keywords：关键字标签" class="headerlink" title="Keywords：关键字标签"></a>Keywords：关键字标签</h3><blockquote>
+<p>是页面内容的关键字，对于seo也较为重要。</p>
+</blockquote>
+<p><img src="\images\Keywords标签.png" alt="Keywords标签"></p>
+<p><strong>一个大型的网页，也需要有对应的Keywords标签的：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"Keywords"</span> <span class="attr">content</span>=<span class="string">"网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,品优购"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/20/1-基础班day11笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -4050,474 +4352,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/20/1-基础班day02笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="棠哥">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/master.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="梦溪笔谈">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/20/1-基础班day02笔记/" itemprop="url">基础班day02笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-20T10:01:00+08:00">
-                2019-02-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  3k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  11
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><blockquote>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 能够说出超链接的使用及属性</li>
-</ul>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 了解网页编码，能够通过charset设置编码（字典、<code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>）</li>
-</ul>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 了解SEO的作用（用来优化网站，使用网站在搜索引擎上的排名靠前）</li>
-</ul>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 什么是标签语义化（在合适的地方使用合适的标签）</li>
-</ul>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 能够书写ul/ol/dl三种列表（无序列表、有序列表、自定义列表）</li>
-</ul>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 能够写出表格标签及相关属性</li>
-</ul>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 能够合并单元格</li>
-</ul>
-<p>。。。。。。</p>
-</blockquote>
-<p><strong>理解上课的知识点</strong>……</p>
-<h2 id="链接标签（重点）"><a href="#链接标签（重点）" class="headerlink" title="链接标签（重点）"></a>链接标签（重点）</h2><blockquote>
-<p>页面中有很多地方点击之后可以跳转到新的页面中去，这个就是链接，如果需要在网页中添加一个链接，就需要使用链接标签</p>
-</blockquote>
-<h3 id="a-标签-Anchor-超链接（锚）"><a href="#a-标签-Anchor-超链接（锚）" class="headerlink" title="a 标签 (Anchor ) : 超链接（锚）"></a>a 标签 (Anchor ) : 超链接（锚）</h3><blockquote>
-<p>超链接在页面中起到跳转或定位的作用（超链接、锚链接、a链接、a标签）</p>
-</blockquote>
-<h3 id="a标签的跳转功能"><a href="#a标签的跳转功能" class="headerlink" title="a标签的跳转功能"></a>a标签的跳转功能</h3><p><strong>作用:</strong>  可以从一个页面跳转到另一个页面</p>
-<p><strong>代码:</strong>  <code>&lt;a href=&quot;跳转目标&quot; target=&quot;目标窗口的弹出方式&quot;&gt;文本或图像&lt;/a&gt;</code></p>
-<p><strong>效果：</strong></p>
-<ol>
-<li><p>链接未点击的时候，默认显示蓝色</p>
-</li>
-<li><p>链接点击过以后，显示为紫色</p>
-<blockquote>
-<p>因为浏览器有默认的缓存机制，只要访问过一次的链接，默认都会展示成紫色，只有清除浏览器的缓存，才会变蓝）</p>
-</blockquote>
-</li>
-</ol>
-<p><strong>注意：</strong></p>
-<ul>
-<li>如果需要在页面中看到a标签，需要在a标签里面写上内容</li>
-<li>a标签不能互相嵌套（规范）</li>
-</ul>
-<h3 id="a-标签的属性"><a href="#a-标签的属性" class="headerlink" title="a 标签的属性"></a>a 标签的属性</h3><ul>
-<li><p><strong>href：</strong>a 标签跳转的目标地址（路径）</p>
-<blockquote>
-<p>告诉浏览器点击之后去哪一个页面</p>
-</blockquote>
-<ul>
-<li>外部链接（互联网上）需要添加 <code>http:// www.baidu.com</code></li>
-<li>内部链接（文件夹中）直接链接页面的路径即可 比如  <code>&lt; a href=&quot;index.html&quot;&gt; 首页 &lt;/a &gt;</code> </li>
-</ul>
-</li>
-<li><p><strong>target：</strong>用于指定链接页面的打开方式</p>
-<ul>
-<li><code>_self</code> ：在当前页面中跳转</li>
-<li><code>_blank</code> :  保留原始页面，在新窗口中跳转</li>
-</ul>
-</li>
-<li><p><strong>相关标签</strong> ：</p>
-<p> base 标签</p>
-<p> <strong>作用：</strong>可以为页面上所有的a标签统一设置跳转方式（base标签一般放在titile标签下面）</p>
-</li>
-</ul>
-<h3 id="a-标签的其他用法"><a href="#a-标签的其他用法" class="headerlink" title="a 标签的其他用法"></a>a 标签的其他用法</h3><ul>
-<li><strong>可以不跳转</strong> (不写路径其实会刷新页面，其实相当于跳转到当前页面)<ul>
-<li><code>href=&quot;#&quot;</code>  </li>
-<li>项目中没有确定链接目标时，可以使用#来占位，之后确定跳转的目标之后再改成正确的</li>
-</ul>
-</li>
-<li><strong>可以进行下载</strong>（一般不用）<ul>
-<li>当路径指向的目标文件是浏览器打不开的文件时，浏览器会默认下载下来。</li>
-</ul>
-</li>
-</ul>
-<h3 id="a标签的定位功能"><a href="#a标签的定位功能" class="headerlink" title="a标签的定位功能"></a>a标签的定位功能</h3><blockquote>
-<p>a标签可以快速定位到当前页面或者其他页面的目标内容（百度百科）</p>
-</blockquote>
-<h4 id="在当前页面进行定位"><a href="#在当前页面进行定位" class="headerlink" title="在当前页面进行定位"></a>在当前页面进行定位</h4><h5 id="ヾ-๑╹◡╹-ﾉ”吸猫大法"><a href="#ヾ-๑╹◡╹-ﾉ”吸猫大法" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”吸猫大法"></a>ヾ(๑╹◡╹)ﾉ”吸猫大法</h5><p><strong>步骤：</strong></p>
-<ol>
-<li><p>给目标标签加上id属性</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"mao"</span>&gt;</span>我是一只猫<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>给链接的href属性中写上<code>#目标标签的id属性值</code></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#mao"</span>&gt;</span>吸猫大法<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h4 id="在跳转的页面进行定位"><a href="#在跳转的页面进行定位" class="headerlink" title="在跳转的页面进行定位"></a>在跳转的页面进行定位</h4><h5 id="ヾ-๑╹◡╹-ﾉ”跨界吸猫"><a href="#ヾ-๑╹◡╹-ﾉ”跨界吸猫" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”跨界吸猫"></a>ヾ(๑╹◡╹)ﾉ”跨界吸猫</h5><p><strong>步骤：</strong></p>
-<ol>
-<li><p>给目标文件中的目标标签加上id属性</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"mao"</span>&gt;</span>我是一只猫<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>给当前文件的链接的href属性中写上 <code>目标文件路径#目标标签的id属性值</code></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"目标文件路径#mao"</span>&gt;</span>吸猫大法<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><img src="\images\摇头猫.gif" alt="摇头猫"></p>
-<h2 id="结构中每个标签的含义（了解）"><a href="#结构中每个标签的含义（了解）" class="headerlink" title="结构中每个标签的含义（了解）"></a>结构中每个标签的含义（了解）</h2><h3 id="DOCTYPE-文档类型"><a href="#DOCTYPE-文档类型" class="headerlink" title="DOCTYPE : 文档类型"></a>DOCTYPE : 文档类型</h3><p><strong>作用：</strong> 用来定义文档类型（告诉浏览器，使用哪种规范去解析html页面）</p>
-<p><strong>位置：</strong>文档的最前面的位置</p>
-<p><strong>规范：</strong>HTML 或 XHTML 规范</p>
-<p><strong>html:xt  ：</strong>XHTML规范，已经淘汰了， 一些特别老的网站会有，知道即可</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>html:5    ：</strong>  HTML5规范，非常的简洁</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="html-标签"><a href="#html-标签" class="headerlink" title="html 标签"></a>html 标签</h3><p><strong>作用：</strong>所有html中标签的一个根节点（老祖宗）</p>
-<p><strong>lang：</strong>用来设置当前页面的语言（标签的语言、对比易语言）</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line">en-英文 zh-中文</span><br><span class="line">英文的意思并不是告诉浏览器，我们这就是纯英文的，而且告诉浏览器我们的内容以英文为主，提高浏览器的渲染性能</span><br></pre></td></tr></table></figure>
-<h3 id="head-标签"><a href="#head-标签" class="headerlink" title="head 标签"></a>head 标签</h3><p><strong>作用：</strong>用于存放<strong>网页的配置标签</strong>和<strong>引入文件的标签</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title、meta、base、style、script、link</span><br><span class="line"></span><br><span class="line">注：在head标签中我们必须要设置的标签是title, 其他可有可无</span><br></pre></td></tr></table></figure>
-<h3 id="body-标签"><a href="#body-标签" class="headerlink" title="body 标签"></a>body 标签</h3><p><strong>作用：</strong>页面在的主体部分，用于存放页面中的html标签</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p、h、a、b、u、i、s、em、del、ins、strong、img</span><br></pre></td></tr></table></figure>
-<h3 id="meta-标签"><a href="#meta-标签" class="headerlink" title="meta 标签"></a>meta 标签</h3><p><strong>作用：</strong>设置网页的元信息</p>
-<p><strong>注意：</strong>meta中设置的所有的内容在页面都不会显示,  在其中可以设置编码格式、样式、关键字等等</p>
-<p><strong>设置字符集（编码格式）：</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">Charset（字符集的格式）：UTF-8</span><br></pre></td></tr></table></figure>
-<h5 id="ヾ-๑╹◡╹-ﾉ”乱码的原因"><a href="#ヾ-๑╹◡╹-ﾉ”乱码的原因" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”乱码的原因"></a>ヾ(๑╹◡╹)ﾉ”乱码的原因</h5><p> <strong>最常见的3种字符集（字典）：</strong></p>
-<ul>
-<li><p>UTF-8：国际化的字典，字体库，收录是全世界所有的语言中的文字</p>
-<p>1汉字 = 3个字节</p>
-</li>
-<li><p>GBK：收录了大陆汉字，还加了港澳台的文字-》ANSI（中国）</p>
-<p>1个汉字= 2个字节</p>
-</li>
-<li><p>GB2312：收录了大陆汉字</p>
-<p><strong>约定：</strong>将来我们在整个学习过程中都用utf-8（与国际接轨）</p>
-</li>
-</ul>
-<h3 id="title-标签"><a href="#title-标签" class="headerlink" title="title 标签"></a>title 标签</h3><p><strong>作用：</strong>让页面拥有一个属于自己的标题。</p>
-<p><strong>注意：</strong>title中的文本在 seo 中占有很大的权重，不能乱写</p>
-<h2 id="SEO与标签语义化（了解）"><a href="#SEO与标签语义化（了解）" class="headerlink" title="SEO与标签语义化（了解）"></a>SEO与标签语义化（了解）</h2><h5 id="ヾ-๑╹◡╹-ﾉ”title标签与h1标签的权重"><a href="#ヾ-๑╹◡╹-ﾉ”title标签与h1标签的权重" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”title标签与h1标签的权重"></a>ヾ(๑╹◡╹)ﾉ”title标签与h1标签的权重</h5><h3 id="SEO-搜索引擎优化"><a href="#SEO-搜索引擎优化" class="headerlink" title="SEO : 搜索引擎优化"></a>SEO : 搜索引擎优化</h3><blockquote>
-<p>Search Engine Optimization</p>
-<p>写网页的目的-》用户的习惯-》用户的结果-》怎样排名靠前-》seo</p>
-</blockquote>
-<p><strong>作用</strong>：用来优化网站，使用网站在搜索引擎上的排名靠前</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">百度是如何收录一个网站的信息的呢？</span><br><span class="line"></span><br><span class="line">百度自己写的一个程序（爬虫）来收录每个网站的信息。</span><br></pre></td></tr></table></figure>
-<h3 id="怎样提升网站的SEO（记忆）"><a href="#怎样提升网站的SEO（记忆）" class="headerlink" title="怎样提升网站的SEO（记忆）"></a>怎样提升网站的SEO（记忆）</h3><ul>
-<li><p><strong>花钱买排名</strong></p>
-<p>缺点：烧钱。</p>
-<p>优点：效果杠杠的</p>
-</li>
-<li><p><strong>将页面做成静态页面</strong>（html后缀）</p>
-</li>
-<li><p><strong>发外链</strong>（类似于广告）</p>
-</li>
-<li><p><strong>标签语义化（语义化规范）</strong></p>
-<blockquote>
-<p>在合适的地方使用合适的标签</p>
-</blockquote>
-<p>标签语义化的应用：每个html标签都有属于自己的语义，有使用标签时候要一定要了解每个标签的语义，合理使用。</p>
-</li>
-</ul>
-<h2 id="列表（熟练）"><a href="#列表（熟练）" class="headerlink" title="列表（熟练）"></a>列表（熟练）</h2><blockquote>
-<p>网页中经常会显示一些列表，这里就要使用到列表标签了，比如：常见的有新浪网页</p>
-</blockquote>
-<h3 id="无序列表-ul-（Unordered-List）"><a href="#无序列表-ul-（Unordered-List）" class="headerlink" title="无序列表 ul （Unordered List）"></a>无序列表 ul （Unordered List）</h3><blockquote>
-<p>一列没有顺序的列表（用的最多）</p>
-</blockquote>
-<h5 id="ヾ-๑╹◡╹-ﾉ”水果列表"><a href="#ヾ-๑╹◡╹-ﾉ”水果列表" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”水果列表"></a>ヾ(๑╹◡╹)ﾉ”水果列表</h5><p><strong>作用：</strong>显示一列没有排列顺序的数据</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  ......</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><strong>显示特点：</strong></p>
-<ul>
-<li>每一项前面有默认的小圆点</li>
-</ul>
-<p><strong>注意：</strong></p>
-<ul>
-<li>无序列表中的数据没有先后顺序之分</li>
-<li><code>&lt;ul&gt;&lt;/ul&gt;</code> 中只能嵌套<code>&lt;li&gt;&lt;/li&gt;</code> ，不能放其他标签或者文字</li>
-<li><code>&lt;li&gt;&lt;/li&gt;</code> 标签中可以嵌套任意标签（嵌套ul都可以）</li>
-</ul>
-<h3 id="有序列表-ol（了解）"><a href="#有序列表-ol（了解）" class="headerlink" title="有序列表 ol（了解）"></a>有序列表 ol（了解）</h3><blockquote>
-<p>一列有顺序的列表（用的很少）</p>
-</blockquote>
-<h5 id="ヾ-๑╹◡╹-ﾉ”考试成绩表"><a href="#ヾ-๑╹◡╹-ﾉ”考试成绩表" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”考试成绩表"></a>ヾ(๑╹◡╹)ﾉ”考试成绩表</h5><p><strong>作用</strong>：显示一列有顺序的数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">  &lt;li&gt;列表项1&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;列表项2&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;列表项3&lt;/li&gt;</span><br><span class="line">  ......</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>显示特点：</strong></p>
-<ul>
-<li>每一项前面有默认的序号</li>
-</ul>
-<p><strong>注意：</strong></p>
-<ul>
-<li>有序列表中的数据有先后顺序之分</li>
-<li><code>&lt;ol&gt;&lt;/ol&gt;</code> 中只能嵌套<code>&lt;li&gt;&lt;/li&gt;</code> ，不能放其他标签或者文字</li>
-<li><code>&lt;li&gt;&lt;/li&gt;</code> 标签中可以嵌套任意标签（ul都可以）</li>
-</ul>
-<p><strong>现在一般情况下ul标签用的比较多，ol标签用的比较少（关键看语义，和样式无关）。</strong></p>
-<h3 id="自定义列表-dl（了解）"><a href="#自定义列表-dl（了解）" class="headerlink" title="自定义列表 dl（了解）"></a>自定义列表 dl（了解）</h3><blockquote>
-<p>一列格式自定义的列表（几乎不用）</p>
-</blockquote>
-<p><img src="\images\mi.fw.png" alt="mi.fw"></p>
-<p><strong>作用</strong>：显示一列数据，格式自己定义</p>
-<blockquote>
-<p>dt  :  标题</p>
-<p>dd :  列表正文</p>
-</blockquote>
-<p><strong>代码：</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dt</span>&gt;</span>小标题<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dd</span>&gt;</span>小标题的解释1<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dd</span>&gt;</span>小标题的解释2<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><strong>好比：</strong></p>
-<p><img src="\images\自定义列表.png" alt="自定义列表"></p>
-<h2 id="HTML中的特殊字符（记忆）"><a href="#HTML中的特殊字符（记忆）" class="headerlink" title="HTML中的特殊字符（记忆）"></a>HTML中的特殊字符（记忆）</h2><blockquote>
-<p>有时候需要在页面中显示空格、&lt;、&gt;等特殊字符，需要使用html的<strong>特殊字符</strong>（<strong>实体字符</strong>）</p>
-</blockquote>
-<h3 id="HTML的空格合并现象"><a href="#HTML的空格合并现象" class="headerlink" title="HTML的空格合并现象"></a>HTML的空格合并现象</h3><blockquote>
-<p>在HTML代码中同时出现多少个空格、缩进、换行。最后浏览器只会解析出一个空格显示</p>
-</blockquote>
-<h5 id="ヾ-๑╹◡╹-ﾉ”合并现象案例"><a href="#ヾ-๑╹◡╹-ﾉ”合并现象案例" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”合并现象案例"></a>ヾ(๑╹◡╹)ﾉ”合并现象案例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">女孩：宝贝，靠近点~男孩：darling，我离不开你~</span><br><span class="line">拆了他们！</span><br></pre></td></tr></table></figure>
-<p> <strong>总结：</strong>html代码中对空格、缩进、换行不敏感，如果同时出现多个空格、缩进、换行, 页面只会把它们当做一个空格来解析</p>
-<p>html 中特殊字符有对应 <strong>替代代码（也叫做实体字符）</strong> : </p>
-<p><img src="\images\1533254344261.png" alt="1533254344261"></p>
-<p>把前面5个记住即可！前面三个更常用！！</p>
-<h2 id="表格table（难点）"><a href="#表格table（难点）" class="headerlink" title="表格table（难点）"></a>表格table（难点）</h2><blockquote>
-<p>将数据以表格的形式在网页中展示</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">感知表格相关标签：</span><br><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span><span class="tag">&lt;/<span class="name">table</span>&gt;</span> : 代表 表格</span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span> : 代表一行 (row : 行 )</span><br><span class="line"><span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span> : 代表一个标准单元格</span><br></pre></td></tr></table></figure>
-<h3 id="创建表格"><a href="#创建表格" class="headerlink" title="创建表格"></a>创建表格</h3><h5 id="ヾ-๑╹◡╹-ﾉ”画出下列表格"><a href="#ヾ-๑╹◡╹-ﾉ”画出下列表格" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”画出下列表格"></a>ヾ(๑╹◡╹)ﾉ”画出下列表格</h5><p><img src="\images\%E8%A1%A8%E6%A0%BC.png" alt="表格"></p>
-<p><strong>代码：</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span>单元格<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span>单元格<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span>单元格<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span>单元格<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="表格的属性"><a href="#表格的属性" class="headerlink" title="表格的属性"></a>表格的属性</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">属性</th>
-<th style="text-align:center">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">border</td>
-<td style="text-align:center">边框</td>
-</tr>
-<tr>
-<td style="text-align:center">width</td>
-<td style="text-align:center">给表格设置宽</td>
-</tr>
-<tr>
-<td style="text-align:center">height</td>
-<td style="text-align:center">给表格设置高</td>
-</tr>
-<tr>
-<td style="text-align:center">cellspacing</td>
-<td style="text-align:center">规定单元格与单元格之间的空白</td>
-</tr>
-<tr>
-<td style="text-align:center">cellpadding</td>
-<td style="text-align:center">单元格内部边框与内容的空白</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>align</strong></td>
-<td style="text-align:center"><strong>对齐方式（table、tr、td分别设置有不同效果）</strong></td>
-</tr>
-</tbody>
-</table>
-<p><strong>虽然我们可以使用table中的标签来设置标签的一些样式，但是最好不要用，因为将来凡是与样式相关内容都是由css来设置的</strong></p>
-<h3 id="表格中的其他标签"><a href="#表格中的其他标签" class="headerlink" title="表格中的其他标签"></a>表格中的其他标签</h3><h5 id="ヾ-๑╹◡╹-ﾉ”先画出下列表格"><a href="#ヾ-๑╹◡╹-ﾉ”先画出下列表格" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”先画出下列表格"></a>ヾ(๑╹◡╹)ﾉ”先画出下列表格</h5><p><img src="\images\%E5%90%88%E5%B9%B6.PNG" alt="合并"></p>
-<p><strong>总结：</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">标签</th>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">特点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>&lt;th&gt;&lt;/th&gt;</code></td>
-<td style="text-align:center">起到表头单元格、标题的作用（代替td）</td>
-<td style="text-align:center">文字加粗居中</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>&lt;caption&gt;&lt;/caption&gt;</code></td>
-<td style="text-align:center">给表格设置标题</td>
-<td style="text-align:center">在表格的最上面显示标题</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>&lt;thead&gt;&lt;/thead&gt;</code></td>
-<td style="text-align:center">（结构）存放当前表的表头</td>
-<td style="text-align:center">高度自适应（由内容撑开）</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>&lt;tbody&gt;&lt;/tbody&gt;</code></td>
-<td style="text-align:center">（结构）存放表格主体数据</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>&lt;tfoot&gt;&lt;/tfoot&gt;</code></td>
-<td style="text-align:center">（结构）一般不用、有兼容性问题</td>
-<td style="text-align:center">高度自适应（由内容撑开）</td>
-</tr>
-</tbody>
-</table>
-<p><strong>注意：</strong></p>
-<ul>
-<li><code>&lt;tr&gt;&lt;/tr&gt;</code>中只能嵌套<code>&lt;td&gt;&lt;/td&gt;</code>或者<code>&lt;th&gt;&lt;/th&gt;</code></li>
-<li><code>&lt;td&gt;&lt;/td&gt;</code>标签像一个容器，可以容纳所有的元素</li>
-</ul>
-<h3 id="合并单元格-左上原则"><a href="#合并单元格-左上原则" class="headerlink" title="合并单元格 (左上原则)"></a>合并单元格 (左上原则)</h3><blockquote>
-<p>上下合并——》跨行合并：属性: rowspan=”合并的个数”——》留住最上，删除其他</p>
-<p>左右合并——》跨列合并：属性: colspan=”合并的个数”——-》留住最左，删除其他</p>
-<p>1.确定合并哪几个单元格</p>
-<p>2.利用左上原则，确定保大保小</p>
-<p>3.确定跨行（rowspan）还是跨列合并（colspan）</p>
-</blockquote>
-<p><strong>步骤：</strong></p>
-<ol>
-<li>通过左上原色，确定保留的单元格，给他添加属性（rowspan/colspan），属性值就是合并单元格的个数</li>
-<li>找到要删除的单元格，删除掉就行了~</li>
-</ol>
-<h5 id="合并单元格练习"><a href="#合并单元格练习" class="headerlink" title="合并单元格练习:"></a>合并单元格练习:</h5><p><img src="\images\%E5%90%88%E5%B9%B6%E5%8D%95%E5%85%83%E6%A0%BC%E7%BB%83%E4%B9%A0.PNG" alt="合并单元格练习"> </p>
-<h2 id="拓展（了解即可）"><a href="#拓展（了解即可）" class="headerlink" title="拓展（了解即可）"></a>拓展（了解即可）</h2><h3 id="预格式文本标签（pre）"><a href="#预格式文本标签（pre）" class="headerlink" title="预格式文本标签（pre）"></a>预格式文本标签（pre）</h3><blockquote>
-<p>如果想让代码中的文本格式原封不动的展示到页面中，可以实现吗？</p>
-</blockquote>
-<p><strong>作用：</strong>让标签内的文本格式原样显示在页面中（包括空格和换行）</p>
-<p><strong>代码：</strong> <code>&lt;pre&gt;有格式的文本&lt;/pre&gt;</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -4572,7 +4406,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
