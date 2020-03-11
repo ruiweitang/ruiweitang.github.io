@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="授课笔记," />
+  <meta name="keywords" content="授课笔记,基础班," />
 
 
 
@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="学习目标   了解margin合并与塌陷现象（相邻块元素垂直外边距的合并，嵌套块元素垂直外边距的塌陷）    能够说出解决margin塌陷的几种方式 给父盒子加一个边框 给父盒子加 padding-top  给父盒子设置属性 overflow: hidden =&amp;gt; BFC; 给父盒子设置浮动 给父盒子设置为行内块      理解浮动的作用及特点（解决上下盒子 可以水平布局的问题，脱标）">
-<meta name="keywords" content="授课笔记">
+<meta name="description" content="学习目标   了解margin合并与塌陷现象（相邻块元素垂直外边距的合并，嵌套块元素垂直外边距的塌陷）    能够说出解决margin塌陷的几种方式    理解浮动的作用及特点（解决上下盒子 可以水平布局的问题，脱标）    能够说出几种清除浮动的方式（额外标签法、overflow、伪元素清除浮动）    能够使用浮动完成导航案例    能够说清除浮动的目的（消除浮动对之后元素的影响）">
+<meta name="keywords" content="授课笔记,基础班">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基础班day08笔记">
 <meta property="og:url" content="http://yoursite.com/2019/02/20/1-基础班day08笔记/index.html">
 <meta property="og:site_name" content="梦溪笔谈">
-<meta property="og:description" content="学习目标   了解margin合并与塌陷现象（相邻块元素垂直外边距的合并，嵌套块元素垂直外边距的塌陷）    能够说出解决margin塌陷的几种方式 给父盒子加一个边框 给父盒子加 padding-top  给父盒子设置属性 overflow: hidden =&amp;gt; BFC; 给父盒子设置浮动 给父盒子设置为行内块      理解浮动的作用及特点（解决上下盒子 可以水平布局的问题，脱标）">
+<meta property="og:description" content="学习目标   了解margin合并与塌陷现象（相邻块元素垂直外边距的合并，嵌套块元素垂直外边距的塌陷）    能够说出解决margin塌陷的几种方式    理解浮动的作用及特点（解决上下盒子 可以水平布局的问题，脱标）    能够说出几种清除浮动的方式（额外标签法、overflow、伪元素清除浮动）    能够使用浮动完成导航案例    能够说清除浮动的目的（消除浮动对之后元素的影响）">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/www.png">
 <meta property="og:image" content="http://yoursite.com/images/n.png">
@@ -101,10 +101,10 @@
 <meta property="og:image" content="http://yoursite.com/images/seo导航.png">
 <meta property="og:image" content="http://yoursite.com/images/seoq.png">
 <meta property="og:image" content="http://yoursite.com/images/tuwen.png">
-<meta property="og:updated_time" content="2019-03-02T04:48:44.598Z">
+<meta property="og:updated_time" content="2020-03-11T11:45:33.389Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基础班day08笔记">
-<meta name="twitter:description" content="学习目标   了解margin合并与塌陷现象（相邻块元素垂直外边距的合并，嵌套块元素垂直外边距的塌陷）    能够说出解决margin塌陷的几种方式 给父盒子加一个边框 给父盒子加 padding-top  给父盒子设置属性 overflow: hidden =&amp;gt; BFC; 给父盒子设置浮动 给父盒子设置为行内块      理解浮动的作用及特点（解决上下盒子 可以水平布局的问题，脱标）">
+<meta name="twitter:description" content="学习目标   了解margin合并与塌陷现象（相邻块元素垂直外边距的合并，嵌套块元素垂直外边距的塌陷）    能够说出解决margin塌陷的几种方式    理解浮动的作用及特点（解决上下盒子 可以水平布局的问题，脱标）    能够说出几种清除浮动的方式（额外标签法、overflow、伪元素清除浮动）    能够使用浮动完成导航案例    能够说清除浮动的目的（消除浮动对之后元素的影响）">
 <meta name="twitter:image" content="http://yoursite.com/images/www.png">
 
 
@@ -373,7 +373,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.3k
+                  2.2k
                 </span>
               
 
@@ -389,7 +389,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  8
+                  7
                 </span>
               
             </div>
@@ -415,14 +415,7 @@
 <li style="list-style: none"><input type="checkbox"> 了解margin合并与塌陷现象（相邻块元素垂直外边距的合并，嵌套块元素垂直外边距的塌陷）</li>
 </ul>
 <ul>
-<li style="list-style: none"><input type="checkbox"> 能够说出解决margin塌陷的几种方式<ul>
-<li>给父盒子加一个边框</li>
-<li>给父盒子加 padding-top </li>
-<li>给父盒子设置属性 overflow: hidden =&gt; BFC;</li>
-<li>给父盒子设置浮动</li>
-<li>给父盒子设置为行内块</li>
-</ul>
-</li>
+<li style="list-style: none"><input type="checkbox"> 能够说出解决margin塌陷的几种方式</li>
 </ul>
 <ul>
 <li style="list-style: none"><input type="checkbox"> 理解浮动的作用及特点（解决上下盒子 可以水平布局的问题，脱标）</li>
@@ -437,6 +430,7 @@
 <li style="list-style: none"><input type="checkbox"> 能够说清除浮动的目的（消除浮动对之后元素的影响）</li>
 </ul>
 </blockquote>
+<a id="more"></a>
 <p><strong>理解上课的知识点</strong></p>
 <h2 id="margin的特殊现象"><a href="#margin的特殊现象" class="headerlink" title="margin的特殊现象"></a>margin的特殊现象</h2><h3 id="marign的合并现象"><a href="#marign的合并现象" class="headerlink" title="marign的合并现象"></a>marign的合并现象</h3><blockquote>
 <p>正常情况下：比如当两个盒子<strong>水平</strong>布局时，左右的margin会叠加；</p>
@@ -754,6 +748,8 @@
           
             <a href="/tags/授课笔记/" rel="tag"><i class="fa fa-tag"></i> 授课笔记</a>
           
+            <a href="/tags/基础班/" rel="tag"><i class="fa fa-tag"></i> 基础班</a>
+          
         </div>
       
 
@@ -877,7 +873,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

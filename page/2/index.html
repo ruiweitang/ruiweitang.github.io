@@ -399,8 +399,7 @@
 
       
         
-          
-            <h2 id="《部分案例代码下载》"><a href="#《部分案例代码下载》" class="headerlink" title="《部分案例代码下载》"></a><a href="/download/移动webday02部分案例代码.zip">《部分案例代码下载》</a></h2><h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><blockquote>
+          <h2 id="《部分案例代码下载》"><a href="#《部分案例代码下载》" class="headerlink" title="《部分案例代码下载》"></a><a href="/download/移动webday02部分案例代码.zip">《部分案例代码下载》</a></h2><h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><blockquote>
 <ul>
 <li style="list-style: none"><input type="checkbox"> 能够理解过渡transition的使用方式</li>
 <li style="list-style: none"><input type="checkbox"> 能够实现基本的动画</li>
@@ -409,850 +408,13 @@
 </ul>
 <p>。。。。。。</p>
 </blockquote>
-<p><strong>理解上课的知识点……</strong></p>
-<h2 id="过渡（transition）"><a href="#过渡（transition）" class="headerlink" title="过渡（transition）"></a>过渡（transition）</h2><blockquote>
-<p>昨天学习了过渡属性，直接设置的是 <code>transition:1s;</code> ，其实 <code>transition</code> 属性是一个复合属性</p>
-</blockquote>
-<p>让一个盒子hover之后慢慢的变宽~</p>
-<h3 id="过渡相关属性"><a href="#过渡相关属性" class="headerlink" title="过渡相关属性"></a>过渡相关属性</h3><blockquote>
-<p>其实过渡属性可以分为多个单独的属性进行设置</p>
-</blockquote>
-<h4 id="过渡的时间（transition-duration）"><a href="#过渡的时间（transition-duration）" class="headerlink" title="过渡的时间（transition-duration）"></a>过渡的时间（transition-duration）</h4><blockquote>
-<p>设置完成过渡效果需要多少时间</p>
-</blockquote>
-<p><strong>代码：</strong><code>transition-duration：1s;</code></p>
-<p><strong>取值：</strong></p>
-<ul>
-<li>具体的时间（1s）</li>
-</ul>
-<h4 id="过渡的属性（transition-property）"><a href="#过渡的属性（transition-property）" class="headerlink" title="过渡的属性（transition-property）"></a>过渡的属性（transition-property）</h4><blockquote>
-<p>设置过渡效果的css属性的名称</p>
-</blockquote>
-<p><strong>代码：</strong><code>transition-property:all;</code></p>
-<p><strong>取值：</strong></p>
-<ul>
-<li><p>可以是具体的属性（width、height、……）</p>
-</li>
-<li><p><strong>all</strong>（表示所有属性都有过渡的效果，默认值）</p>
-<blockquote>
-<p>但是从效果来说，不是每一个属性都有过渡效果，比如：display：none这种不可以过渡的属性，是没有过渡的效果的（因为不存在中间状态）</p>
-</blockquote>
-</li>
-</ul>
-<h4 id="过渡的变化效果（transition-timing-function）"><a href="#过渡的变化效果（transition-timing-function）" class="headerlink" title="过渡的变化效果（transition-timing-function）"></a>过渡的变化效果（transition-timing-function）</h4><blockquote>
-<p>设置过渡变化速度效果的不同</p>
-</blockquote>
-<p><strong>代码：</strong> <code>transition-timing-function：linear;</code></p>
-<p><strong>取值：</strong> </p>
-<ul>
-<li>ease：慢速→快速→慢速</li>
-<li>linear：匀速变化</li>
-<li>steps（n）：过渡分为几步完成（n个步骤完成）</li>
-</ul>
-<h4 id="过渡的延时（transition-delay）"><a href="#过渡的延时（transition-delay）" class="headerlink" title="过渡的延时（transition-delay）"></a>过渡的延时（transition-delay）</h4><blockquote>
-<p>设置过渡在多少时间之后开始</p>
-</blockquote>
-<p><strong>代码：</strong> <code>transition-delay：2s;</code></p>
-<p><strong>取值：</strong></p>
-<ul>
-<li>具体的时间</li>
-</ul>
-<h3 id="过渡的连写形式（transition）"><a href="#过渡的连写形式（transition）" class="headerlink" title="过渡的连写形式（transition）"></a>过渡的连写形式（transition）</h3><blockquote>
-<p>过渡相关属性都是以transition开头，可以通过transition属性设置相关属性</p>
-</blockquote>
-<p><strong>代码：</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="comment">/* 过渡的属性 */</span></span><br><span class="line">    <span class="attribute">transition-property</span>: all;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 过渡的时间 */</span></span><br><span class="line">    <span class="attribute">transition-duration</span>: <span class="number">1s</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 过渡的变化效果 */</span></span><br><span class="line">    <span class="attribute">transition-timing-function</span>: linear;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 过渡的延时 */</span></span><br><span class="line">    <span class="attribute">transition-delay</span>: <span class="number">2s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*----------------------------------*/</span></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="comment">/* 连写形式 */</span></span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">1s</span> linear <span class="number">2s</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>连写的注意点：</strong></p>
-<ul>
-<li><p><strong>省略问题</strong>：按照需求省略，省略相当于设置了默认值</p>
-</li>
-<li><p><strong>顺序问题</strong>：没有要求，但是注意第一个时间永远是过渡时间</p>
-<blockquote>
-<p>如果连写中只设置了一个时间，这个时间表示的是过渡的时间</p>
-<p>如果连写中设置了两个时间，则第一个时间表示过渡的时间，第二个时间表示延时的时间</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="过渡属性的小结"><a href="#过渡属性的小结" class="headerlink" title="过渡属性的小结"></a>过渡属性的小结</h3><ul>
-<li>过渡的时间：<code>transition-duration</code></li>
-<li>过渡的属性：<code>transition-property</code></li>
-<li>过渡的效果：<code>transition-timing-function</code></li>
-<li>过渡的延时：<code>transition-delay</code></li>
-</ul>
-<h5 id="ヾ-๑╹◡╹-ﾉ”-3D相册案例"><a href="#ヾ-๑╹◡╹-ﾉ”-3D相册案例" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 3D相册案例"></a>ヾ(๑╹◡╹)ﾉ” 3D相册案例</h5><p>300*400</p>
-<h5 id="————————"><a href="#————————" class="headerlink" title="————————"></a>————————</h5><h2 id="css3动画"><a href="#css3动画" class="headerlink" title="css3动画"></a>css3动画</h2><blockquote>
-<p>动画可以通过设置多个节点来精确控制一个或者一组动画，常用来实现复杂的动画效果。</p>
-</blockquote>
-<h5 id="ヾ-๑╹◡╹-ﾉ”动画的初体验（让一个div一直旋转）"><a href="#ヾ-๑╹◡╹-ﾉ”动画的初体验（让一个div一直旋转）" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”动画的初体验（让一个div一直旋转）"></a>ヾ(๑╹◡╹)ﾉ”动画的初体验（让一个div一直旋转）</h5><blockquote>
-<p>看写好的动画效果</p>
-</blockquote>
-<p><img src="\images\动画旋转-1582361435595.gif" alt="动画旋转"></p>
-<p><strong>问题：</strong> 动画和过渡的区别？</p>
-<ul>
-<li><p>过渡必须要触发条件（如：hover），动画则可以不需要（浏览器一刷新就动起来）</p>
-</li>
-<li><p>过渡最后肯定会停下来，动画则可以一直运行下去</p>
-</li>
-<li><p>过渡需要两个状态的不同，动画则可以设置多个状态</p>
-<blockquote>
-<p> <strong>效果</strong>上来说相似，但是动画比过渡跟复杂点</p>
-</blockquote>
-</li>
-</ul>
-<h5 id="ヾ-๑╹◡╹-ﾉ”-把刚刚的hover效果改写成一刷新就一直旋转动画"><a href="#ヾ-๑╹◡╹-ﾉ”-把刚刚的hover效果改写成一刷新就一直旋转动画" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 把刚刚的hover效果改写成一刷新就一直旋转动画"></a>ヾ(๑╹◡╹)ﾉ” 把刚刚的hover效果改写成一刷新就一直旋转动画</h5><blockquote>
-<p>动画的实现两步：</p>
-<ol>
-<li>定义动画：@keyframes 动画名{}</li>
-<li>使用/调用动画：给对应的元素设置animation属性</li>
-</ol>
-</blockquote>
-<h3 id="定义动画（-keyframes）"><a href="#定义动画（-keyframes）" class="headerlink" title="定义动画（@keyframes）"></a>定义动画（@keyframes）</h3><blockquote>
-<p>使用动画前首先要定义一个动画出来，需要通过<strong>动画序列</strong>设计动画→说白了就是控制动画的不同状态</p>
-</blockquote>
-<p><strong>需求：(动画需要考虑状态)</strong></p>
-<ol>
-<li>默认盒子宽度200，让盒子变宽为800的动画。</li>
-<li>默认盒子宽高都是200，先让盒子变宽为800，再让盒子变高为800</li>
-</ol>
-<p><strong>代码：</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 1. 定义一个动画 */</span></span><br><span class="line"><span class="comment">/* 定义动画方式一：from-to两个状态 */</span></span><br><span class="line">@<span class="keyword">keyframes</span> dong &#123;</span><br><span class="line">    <span class="comment">/* 动画的开始状态 */</span></span><br><span class="line">    <span class="selector-tag">from</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 动画的结束状态 */</span></span><br><span class="line">    <span class="selector-tag">to</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">600px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*--------------------------*/</span></span><br><span class="line"><span class="comment">/* 定义动画方式二：百分比设置多个状态 */</span></span><br><span class="line">@<span class="keyword">keyframes</span> bian &#123;</span><br><span class="line">    0% &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    50% &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">600px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    100% &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">600px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">600px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="使用-调用动画（animation）"><a href="#使用-调用动画（animation）" class="headerlink" title="使用/调用动画（animation）"></a>使用/调用动画（animation）</h3><blockquote>
-<p>其实animation属性是一个复合属性，一共是8个属性的连写形式</p>
-</blockquote>
-<p><strong>设置元素宽度变长的动画</strong></p>
-<p><strong>代码：</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">使用动画相关的属性：</span></span><br><span class="line"><span class="comment">1、动画的名字：animation-name------------------------------------</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="selector-tag">animation-name</span>: <span class="selector-tag">big</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">2、动画的持续时间（一次动画持续的时间）：animation-duration------------------------------------</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="selector-tag">animation-duration</span>: 1<span class="selector-tag">s</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">3、动画的延时：animation-delay------------------------------------</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="selector-tag">animation-delay</span>: 1<span class="selector-tag">s</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">4、动画的效果：animation-timing-function------------------------------------</span></span><br><span class="line"><span class="comment">取值：</span></span><br><span class="line"><span class="comment">1、ease：先慢——》再快——》再慢</span></span><br><span class="line"><span class="comment">2、linear：匀速</span></span><br><span class="line"><span class="comment">3、steps()：分步进行</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="selector-tag">animation-timing-function</span>: <span class="selector-tag">linear</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">5、动画的执行次数：animation-iteration-count------------------------------------</span></span><br><span class="line"><span class="comment">取值：</span></span><br><span class="line"><span class="comment">1、次数（默认是1次）</span></span><br><span class="line"><span class="comment">2、infinite：无限次</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="selector-tag">animation-iteration-count</span>: <span class="selector-tag">infinite</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">6、指定动画的方向（按照什么顺序执行）：animation-direction------------------------------------</span></span><br><span class="line"><span class="comment">取值：</span></span><br><span class="line"><span class="comment">1、normal：正常（从from——》to）</span></span><br><span class="line"><span class="comment">2、reverse：反转（从to——》from）</span></span><br><span class="line"><span class="comment">3、alternate：交替（from——》to——》from——》to——》from....）</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="selector-tag">animation-direction</span>: <span class="selector-tag">alternate</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">7、动画结束的状态：animation-fill-mode------------------------------------</span></span><br><span class="line"><span class="comment">取值：</span></span><br><span class="line"><span class="comment">1、backwards：（默认值）回到开始状态结束</span></span><br><span class="line"><span class="comment">2、forwards：动画在结束状态结束</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="selector-tag">animation-fill-mode</span>: <span class="selector-tag">forwards</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">8、动画执行的状态：animation-play-state------------------------------------</span></span><br><span class="line"><span class="comment">取值：</span></span><br><span class="line"><span class="comment">1、默认执行</span></span><br><span class="line"><span class="comment">2、paused：暂停动画（一般给hover状态加，让鼠标移入之后暂停动画）</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="selector-tag">animation-play-state</span>: <span class="selector-tag">paused</span>;</span><br></pre></td></tr></table></figure>
-<h5 id="————————-1"><a href="#————————-1" class="headerlink" title="————————"></a>————————</h5><p><strong>注意点：</strong></p>
-<ul>
-<li>一般使用动画用的都是animation的连写形式<ul>
-<li>连写形式中只需要注意第一个时间是动画持续时间，第二个时间是延时时间即可。此外没任何顺序问题</li>
-<li>一般只设置动画的名字、动画的持续时间、动画的次数即可</li>
-</ul>
-</li>
-</ul>
-<h5 id="ヾ-๑╹◡╹-ﾉ”-大风车案例"><a href="#ヾ-๑╹◡╹-ﾉ”-大风车案例" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 大风车案例"></a>ヾ(๑╹◡╹)ﾉ” 大风车案例</h5><blockquote>
-<p>本质上来说就是让一个盒子旋转，而盒子里面有四个扇叶</p>
-</blockquote>
-<p><img src="\images\大风车效果-1582361435598.gif" alt="大风车效果" style="zoom:80%;"></p>
-<h5 id="ヾ-๑╹◡╹-ﾉ”-小鱼游动案例"><a href="#ヾ-๑╹◡╹-ﾉ”-小鱼游动案例" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 小鱼游动案例"></a>ヾ(๑╹◡╹)ﾉ” 小鱼游动案例</h5><p>一共有两个动画</p>
-<blockquote>
-<ol>
-<li><p>小鱼原地抖动的动画（通过切换背景位置设置完成效果，类似于翻书动画）</p>
-<p><img src="\images\dou-1582361435598.gif" alt="dou" style="zoom:80%;"></p>
-</li>
-<li><p>小鱼游动的动画</p>
-<p><img src="\images\you-1582361435598.gif" alt="you" style="zoom:80%;"></p>
-</li>
-</ol>
-</blockquote>
-<h5 id="—————————–"><a href="#—————————–" class="headerlink" title="—————————–"></a>—————————–</h5><h2 id="背景图片大小（background-size）"><a href="#背景图片大小（background-size）" class="headerlink" title="背景图片大小（background-size）"></a>背景图片大小（background-size）</h2><blockquote>
-<p>通过css可以设置背景图片的大小</p>
-</blockquote>
-<p><strong>语法：</strong> </p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background-size</span>: 背景图片宽度  背景图片高度：</span><br></pre></td></tr></table></figure>
-<p><strong>取值（分别设置的是宽度和高度）：</strong></p>
-<ul>
-<li><p>数字+px</p>
-</li>
-<li><p>百分比（相对于盒子的宽高百分比）</p>
-</li>
-<li><p>关键字</p>
-<p><strong>默认尺寸：</strong></p>
-<p><img src="\images\1.1.png" alt="1.1"></p>
-<ul>
-<li><p><strong>contain（包含）</strong>：将背景图片等比例缩放，直到<strong>不会超出盒子</strong>的最大</p>
-<blockquote>
-<p>直到宽度或者高度中<strong>有一个和盒子相等</strong>，并且背景图片<strong>没有溢出部分</strong>即止。</p>
-</blockquote>
-<p><img src="\images\1.3.png" alt="1.3"></p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p><strong>cover（覆盖）</strong>：将背景图片等比例缩放，直到<strong>填满整个盒子刚好</strong>没有空白</p>
-<blockquote>
-<p>直到宽度或者高度中<strong>有一个和盒子相等</strong>，并且<strong>背景图片填充满盒子</strong>如果有溢出部分则被隐藏</p>
-</blockquote>
-<p><img src="\images\1.2-1550336266662.png" alt="1.2"></p>
-</li>
-</ul>
-<hr>
-<p><strong>注意点：</strong></p>
-<ul>
-<li><p>在设置<code>background-size</code> 和<code>background</code>连写的时候注意覆盖问题</p>
-<ul>
-<li><p>要么单独写的写在连写的下面</p>
-</li>
-<li><p>要么单独写的写在连写的里面</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 连写完整版中，也有background-size属性，注意连写的覆盖问题 */</span></span><br><span class="line">background：color image repeat attachment position / size</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<h5 id="————————-2"><a href="#————————-2" class="headerlink" title="————————"></a>————————</h5><h2 id="css3私有前缀（了解）"><a href="#css3私有前缀（了解）" class="headerlink" title="css3私有前缀（了解）"></a>css3私有前缀（了解）</h2><blockquote>
-<p>私有前缀是为了兼容老版本浏览器的写法，</p>
-<ul>
-<li><p>对于新版本的浏览器无需添加。</p>
-</li>
-<li><p>如果需要兼容老版本浏览器，需要在css3属性前添加私有前缀。</p>
-</li>
-</ul>
-</blockquote>
-<p><strong>私有前缀的作用：</strong>兼容老版本浏览器</p>
-<p><strong>常见不同浏览器的私有前缀代码：</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">谷歌、苹果浏览器：<span class="selector-tag">-webkit-</span></span><br><span class="line">火狐浏览器：<span class="selector-tag">-moz-</span></span><br><span class="line"><span class="selector-tag">IE</span>浏览器：<span class="selector-tag">-ms-</span></span><br><span class="line">欧朋浏览器：<span class="selector-tag">-o-</span></span><br></pre></td></tr></table></figure>
-<h5 id="ヾ-๑╹◡╹-ﾉ”-演示不同浏览器支持的情况"><a href="#ヾ-๑╹◡╹-ﾉ”-演示不同浏览器支持的情况" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 演示不同浏览器支持的情况"></a>ヾ(๑╹◡╹)ﾉ” 演示不同浏览器支持的情况</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: pink;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">100px</span> auto;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*谷歌浏览器和safari浏览器的前缀 -webkit-*/</span></span><br><span class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">    <span class="comment">/*火狐浏览器的前缀 -moz-*/</span></span><br><span class="line">    <span class="attribute">-moz-transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">    <span class="comment">/*ie浏览器的前缀 -ms-*/</span></span><br><span class="line">    <span class="attribute">-ms-transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">    <span class="comment">/*opera浏览器的前缀 -o-*/</span></span><br><span class="line">    <span class="attribute">-o-transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">    <span class="comment">/*规范阶段的标准写法*/</span></span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>注意：</strong> 对于移动端来说，大多都是ios和Android的操作系统，浏览器内核都是webkit内核，所以前缀只需要写<code>-webkit-</code> 即可</p>
-<blockquote>
-<p>真正开发中，前缀会通过自动化打包工具自动添加，不用程序员一个个加。</p>
-</blockquote>
-<h5 id="————————————————"><a href="#————————————————" class="headerlink" title="————————————————"></a>————————————————</h5><h1 id="移动web的初识"><a href="#移动web的初识" class="headerlink" title="移动web的初识"></a>移动web的初识</h1><blockquote>
-<p>移动web说白了就是移动设备中的web网页</p>
-</blockquote>
-<h2 id="移动web的开发现状"><a href="#移动web的开发现状" class="headerlink" title="移动web的开发现状"></a>移动web的开发现状</h2><blockquote>
-<p>移动web开发与传统pc端开发的异同点</p>
-</blockquote>
-<h3 id="浏览器不同（兼容性不同）"><a href="#浏览器不同（兼容性不同）" class="headerlink" title="浏览器不同（兼容性不同）"></a>浏览器不同（兼容性不同）</h3><p><img src="\images\浏览器的现状.png" alt="浏览器的现状" style="zoom:50%;"></p>
-<blockquote>
-<p>其实：国内的UC、QQ、百度等手机浏览器大部分都是根据webkit修改过来的内核，国内暂无自主研发的内核。</p>
-</blockquote>
-<ul>
-<li><p>pc端：浏览器种类很多，如果需要做兼容性处理，需要添加很多不同的私有前缀</p>
-</li>
-<li><p>移动端：兼容移动端主流浏览器，一般只需要兼容webkit内核即可，前缀只需要添加<code>-webkit-</code> 即可</p>
-<blockquote>
-<p>并且手机更新换代很快，所以浏览器版本都比较新，对于css3新属性的支持会更好</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="屏幕尺寸不同（适配不同）"><a href="#屏幕尺寸不同（适配不同）" class="headerlink" title="屏幕尺寸不同（适配不同）"></a>屏幕尺寸不同（适配不同）</h3><ul>
-<li><p>pc端：屏幕较大，一般通过版心进行不同屏幕的适配</p>
-</li>
-<li><p>移动端：移动端设备屏幕尺寸较小，并且碎片化严重（即有很多不同尺寸的屏幕）</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">Android</span>设备有多种分辨率：480<span class="selector-tag">x800</span>, 480<span class="selector-tag">x854</span>, 540<span class="selector-tag">x960</span>, 720<span class="selector-tag">x1280</span>，1080<span class="selector-tag">x1920</span>等，现在还有2<span class="selector-tag">K</span>，4<span class="selector-tag">k</span>屏等</span><br><span class="line"><span class="selector-tag">iPhone</span>主要分辨率有：640<span class="selector-tag">x960</span>, 640<span class="selector-tag">x1136</span>, 750<span class="selector-tag">x1334</span>, 1242<span class="selector-tag">x2208</span>等</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>  此时再使用版心适配就不合适了，需要使用一些特殊的布局方法→流式布局等</p>
-<p><strong><em>其实移动web和之前学习的pc端开发也是有相同点的：使用的技术本质上一样，还是HTML/CSS/JavaScript的技术。所以同学们学习上并不难，只需要学习几种其他的布局方式即可</em></strong></p>
-<h2 id="移动端调试方法"><a href="#移动端调试方法" class="headerlink" title="移动端调试方法"></a>移动端调试方法</h2><blockquote>
-<p>针对于移动web开发，肯定需要在移动端上调试网页，那怎么操作呢？</p>
-</blockquote>
-<ul>
-<li><p>真机调试：使用真正的手机进行访问</p>
-<blockquote>
-<p>等后期学到服务器内容，我们就能会：</p>
-<ul>
-<li><p>使用本地服务器，在局域网中通过手机访问服务器上网页</p>
-</li>
-<li><p>使用外网服务器，在互联网中通过手机访问</p>
-</li>
-</ul>
-</blockquote>
-</li>
-<li><p>模拟器调试：Chrome DevTools（谷歌浏览器）的模拟手机调试</p>
-<blockquote>
-<p>手机设备五花八门，屏幕尺寸都大不一样，尤其是安卓端，给我们的页面预览带来了一些麻烦。在实际工作中，作为开发者一般不可能有足够的设备让我们去测试（<strong>除了测试部门</strong> ），即便有，效率也特别的低，因此开发者一般都是通过浏览器的手机模拟器来模拟不同的设备。</p>
-</blockquote>
-</li>
-</ul>
-<p>当然，虽然开发阶段一般使用模拟器调试，但是在实际工作中，最终还是需要通过真机调试的。</p>
-<h2 id="视口（viewport）（了解）"><a href="#视口（viewport）（了解）" class="headerlink" title="视口（viewport）（了解）"></a>视口（viewport）（了解）</h2><blockquote>
-<p>先把vscode默认设置的视口参数去掉。</p>
-</blockquote>
-<p>在浏览器中存在视口的概念。视口其实就是浏览器显示页面内容的屏幕区域。可以把视口当做是盛放网页的容器。</p>
-<p><strong>问题：</strong> 写四个div宽度为320px，都左浮动，在pc端中是一行中显示的，那么在手机端比如：iPhone4打开猜猜看效果是怎样的？</p>
-<blockquote>
-<p>还是一行中显示，此时html标签的宽高是980px。</p>
-<p>原因是因为手机端的页面打开的时候会在视口中打开，而视口宽度默认是980px正好可以放下</p>
-</blockquote>
-<h5 id="————————————–"><a href="#————————————–" class="headerlink" title="————————————–"></a>————————————–</h5><h3 id="布局视口（layout-viewport）"><a href="#布局视口（layout-viewport）" class="headerlink" title="布局视口（layout viewport）"></a>布局视口（layout viewport）</h3><blockquote>
-<p>用于在手机上查看pc端网页的问题</p>
-</blockquote>
-<p><strong>历史原因</strong>：乔布斯提出了布局视口的概念</p>
-<ul>
-<li>早期，只有pc端网页，早期网页的版心为980px，手机端如果直接查看980px宽度的网页，布局可能会乱掉，效果不好，用户体验极差！！</li>
-<li>后来乔布斯为了让移动端可以看到完整的网页，发明了布局视口这个概念！<strong>解决移动端查看pc端网页的问题</strong> </li>
-</ul>
-<p><strong>布局视口</strong>：相当于盛放网页的容器。并且一般宽度默认是980px。</p>
-<blockquote>
-<p>当使用布局视口980来打开网页时，此时早期的网页可以放下，布局不会乱掉。</p>
-</blockquote>
-<p><img src="\images\布局视口.png" alt="布局视口" style="zoom:70%;"></p>
-<p><strong>布局视口作用的过程：</strong></p>
-<p>移动端打开网页——》先把网页在980px的布局视口中打开（完美展示，不会乱掉）——》再把布局视口中的完美布局效果，缩放显示在移动端中（让用户可以在屏幕中看到全部的网页）</p>
-<h3 id="理想视口（ideal-viewport）"><a href="#理想视口（ideal-viewport）" class="headerlink" title="理想视口（ideal viewport）"></a>理想视口（ideal viewport）</h3><blockquote>
-<p>其实就是布局视口的一个理想尺寸，也是实际开发移动web的常见设置。</p>
-</blockquote>
-<p>刚刚我们发现了，如果布局视口是980px这种较大的情况</p>
-<ul>
-<li>此时为了看到网页的全貌会缩小网页的效果，此时文字看起来很小</li>
-<li>此时如果为了看清实际的文字放大网页的效果，这时候网页又看不完全，需要左右滑动</li>
-</ul>
-<p>那么有没有一种情况：不缩放网页的同时，既可以文字正常阅读，又可以网页显示完全不用左右滑动呢？→理想视口</p>
-<p><strong>理想视口：</strong>当布局视口的尺寸等于设备屏幕的尺寸，才是理想视口</p>
-<blockquote>
-<p>当然，为了保证在理想视口中网页效果不乱，我们之后布局的空间也会按照理想视口的空间进行布局，毕竟现在我们已经大量针对于移动端布局的网页了</p>
-</blockquote>
-<blockquote>
-<p>那就剩一个问题了，我们如何设置布局视口的尺寸就等于当前设备屏幕的尺寸呢？→通过视口标签设置</p>
-</blockquote>
-<h3 id="meta标签的设置视口（记住）"><a href="#meta标签的设置视口（记住）" class="headerlink" title="meta标签的设置视口（记住）"></a>meta标签的设置视口（记住）</h3><blockquote>
-<p>通过meta标签可以进行视口的设置</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">属性</th>
-<th style="text-align:center">解释说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">width</td>
-<td style="text-align:center">设置视口的宽度，device-width表示当前设备的宽度</td>
-</tr>
-<tr>
-<td style="text-align:center">user-scalable</td>
-<td style="text-align:center">设置用户是否可以缩放，yes/no</td>
-</tr>
-<tr>
-<td style="text-align:center">initial-scale</td>
-<td style="text-align:center">初识缩放比</td>
-</tr>
-<tr>
-<td style="text-align:center">maximum-scale</td>
-<td style="text-align:center">最大缩放比</td>
-</tr>
-<tr>
-<td style="text-align:center">minimum-scale</td>
-<td style="text-align:center">最小缩放比</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>之后开发专门针对于移动端网页时，一般都需要加上以上meta标签，这算是移动web的<strong>第一个注意点</strong>。</p>
-</blockquote>
-<h5 id="————————————–-1"><a href="#————————————–-1" class="headerlink" title="————————————–"></a>————————————–</h5><blockquote>
-<p>接下来我们看下移动web中第二个指的注意点的点</p>
-</blockquote>
-<h2 id="二倍图"><a href="#二倍图" class="headerlink" title="二倍图"></a>二倍图</h2><blockquote>
-<p>在移动端开发的时候会使用到二倍图，这也是移动web中需要同学们注意的第二个注意的。</p>
-<p>但是如果想理解二倍图，首先我们先认识几个移动端中相关概念</p>
-</blockquote>
-<h3 id="物理像素"><a href="#物理像素" class="headerlink" title="物理像素"></a>物理像素</h3><blockquote>
-<p>我们平时买手机的时候可以看到手机的各项参数，比如：iphone6/7/8手机的分辨率是750*1334</p>
-<p>你所看到的这个<strong>分辨率其实指的就是物理像素</strong></p>
-</blockquote>
-<p><strong>物理像素：</strong>指的是屏幕中显示的最小颗粒，是真实在物理现实中存在的。</p>
-<blockquote>
-<p>说白了就是拿放大镜看到的屏幕中的一个一个<strong>发光点</strong></p>
-</blockquote>
-<p><img src="\images\显微镜放大屏幕物理像素.gif" alt="显微镜放大屏幕物理像素"></p>
-<p><img src="\images\物理像素.jpeg" alt="物理像素" style="zoom:40%;"></p>
-<blockquote>
-<p>我们知道了物理像素就是屏幕中的小小发光点之后，其实肯定有同学会联想到：css中的px，这个px我们平时也叫做css中的像素，那么物理像素和css像素px之间存在什么关系呢？？</p>
-</blockquote>
-<p>css像素px是我们在css中常见的长度单位。但是现在需要<strong>注意</strong>：</p>
-<ul>
-<li><p>之前pc端：1个px确实等于1个物理像素——》1个px对应于1个屏幕发光点</p>
-</li>
-<li><p>现在移动端：1个px可能等于多个物理像素——》1个px对应于多个屏幕发光点</p>
-<blockquote>
-<p><strong>比如：</strong>iphone6/7/8分辨率（物理像素）：750*1334——》一行只能放375px的盒子——》1px==2个物理像素（发光点）</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="移动端屏幕的特点"><a href="#移动端屏幕的特点" class="headerlink" title="移动端屏幕的特点"></a>移动端屏幕的特点</h3><blockquote>
-<p>说到这里，有同学可能会觉得：为啥到移动端屏幕和pc端屏幕的设备像素比不能都是1:1的关系了呢？1:1不行嘛？</p>
-</blockquote>
-<ul>
-<li>其实pc端和早期的手机屏幕确实设备像素比是1:1，即：1px==1个物理像素（发光点）</li>
-<li>后面随着技术的发展，出现了比如：<strong>Retina（视网膜屏幕）</strong>显示技术，可以将把更多的物理像素点压缩至一块屏幕，即1px==多个物理像素（发光点），从而达到更高的分辨率，并提高屏幕显示的细腻程度。</li>
-</ul>
-<p><img src="\images\屏幕放大图.jpg" alt="屏幕放大图"></p>
-<p><img src="\images\2x-1582543853038.png" alt="2x"></p>
-<blockquote>
-<p>当物理像素发光点越密集，所以效果更加清晰细腻，因此现在越来越多的移动端屏幕都会选择1px对应多个物理像素的情况了。现在常见的情况就是1px==2个物理像素</p>
-</blockquote>
-<blockquote>
-<p>那么既然随着技术的发展，1px==多个物理像素点，那么对于开发者来说的影响到底是什么呢？？此时我们在移动端中使用图片就会受到影响。</p>
-</blockquote>
-<h3 id="二倍图的出现"><a href="#二倍图的出现" class="headerlink" title="二倍图的出现"></a>二倍图的出现</h3><blockquote>
-<p>图片也存在分辨率的概念</p>
-</blockquote>
-<p><strong>图片分辨率：</strong>指的是图片在水平垂直方向需要显示多少个物理像素（小光点）</p>
-<blockquote>
-<p>比如：图片的分辨率是 <code>200*200</code>，其实表示图片显示在屏幕中需要用到 <code>200*200</code> 的<strong>物理像素（发光点）</strong> </p>
-</blockquote>
-<h5 id="———————"><a href="#———————" class="headerlink" title="———————-"></a>———————-</h5><p><strong>存在的问题：以 <code>200*200</code>分辨率 的图片显示为例</strong></p>
-<ul>
-<li>之前在pc端中：图片需要 <code>200*200</code> 的发光点——》pc端中：1px==1发光点——》所以此时css中我们需要 <code>200*200</code> px即可</li>
-<li>但是现在移动端中：图片需要 <code>200*200</code> 的发光点——》iphone4中：1px==2发光点——》所以此时css中需要 <code>100*100</code> px即可</li>
-</ul>
-<hr>
-<p><strong>问题：</strong> 如果我们需要在移动端iphone4中显示 <strong><code>100*100</code> px</strong>的图片，其实我们需要多大分辨率的图片才行？？？</p>
-<p><img src="\images\移动端实际效果截图.jpg" alt="移动端实际效果截图"></p>
-<p><img src="\images\二倍图对比.png" alt="移动端实际效果截图"></p>
-<p><strong>结论：</strong> 在移动端如：iphone4中，需要显示多少px的图片，为了清晰不被强行放大，其实需要使用宽高为2倍分辨率的图片才是最好的效果。而这使用的宽高为2倍分辨率大小的图片，称之为<strong>2倍图</strong></p>
-<blockquote>
-<p>实际开发中现在还存在2倍图、3倍图、4倍图之类的，但是具体使用哪一种看公司的需要或者要求</p>
-</blockquote>
-<p><strong>命名特点：</strong></p>
-<ul>
-<li><a href="mailto:xxxxx@2x.png" target="_blank" rel="noopener">xxxxx@2x.png</a>：二倍图</li>
-<li><a href="mailto:xxxxx@3x.png" target="_blank" rel="noopener">xxxxx@3x.png</a>：三倍图</li>
-</ul>
-<p><strong>注意点：</strong> 二倍图是我们移动web开发时的第二个代码注意点，总结来说：一般移动web开发图片常是二倍图，使用的时候记得把图片的分辨率除以二设置px即可。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/06/1-移动webday01笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="棠哥">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/master.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="梦溪笔谈">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/06/1-移动webday01笔记/" itemprop="url">移动webday01笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-06T10:00:01+08:00">
-                2020-02-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  2.7k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  9
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="《部分案例代码下载》"><a href="#《部分案例代码下载》" class="headerlink" title="《部分案例代码下载》"></a><a href="/download/移动webday01部分案例代码.zip">《部分案例代码下载》</a></h2><h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><blockquote>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 能够使用2d转换属性</li>
-<li style="list-style: none"><input type="checkbox"> 能够认识3d坐标系</li>
-<li style="list-style: none"><input type="checkbox"> 能够使用3d转换属性</li>
-<li style="list-style: none"><input type="checkbox"> 能够理解<code>perspective</code>和 <code>transform-style：preserve-3d</code>的区别</li>
-</ul>
-<p>。。。。。。</p>
-</blockquote>
-<p><strong>理解上课的知识点……</strong></p>
-<h1 id="CSS3的补充知识点"><a href="#CSS3的补充知识点" class="headerlink" title="CSS3的补充知识点"></a>CSS3的补充知识点</h1><h2 id="过渡的基本认识（transition）"><a href="#过渡的基本认识（transition）" class="headerlink" title="过渡的基本认识（transition）"></a>过渡的基本认识（transition）</h2><blockquote>
-<p>而在CSS3中，提供了一个过渡属性，可以让元素的样式慢慢的变化（过渡的效果）</p>
-</blockquote>
-<p><strong>需求：</strong> 一个div默认200*200，背景红色，要求鼠标移入之后宽度 <strong>变成800px</strong></p>
-<blockquote>
-<p>之前设置元素hover的样式，元素的样式是瞬间改变的，很突然。</p>
-<p>如果需要让元素样式的变成慢慢的进行，可以怎么做呢？此时可以使用过渡来完成。</p>
-</blockquote>
-<ul>
-<li>慢慢的变化是过渡的效果，除了宽度之外，其他属性都可以进行过渡，如颜色等</li>
-</ul>
-<p><strong>代码：</strong> <code>transition:1s;</code></p>
-<p><strong>注意点：</strong></p>
-<ul>
-<li><p>过渡属性给需要过渡的元素本身加</p>
-</li>
-<li><p>过渡一般需要有两个状态不同的样式才能有效果</p>
-<ul>
-<li>默认状态</li>
-<li>hover状态</li>
-</ul>
-<blockquote>
-<p>默认一般只要两个状态的样式不同，都会有过渡效果（有特殊情况）</p>
-</blockquote>
-</li>
-<li><p>transition属性设置在不同状态中，效果不同。</p>
-<ul>
-<li><p>如果写在默认状态中，那么鼠标移入移出时都有过渡效果</p>
-</li>
-<li><p>如果写在hover状态中，那么鼠标只有移入时有过渡效果，移出时没有。</p>
-<blockquote>
-<p>因为移出时hover选择器不能选中元素，此时元素上没有transition属性了，所以移出时就没有过渡效果了。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="2D转换（transform）"><a href="#2D转换（transform）" class="headerlink" title="2D转换（transform）"></a>2D转换（transform）</h2><blockquote>
-<p>transform: 转换，是CSS3最具颠覆性的几个特性之一，既可以用于2D转换，也可以用于3D转换。</p>
-<p>transform：2D转换，元素在平面上实现缩放、旋转、平移等操作</p>
-</blockquote>
-<h3 id="缩放（scale）"><a href="#缩放（scale）" class="headerlink" title="缩放（scale）"></a>缩放（scale）</h3><p><img src="/images/2d转换缩放.gif" alt="2d转换缩放"></p>
-<blockquote>
-<p>缩放可以让元素进行放大或者缩小</p>
-</blockquote>
-<p><strong>需求：</strong>此时需要让一个<strong>有内容的div</strong>鼠标移入之后，让<strong>整体宽度放大</strong>为两倍，可以怎么实现呢？（如果包括内容也缩放呢？）</p>
-<p><strong>方案：</strong></p>
-<ul>
-<li><p>可以hover之后设置width为原来的两倍</p>
-<blockquote>
-<p>但是div里面的内容并不会缩放</p>
-</blockquote>
-</li>
-<li><p>可以使用<code>transform:scaleX(2);</code> 对div进行缩放，并且div的<strong>内容也会缩放</strong></p>
-</li>
-</ul>
-<p><strong>代码：</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 让宽度进行缩放 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">scaleX</span>(2);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 让高度进行缩放 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">scaleY</span>(2);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 如果需要同时设置宽度和高度进行缩放 */</span></span><br><span class="line"><span class="selector-tag">transform</span><span class="selector-pseudo">:scale(2</span>,2);</span><br><span class="line"><span class="comment">/* 特殊情况：或者只设置一个，表示宽高都是一个比例 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">scale</span>(2);</span><br></pre></td></tr></table></figure>
-<p><strong>取值：</strong></p>
-<ul>
-<li><p>没有单位的数字（倍数）</p>
-<blockquote>
-<p>如果scale中是一个值，这个值表示宽高都是这个比例进行缩放</p>
-</blockquote>
-</li>
-</ul>
-<h5 id="ヾ-๑╹◡╹-ﾉ”-图片放大效果（类似于穷游网的效果）"><a href="#ヾ-๑╹◡╹-ﾉ”-图片放大效果（类似于穷游网的效果）" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 图片放大效果（类似于穷游网的效果）"></a>ヾ(๑╹◡╹)ﾉ” 图片放大效果（类似于穷游网的效果）</h5><blockquote>
-<p>如：<a href="https://www.qyer.com/" target="_blank" rel="noopener">穷游网</a></p>
-<p>hover时，让其中的img图片放大</p>
-</blockquote>
-<blockquote>
-<p>缩放效果默认是以元素中心点放大的，如果需要让元素以特殊的位置放大，可以怎么做呢？</p>
-</blockquote>
-<h3 id="转换原点（transform-origin）"><a href="#转换原点（transform-origin）" class="headerlink" title="转换原点（transform-origin）"></a>转换原点（transform-origin）</h3><blockquote>
-<p>通过transform-origin可以设置转换的中心原点</p>
-</blockquote>
-<p><strong>代码：</strong> <code>transform-origin:center center;</code></p>
-<p><strong>取值：</strong></p>
-<blockquote>
-<p>原点的取值和之前学习的background-position是一样的</p>
-</blockquote>
-<ul>
-<li>方位名词：<ul>
-<li>水平：left、center、right</li>
-<li>垂直：top、center、bottom</li>
-</ul>
-</li>
-<li>坐标点：以元素左上角为原点，水平向右是x轴，垂直向下是y轴</li>
-</ul>
-<h5 id="————————"><a href="#————————" class="headerlink" title="————————"></a>————————</h5><h3 id="旋转（rotate）"><a href="#旋转（rotate）" class="headerlink" title="旋转（rotate）"></a>旋转（rotate）</h3><p><img src="/images//2d转换旋转.gif" alt="2d转换旋转"></p>
-<blockquote>
-<p>通过rotate可以让元素进行旋转</p>
-</blockquote>
-<p><strong>代码：</strong> <code>transform:rotate(90deg);</code></p>
-<p><strong>取值：</strong></p>
-<ul>
-<li><p>角度（deg）</p>
-<blockquote>
-<p>顺时针进行转动</p>
-</blockquote>
-</li>
-</ul>
-<p><strong>注意点：</strong></p>
-<ul>
-<li>也可以通过 <code>transform-origin</code> 属性来设置旋转原点</li>
-</ul>
-<h5 id="ヾ-๑╹◡╹-ﾉ”-扑克牌效果"><a href="#ヾ-๑╹◡╹-ﾉ”-扑克牌效果" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 扑克牌效果"></a>ヾ(๑╹◡╹)ﾉ” 扑克牌效果</h5><h3 id="平移（translate）"><a href="#平移（translate）" class="headerlink" title="平移（translate）"></a>平移（translate）</h3><p><img src="/images/2d转换平移.gif" alt="2d转换平移"></p>
-<blockquote>
-<p>可以通过translate让元素进行平移</p>
-</blockquote>
-<p><strong>代码：</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 沿着x轴进行平移 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">translateX</span>(100<span class="selector-tag">px</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 沿着y轴进行平移 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">translateY</span>(100<span class="selector-tag">px</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 沿着x轴和y轴进行移动 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">translate</span>(100<span class="selector-tag">px</span>,100<span class="selector-tag">px</span>);</span><br></pre></td></tr></table></figure>
-<p><strong>取值：</strong></p>
-<ul>
-<li><p>可以是具体的数值</p>
-</li>
-<li><p>可以是百分比</p>
-<blockquote>
-<p>百分比是相对于自身元素的百分比！</p>
-</blockquote>
-</li>
-</ul>
-<p><strong>注意点：</strong></p>
-<ul>
-<li>translate平移不会影响其他盒子的位置，是相对于自己原来的位置进行移动的，类似于相对定位的效果。</li>
-</ul>
-<h5 id="ヾ-๑╹◡╹-ﾉ”-让一个盒子水平垂直都居中"><a href="#ヾ-๑╹◡╹-ﾉ”-让一个盒子水平垂直都居中" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 让一个盒子水平垂直都居中"></a>ヾ(๑╹◡╹)ﾉ” 让一个盒子水平垂直都居中</h5><blockquote>
-<p>之前我们使用定位居中时，是具体通过margin完成效果的。但是当元素的宽高不确定，如由内容撑开时，使用translate会更好点。</p>
-</blockquote>
-<h5 id="ヾ-๑╹◡╹-ﾉ”-2d转换的小结"><a href="#ヾ-๑╹◡╹-ﾉ”-2d转换的小结" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 2d转换的小结"></a>ヾ(๑╹◡╹)ﾉ” 2d转换的小结</h5><h3 id="转换的合写问题"><a href="#转换的合写问题" class="headerlink" title="转换的合写问题"></a>转换的合写问题</h3><blockquote>
-<p>之前每种转换都是分开实现的，如果需要让一个盒子同时实现三种转换，就需要使用到转换的合写形式</p>
-</blockquote>
-<p><strong>需求：</strong> 一个盒子在页面中居中，当hover到body时，让一个盒子往右平移400px，同时旋转360度，同时宽高都缩小为原来的0.5倍，可以怎么实现？</p>
-<blockquote>
-<p>transform属性只能写一个，所以需要设置一个transform的连写形式。</p>
-</blockquote>
-<p><strong>代码：</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">translateX</span>(1000<span class="selector-tag">px</span>) <span class="selector-tag">rotate</span>(360<span class="selector-tag">deg</span>) <span class="selector-tag">scale</span>(0<span class="selector-class">.5</span>);</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如果先写rotate（360deg）可不可以呢？</p>
-</blockquote>
-<p><strong>注意点：</strong></p>
-<ul>
-<li><p>transform属性值之间需要以空格隔开</p>
-</li>
-<li><p>rotate属性如果写在第一个，rotate会让坐标轴也一起旋转，坐标轴改变之后会平移的方向！</p>
-<blockquote>
-<p>写在<strong>第一个的属性值会影响坐标轴</strong></p>
-</blockquote>
-</li>
-</ul>
-<h5 id="————————-1"><a href="#————————-1" class="headerlink" title="————————"></a>————————</h5><h2 id="3D转换（transform）"><a href="#3D转换（transform）" class="headerlink" title="3D转换（transform）"></a>3D转换（transform）</h2><blockquote>
-<p>transform不仅仅可以进行2D转换（平面内转换），还可以进行3D转换（立体的空间）</p>
-</blockquote>
-<p><strong>问题：</strong> 2D和3D的区别是什么呢？</p>
-<blockquote>
-<p>2D是一个平面，一个平面坐标系（只有x轴和y轴）</p>
-<p>3D是一个立体的空间，一个立体坐标系（有x轴和y轴还有z轴）</p>
-<p>说白了，3D就比2D多出了一个<strong>z轴</strong></p>
-</blockquote>
-<h3 id="3D坐标系"><a href="#3D坐标系" class="headerlink" title="3D坐标系"></a>3D坐标系</h3><blockquote>
-<p>实际在浏览器中有一个立体坐标系，用x、y、z分别表示空间的3个维度，三条轴互相垂直。</p>
-</blockquote>
-<p><strong>x轴：</strong> 水平向右是x轴正方向</p>
-<p><strong>y轴：</strong> 垂直向下是y轴正方向</p>
-<p><strong>z轴：</strong> 做浏览器平面垂直向脸方向是z轴正方向</p>
-<p><img src="/images/zbz.png" alt=""></p>
-<p><img src="/images/3d坐标系.png" alt="3d坐标系"></p>
-<h3 id="透视-视距（perspective）"><a href="#透视-视距（perspective）" class="headerlink" title="透视/视距（perspective）"></a>透视/视距（perspective）</h3><p><strong>需求：</strong> 让图片沿着x轴进行旋转，此时会立体旋转，看一下此时图片是往里还是往外旋转的？</p>
-<blockquote>
-<p>因为电脑显示屏是一个2D的平面，所以直接沿着x轴立体旋转看不出效果。</p>
-<p>此时可以通过perspective属性，可以定义眼睛距视图的距离，单位是px。</p>
-</blockquote>
-<p><strong><code>perspective</code> 属性给父元素设置，可以让其子元素有近大远小的效果。</strong></p>
-<p><strong>代码：</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">perspective</span>：1000<span class="selector-tag">px</span>;</span><br></pre></td></tr></table></figure>
-<p><strong>其实和生活中的场景是一样的：</strong></p>
-<p><img src="/images/per1.jpg" alt="per1"></p>
-<blockquote>
-<p>路实质都是一样的宽的，那怎么看出来那边更近呢？近的会大一点，远的会小一点。</p>
-</blockquote>
-<p><img src="/images/per2.jpg" alt="per2"></p>
-<blockquote>
-<p>房子实质都是一样大的，那怎么看出来右边的更近，左边的更远？近大远小</p>
-</blockquote>
-<p><code>perspective</code> 的取值：设置的是观察者眼睛离元素初始平面（z=0平面）的距离</p>
-<ul>
-<li>如果取值越大，表示距离越远，近大远小的效果就越不明显</li>
-<li>如果取值越小，表示距离越近，近大远小的效果就越明显</li>
-</ul>
-<blockquote>
-<p>一般不会给太小，适中即可。</p>
-</blockquote>
-<p>接下来我们主要学习最常用的两个3d转换~</p>
-<h3 id="3d旋转（rotate）"><a href="#3d旋转（rotate）" class="headerlink" title="3d旋转（rotate）"></a>3d旋转（rotate）</h3><blockquote>
-<p>rotate直接设置就是2D平面效果。</p>
-<p>当rotate沿着x轴或者y轴进行旋转时，此时就是3D的效果</p>
-</blockquote>
-<p><strong>代码：</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 让元素沿着x轴旋转 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">rotateX</span>(45<span class="selector-tag">deg</span>);</span><br></pre></td></tr></table></figure>
-<p><img src="/images/3d旋转rotateX.gif" alt="3d旋转rotateX" style="zoom:50%;"></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 让元素沿着y轴旋转 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">rotateY</span>(45<span class="selector-tag">deg</span>);</span><br></pre></td></tr></table></figure>
-<p><img src="/images/3d旋转rotateY.gif" alt="3d旋转rotateY" style="zoom:50%;"></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 让元素沿着z轴旋转，就是默认平面的效果，即rotate() */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">rotateZ</span>(45<span class="selector-tag">deg</span>);</span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">rotate</span>(45<span class="selector-tag">deg</span>);</span><br></pre></td></tr></table></figure>
-<p><img src="/images/3d旋转rotateZ.gif" alt="3d旋转rotateZ" style="zoom:50%;"></p>
-<h5 id="ヾ-๑╹◡╹-ﾉ”-演示3D旋转沿着不同轴旋转的效果"><a href="#ヾ-๑╹◡╹-ﾉ”-演示3D旋转沿着不同轴旋转的效果" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 演示3D旋转沿着不同轴旋转的效果"></a>ヾ(๑╹◡╹)ﾉ” 演示3D旋转沿着不同轴旋转的效果</h5><blockquote>
-<p>具体旋转的方向可以使用左手法则来判断：</p>
-<ol>
-<li>掏出你的左手，左手握拳，伸出大拇指</li>
-<li>让大拇指的指向轴的正方向</li>
-<li>此时四指弯曲的方向就是图片旋转的方向</li>
-</ol>
-</blockquote>
-<p>当然，其实具体效果不用纠结，写出代码看效果调试即可！</p>
-<h3 id="3d平移（translate）"><a href="#3d平移（translate）" class="headerlink" title="3d平移（translate）"></a>3d平移（translate）</h3><blockquote>
-<p>translate属性如果沿着z轴平移也会有3D的效果</p>
-</blockquote>
-<p><strong>代码：</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 沿着z轴的正方向移动100px */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">translateZ</span>(45<span class="selector-tag">px</span>);</span><br></pre></td></tr></table></figure>
-<h4 id="3d移动的合写："><a href="#3d移动的合写：" class="headerlink" title="3d移动的合写："></a>3d移动的合写：</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 如果需要同时设置三个轴方向的平移，可以写成 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">translateX</span>(100<span class="selector-tag">px</span>) <span class="selector-tag">translateY</span>(100<span class="selector-tag">px</span>) <span class="selector-tag">translateZ</span>(100<span class="selector-tag">px</span>);</span><br><span class="line"><span class="comment">/* 也可以使用3d移动的简写方法 */</span></span><br><span class="line"><span class="selector-tag">transform</span><span class="selector-pseudo">:translate3d(x</span>,<span class="selector-tag">y</span>,<span class="selector-tag">z</span>);</span><br></pre></td></tr></table></figure>
-<h5 id="ヾ-๑╹◡╹-ﾉ”-3D立方体效果"><a href="#ヾ-๑╹◡╹-ﾉ”-3D立方体效果" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 3D立方体效果"></a>ヾ(๑╹◡╹)ﾉ” 3D立方体效果</h5><p><strong>先是立方体的铺垫：</strong></p>
-<blockquote>
-<p>当一个元素rotateY(45deg)是什么效果？z轴指向哪里？</p>
-<p>当一个元素rotateY(90deg)是什么效果？z轴指向哪里？</p>
-</blockquote>
-<ul>
-<li>面朝向的方向就是z轴，旋转时，面朝的方向永远是z轴</li>
-</ul>
-<p>实现六个面的思路：</p>
-<ol>
-<li>先让这个面旋转到对应的方向</li>
-<li>往z轴（面朝向）平移到对应的距离即可</li>
-</ol>
-<h5 id="————————-2"><a href="#————————-2" class="headerlink" title="————————"></a>————————</h5><p><strong>整体思路：</strong></p>
-<blockquote>
-<p>整体是一个ul，每一个面是li标签，然后让每一个面沿着不同方向旋转之后移动，组合成立方体</p>
-<p>按照下方思路图一步步完成</p>
-</blockquote>
-<p><img src="/images/立方体思路2.gif" alt="3d正方体思路"></p>
-<h3 id="transform-style"><a href="#transform-style" class="headerlink" title="transform-style"></a>transform-style</h3><blockquote>
-<p>其实perspective是一个伪3D：说白了只是多个一个近大远小的效果而已，但是本质上来说还是一个平面元素</p>
-<p>如果需要真正实现3D空间的转换，需要通过transform-style来实现</p>
-</blockquote>
-<p><strong>演示：</strong> ul里面两个li100*400，让第二个li标签沿着x轴旋转45deg，此时旋转ul盒子看的效果</p>
-<p><strong>默认效果：</strong></p>
-<blockquote>
-<p>默认效果来说发现li标签变短了，看不出3d效果</p>
-</blockquote>
-<p><img src="/images/默认.gif" alt="默认"></p>
-<p><strong>设置perspective：1000px之后：</strong></p>
-<blockquote>
-<p>设置视距之后只是有了近大远小的视觉效果，但是实际旋转看发现还是一个纸片人，不是真的3d元素</p>
-</blockquote>
-<p><img src="/images/perspective.gif" alt="perspective"></p>
-<p><strong>设置<code>transform-style: preserve-3d;</code> 之后：</strong></p>
-<blockquote>
-<p>设置了<code>transform-style: preserve-3d;</code> 元素变成3d元素，是真的3d元素</p>
-</blockquote>
-<p><img src="/images/preserve-3d.gif" alt="preserve-3d"></p>
-<p><strong>代码：</strong> <code>transform-style:preserve-3d;</code></p>
-<p><strong>取值：</strong></p>
-<ul>
-<li>flat：子元素在2d平面中显示（默认值）</li>
-<li>preserve-3d：子元素在3D空间中显示</li>
-</ul>
-<p><strong>注意点：</strong></p>
-<ul>
-<li>transform-style属性同样也是给父元素添加的！！</li>
-</ul>
-<p><strong>transform-style与perspective的区别：</strong></p>
-<ul>
-<li>perspective仅仅只是在平面中模拟出近大远小的效果，并不是真正的3D元素。</li>
-<li>transform-style可以让其子元素在一个3D空间中布局，是真正的3D元素</li>
-<li>以后真正需要完成真正的3D元素需要使用transform-style属性。如果需要有近大远小的视觉效果，可以加上perspective属性。</li>
-</ul>
-<h5 id="————————-3"><a href="#————————-3" class="headerlink" title="————————"></a>————————</h5><h5 id="ヾ-๑╹◡╹-ﾉ”-作业：3D导航效果"><a href="#ヾ-๑╹◡╹-ﾉ”-作业：3D导航效果" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 作业：3D导航效果"></a>ヾ(๑╹◡╹)ﾉ” 作业：3D导航效果</h5><p><img src="/images/3d导航.gif" alt="3d导航"></p>
-<p><strong>思路：</strong> </p>
-<ul>
-<li>整体是ul，每个导航是1（100*50），li有两个面，使用a标签表示</li>
-<li>通过定位先让两个a重叠，然后通过转换改变a标签面的位置<ul>
-<li><code>web前端</code>首先需要沿着x轴旋转90deg，然后沿着z轴直走高度的一半（25）</li>
-<li><code>传智播客</code> 直接沿着z轴直走高度的一半（25）</li>
-</ul>
-</li>
-</ul>
-<p><img src="/images/3d导航思路.gif" alt=""></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/06/1-移动webday02笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1400,10 +562,177 @@
 
       
         
-          
-            <h1 id="二倍图对比"><a href="#二倍图对比" class="headerlink" title="二倍图对比"></a>二倍图对比</h1><p>  </p><h1>一倍图</h1><br>  <img src="/images/100.jpg" width="100px" alt="" border="1"><br>  <h1>二倍图</h1><br>  <img src="/images/200.jpg" width="100px" alt="" border="1 "><p></p>
+          <h1 id="二倍图对比"><a href="#二倍图对比" class="headerlink" title="二倍图对比"></a>二倍图对比</h1>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/06/4-二倍图对比/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/06/1-移动webday01笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="棠哥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/master.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="梦溪笔谈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/06/1-移动webday01笔记/" itemprop="url">移动webday01笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-06T10:00:01+08:00">
+                2020-02-06
+              </time>
+            
+
+            
+
+            
+          </span>
 
           
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.7k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  9
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="《部分案例代码下载》"><a href="#《部分案例代码下载》" class="headerlink" title="《部分案例代码下载》"></a><a href="/download/移动webday01部分案例代码.zip">《部分案例代码下载》</a></h2><h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 能够使用2d转换属性</li>
+<li style="list-style: none"><input type="checkbox"> 能够认识3d坐标系</li>
+<li style="list-style: none"><input type="checkbox"> 能够使用3d转换属性</li>
+<li style="list-style: none"><input type="checkbox"> 能够理解<code>perspective</code>和 <code>transform-style：preserve-3d</code>的区别</li>
+</ul>
+<p>。。。。。。</p>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/06/1-移动webday01笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1551,8 +880,7 @@
 
       
         
-          
-            <h2 id="ps的基本操作"><a href="#ps的基本操作" class="headerlink" title="ps的基本操作"></a>ps的基本操作</h2><blockquote>
+          <h2 id="ps的基本操作"><a href="#ps的基本操作" class="headerlink" title="ps的基本操作"></a>ps的基本操作</h2><blockquote>
 <p>作为前端工程师来说，对于PS的使用要求是：</p>
 <ul>
 <li>会量尺寸</li>
@@ -1560,118 +888,13 @@
 </ul>
 <p>前端的重点在代码的编写，按照设计图完成一个页面。</p>
 </blockquote>
-<h3 id="首选项设置"><a href="#首选项设置" class="headerlink" title="首选项设置"></a>首选项设置</h3><blockquote>
-<p>在使用PS之前，需要先把首选项设置好</p>
-</blockquote>
-<p><strong>步骤：</strong></p>
-<ol>
-<li><code>ctrl+k</code> 打开首选项</li>
-<li>选择<code>单位与标尺</code></li>
-<li>将单位都设置为<code>像素</code></li>
-</ol>
-<p><img src="\images\css2.png" alt="css2"></p>
-<h3 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h3><blockquote>
-<p>使用PS操作图片的第一步：打开图片</p>
-</blockquote>
-<ul>
-<li>直接把图片拖拽进PS即可</li>
-<li>或者点击左上角 <code>文件</code> → <code>打开</code> →选择对应文件即可</li>
-</ul>
-<h3 id="放大图片"><a href="#放大图片" class="headerlink" title="放大图片"></a>放大图片</h3><blockquote>
-<p>有时候需要把图片放大方便量取</p>
-</blockquote>
-<ul>
-<li>点击左侧工具栏中的<strong>缩放工具（Z）</strong><img src="\images\css3.png" alt="css3"></li>
-<li><strong>使用快捷键</strong><ul>
-<li>放大：<code>ctrl +</code></li>
-<li>缩小：<code>ctrl -</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="拖动图片"><a href="#拖动图片" class="headerlink" title="拖动图片"></a>拖动图片</h3><blockquote>
-<p>有时候放大之后需要拖动图片查看其它部分</p>
-</blockquote>
-<ul>
-<li>选择左侧工具栏中的<strong>抓手工具（H）</strong><img src="\images\css4-1550476689994.png" alt="css4"></li>
-<li><strong>使用快捷键</strong><ul>
-<li>按住空格不放手，然后鼠标左键按下拖动即可</li>
-</ul>
-</li>
-</ul>
-<h3 id="量颜色"><a href="#量颜色" class="headerlink" title="量颜色"></a>量颜色</h3><blockquote>
-<p>前端必会的PS操作之一：量颜色</p>
-</blockquote>
-<ol>
-<li>选择左侧工具栏的<strong>吸管工具（I）</strong></li>
-</ol>
-<p><img src="\images\xi.png" alt="xi"></p>
-<ol start="2">
-<li><p>此时光标变成可以吸管，在需要量颜色的地方点击一下</p>
-<p><img src="\images\css6.png" alt="css6"></p>
-</li>
-<li><p>点击之后，鼠标右击，选择 <code>拷贝颜色的十六进制代码</code> ，最后在代码中 <code>ctrl + v</code> 即可</p>
-</li>
-</ol>
-<h3 id="量尺寸"><a href="#量尺寸" class="headerlink" title="量尺寸"></a>量尺寸</h3><blockquote>
-<p>前端必会的PS操作之一：量尺寸</p>
-</blockquote>
-<ol>
-<li><p>选择左侧工具栏的<strong>切片工具（C）</strong></p>
-<blockquote>
-<p>注意：默认显示的效果可能是剪裁工具，需要有以下操作</p>
-</blockquote>
-<p><img src="\images\tools.png" alt="tools"></p>
-</li>
-<li><p>把需要量取的部分切片出来</p>
-<p><img src="\images\ps1.png" alt="ps1"></p>
-</li>
-<li><p>双击切好的切片，查看量取的尺寸即可</p>
-<p><img src="\images\ps2.png" alt="ps2"></p>
-</li>
-</ol>
-<h3 id="切图操作"><a href="#切图操作" class="headerlink" title="切图操作"></a>切图操作</h3><blockquote>
-<p>一般工作中图片都是UI设计好的，但是如果公司不够大，UI妹子人手不够忙不过来，可能需要自己切图</p>
-</blockquote>
-<ol>
-<li><p>选择切片：使用切片工具把图片切成切片</p>
-<p><img src="\images\ps1.png" alt="ps1"></p>
-</li>
-<li><p>导出切片：按下 <code>ctrl + shift + alt + s</code>  （三键 + s）</p>
-</li>
-<li><p>在弹出窗口设置保存图片格式，点击储存</p>
-<p><img src="\images\ps3.png" alt="ps3"></p>
-</li>
-<li><p>选择 <code>切片</code> → <code>选中的切片</code></p>
-<p><img src="\images\切片保存1.png" alt=""></p>
-</li>
-<li><p>选择 <code>设置</code> → <code>其他</code> →<code>将图片放进文件夹</code> 前面的勾去掉</p>
-<p><img src="\images\切片保存2.png" alt=""></p>
-<p><img src="\images\切片保存3.png" alt=""></p>
-</li>
-<li><p>最后点击确定，点击保存即可</p>
-</li>
-</ol>
-<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><h3 id="导出有透明的图片（了解）"><a href="#导出有透明的图片（了解）" class="headerlink" title="导出有透明的图片（了解）"></a>导出有透明的图片（了解）</h3><blockquote>
-<p>导出有透明的图片，需要保证图片是PSD格式的图片，并且UI有设置对应的透明图片</p>
-<p>PSD图片：是由多张透明的图片重叠出来的，一张完整的PSD图片是由很多只图层构成的</p>
-</blockquote>
-<p><strong>步骤：</strong></p>
-<ol>
-<li><p>把PSD格式图片拖入PS中 </p>
-</li>
-<li><p>选择<strong>移动工具（V）</strong> <img src="\images\PS4.png" alt="PS4"> 按住 <code>ctrl</code> 点击需要导出的透明图片（有颜色的部分）</p>
-</li>
-<li><p>在图层面板中找到<strong>高亮的部分</strong>，右击选择<code>转换智能对象</code></p>
-<p><img src="\images\ps5.png" alt="ps5"></p>
-</li>
-<li><p><strong>双击</strong>转换后图层前方的小图标，点击确定</p>
-<p><img src="\images\ps6.png" alt="ps6"></p>
-</li>
-<li><p>此时透明的图片已经选取好了，再按下 <code>ctrl + shift + alt + s</code>  （三键 + s）<strong>直接保存</strong>即可</p>
-</li>
-</ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/20/1-PS的基本操作/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1819,394 +1042,16 @@
 
       
         
-          
-            <h2 id="CSS3相关属性拓展（了解）"><a href="#CSS3相关属性拓展（了解）" class="headerlink" title="CSS3相关属性拓展（了解）"></a>CSS3相关属性拓展（了解）</h2><blockquote>
+          <h2 id="CSS3相关属性拓展（了解）"><a href="#CSS3相关属性拓展（了解）" class="headerlink" title="CSS3相关属性拓展（了解）"></a>CSS3相关属性拓展（了解）</h2><blockquote>
 <p>css这个语言是随着时间的推进，有不同的版本迭代更新的，而css3是对css2的一些效果的完善和拓充，新增了很多新功能。但是值得注意的是css3因为的新版本，一些老版本（低版本的浏览器是不支持的！！）这样就存在一些兼容性问题。</p>
 </blockquote>
-<p><strong>遇到问题可以查阅相关的CSS手册</strong> </p>
-<h2 id="结构伪类选择器"><a href="#结构伪类选择器" class="headerlink" title="结构伪类选择器"></a>结构伪类选择器</h2><blockquote>
-<p>通过标签的结构关系找到对应的元素</p>
-<p>如果现在想找到ul标签下面的第几个li标签的时候，除了使用class大法之外，还可以使用结构伪类选择器完成效果</p>
-</blockquote>
-<p><strong>如果要找第一个li标签呢？</strong></p>
-<ul>
-<li><p><strong>E:first-child</strong> ：选择其父元素的第一个子元素</p>
-<blockquote>
-<p>还会判断是否是E元素，是才设置样式。（既是E标签，又是父元素的第一个子元素）</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">比如：li：first-child &#123;css样式&#125;</span><br><span class="line">查找过程如下：</span><br><span class="line">1、首先找到li </span><br><span class="line">2、找li标签的父元素</span><br><span class="line">3、找父元素第一个子元素</span><br><span class="line">4、看这个子元素是不是li</span><br><span class="line">	1、是-》加样式</span><br><span class="line">	2、不是-》不加样式</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<p><strong>如果要找最后一个li标签呢？</strong></p>
-<ul>
-<li><p><strong>E:last-child</strong> ：选择其父元素的最后一个子元素</p>
-<blockquote>
-<p>还会判断是否是E元素，是才设置样式。（既是E标签，又是父元素的最后一个子元素）</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">比如：li：last-child &#123;css样式&#125;</span><br><span class="line">查找过程如下：</span><br><span class="line">1、首先找到li </span><br><span class="line">2、找li标签的父元素</span><br><span class="line">3、找父元素最后一个子元素</span><br><span class="line">4、看这个子元素是不是li</span><br><span class="line">	1、是-》加样式</span><br><span class="line">	2、不是-》不加样式</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<p><strong>如果要找第12个li标签呢？</strong></p>
-<ul>
-<li><p><strong>E:nth-child(n)</strong> ： 选择其父元素的第n个子元素</p>
-<blockquote>
-<p>还会判断是否是E元素，是才设置样式（既是E元素，又是父元素的第n个子元素）</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">比如：li：nth-child(n) &#123;css样式&#125;</span><br><span class="line">查找过程如下：</span><br><span class="line">1、首先找到li </span><br><span class="line">2、找li标签的父元素</span><br><span class="line">3、找父元素第n个子元素</span><br><span class="line">4、看这个子元素是不是li</span><br><span class="line">	1、是-》加样式</span><br><span class="line">	2、不是-》不加样式</span><br></pre></td></tr></table></figure>
-<p><strong>注意：</strong></p>
-<p>针对于nth-child括号中可以写一个带n的式子，n的取值范围是<strong>0~正无穷的整数</strong></p>
-<ul>
-<li>找到所有的<strong>偶数</strong>：<code>2n/even</code></li>
-<li>找到所有的<strong>奇数</strong>：<code>2n-1 / 2n+1 /odd</code></li>
-<li>找到<strong>前12个</strong>：<code>-n+12</code></li>
-<li>……(更多新奇的玩法等待你的发现)</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p><strong>如果要找倒数第12个li标签呢？</strong></p>
-<ul>
-<li><p><strong>E:nth-last-child(n)</strong>：选择其父元素的<strong>倒数</strong>第n个子元素</p>
-<blockquote>
-<p>判断是否是E元素。（既是E元素，又是父元素的<strong>倒数</strong>第n个子元素）</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">比如：li：nth-last-child(n) &#123;css样式&#125;</span><br><span class="line">查找过程如下：</span><br><span class="line">1、首先找到li </span><br><span class="line">2、找li标签的父元素</span><br><span class="line">3、找父元素倒数第n个子元素</span><br><span class="line">4、看这个子元素是不是li</span><br><span class="line">	1、是-》加样式</span><br><span class="line">	2、不是-》不加样式</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<p><strong>如果列表中混入了奸细，怎么才能找到第一个li标签呢？</strong></p>
-<ul>
-<li><p><strong>E:nth-of-type(n)</strong>：选择其父元素的第n个E元素</p>
-<blockquote>
-<p>选择的是子元素中的第n个E元素</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">比如：li：nth-of-type(n) &#123;css样式&#125;</span><br><span class="line">查找过程如下：</span><br><span class="line">1、首先找到li </span><br><span class="line">2、找li标签的父元素</span><br><span class="line">3、找父元素的第n个E元素</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="盒子阴影-边框阴影（box-shadow）"><a href="#盒子阴影-边框阴影（box-shadow）" class="headerlink" title="盒子阴影/边框阴影（box-shadow）"></a>盒子阴影/边框阴影（box-shadow）</h2><blockquote>
-<p>类似于京东网页上，有盒子阴影的效果，同样可以通过CSS3中的box-shadow完成</p>
-</blockquote>
-<p><strong>代码：</strong> <code>box-shadow: 10px 10px 10px #aaa;</code></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-shadow:水平阴影 垂直阴影 模糊距离 阴影尺寸 阴影颜色  内/外阴影；</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">值</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">h-shadow</td>
-<td style="text-align:center">必需。水平阴影的位置。允许负值。</td>
-</tr>
-<tr>
-<td style="text-align:center">v-shadow</td>
-<td style="text-align:center">必需。垂直阴影的位置。允许负值。</td>
-</tr>
-<tr>
-<td style="text-align:center">blur</td>
-<td style="text-align:center">可选。模糊距离。</td>
-</tr>
-<tr>
-<td style="text-align:center">spread</td>
-<td style="text-align:center">可选。阴影的尺寸。</td>
-</tr>
-<tr>
-<td style="text-align:center">color</td>
-<td style="text-align:center">可选。阴影的颜色。</td>
-</tr>
-<tr>
-<td style="text-align:center">inset</td>
-<td style="text-align:center">可选。将外部阴影 (outset) 改为内部阴影。</td>
-</tr>
-</tbody>
-</table>
-<p><strong>注意点：</strong></p>
-<ul>
-<li>前两个属性是必须写的。其余的可以省略。</li>
-<li>默认阴影是外部阴影，但是不能设置outset这个属性值。如果想要内部阴影，请设置inset </li>
-</ul>
-<h2 id="文字阴影（text-shadow）"><a href="#文字阴影（text-shadow）" class="headerlink" title="文字阴影（text-shadow）"></a>文字阴影（text-shadow）</h2><blockquote>
-<p>在CSS3中除了可以给盒子设置阴影效果之外，还可以给文字设置阴影效果</p>
-</blockquote>
-<p><strong>代码：</strong> <code>text-shadow: 5px 5px 10px #000;</code></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-shadow</span>:水平位置 垂直位置 模糊距离 阴影颜色;</span><br></pre></td></tr></table></figure>
-<p><strong>取值：</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">值</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">h-shadow</td>
-<td style="text-align:center">必需。水平阴影的位置。允许负值。</td>
-</tr>
-<tr>
-<td style="text-align:center">v-shadow</td>
-<td style="text-align:center">必需。垂直阴影的位置。允许负值。</td>
-</tr>
-<tr>
-<td style="text-align:center">blur</td>
-<td style="text-align:center">可选。模糊的距离。</td>
-</tr>
-<tr>
-<td style="text-align:center">color</td>
-<td style="text-align:center">可选。阴影的颜色。</td>
-</tr>
-</tbody>
-</table>
-<p><strong>有趣的案例：</strong></p>
-<blockquote>
-<p>可以给一个文字设置多个阴影效果，中间使用逗号 “,” 进行连接。</p>
-</blockquote>
-<p><img src="\images\aotu.png" alt="aotu"></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*凸出来文字*/</span></span><br><span class="line"><span class="selector-tag">text-shadow</span>: 1<span class="selector-tag">px</span> 1<span class="selector-tag">px</span> 1<span class="selector-tag">px</span> <span class="selector-id">#000</span>,<span class="selector-tag">-1px</span> <span class="selector-tag">-1px</span> 1<span class="selector-tag">px</span> <span class="selector-id">#fff</span>;</span><br><span class="line"><span class="comment">/*凹进去文字*/</span></span><br><span class="line"><span class="selector-tag">text-shadow</span>: <span class="selector-tag">-1px</span> <span class="selector-tag">-1px</span> 1<span class="selector-tag">px</span> <span class="selector-id">#000</span>,1<span class="selector-tag">px</span> 1<span class="selector-tag">px</span> 1<span class="selector-tag">px</span> <span class="selector-id">#fff</span>;</span><br><span class="line"><span class="comment">/* 背景颜色和文字颜色为#666即可 */</span></span><br></pre></td></tr></table></figure>
-<h2 id="背景图片大小（background-size）"><a href="#背景图片大小（background-size）" class="headerlink" title="背景图片大小（background-size）"></a>背景图片大小（background-size）</h2><blockquote>
-<p>有时候可以设置背景图片的大小</p>
-</blockquote>
-<p><strong>取值（分别设置的是宽度和高度）：</strong></p>
-<ul>
-<li><p>数字+px</p>
-</li>
-<li><p>百分比（相对于盒子的宽高百分比）</p>
-</li>
-<li><p>关键字</p>
-<p><strong>默认尺寸：</strong></p>
-<p><img src="\images\1.1.png" alt="1.1"></p>
-<ul>
-<li><ul>
-<li><p><strong>contain</strong>：将背景图片等比例缩放，直到<strong>不会超出盒子</strong>的最大</p>
-<blockquote>
-<p>直到宽度或者高度中<strong>有一个和盒子相等</strong>，并且背景图片<strong>没有溢出部分</strong>即止。</p>
-</blockquote>
-<p><img src="\images\1.3.png" alt="1.3"></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p><strong>cover</strong>：将背景图片等比例缩放，直到<strong>填满整个盒子</strong>没有空白</p>
-<blockquote>
-<p>直到宽度或者高度中<strong>有一个和盒子相等</strong>，并且<strong>背景图片填充满盒子</strong>如果有溢出部分则被隐藏</p>
-</blockquote>
-<p><img src="\images\1.2-1550336266662.png" alt="1.2"></p>
-</li>
-</ul>
-<p><strong>注意点：</strong></p>
-<ul>
-<li><p>在设置<code>background-size</code> 和<code>background</code>连写的时候注意覆盖问题</p>
-<ul>
-<li><p>要么单独写的写在连写的下面</p>
-</li>
-<li><p>要么单独写的写在连写的里面</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 连写完整版中，也有background-size属性，注意连写的覆盖问题 */</span></span><br><span class="line">background：color image repeat attachment position / size</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="背景渐变"><a href="#背景渐变" class="headerlink" title="背景渐变"></a>背景渐变</h2><blockquote>
-<p>给一个元素设置 <strong>background-image</strong> 属性时，不仅可以通过url指定一张图片，还可以通过线性渐变(linear-gradient)或者径向渐变(radial-gradient)设置一张颜色渐变的背景图。</p>
-</blockquote>
-<h3 id="线性渐变"><a href="#线性渐变" class="headerlink" title="线性渐变"></a>线性渐变</h3><blockquote>
-<p>沿着一个方向颜色进行线性渐变</p>
-</blockquote>
-<p><strong>代码：</strong><code>background-image: linear-gradient(green,yellow);</code> <strong>（默认从上往下渐变）</strong></p>
-<p><img src="\images\2.9.png" alt="2.9"></p>
-<p><strong>取值：</strong></p>
-<ul>
-<li><p><strong>第一个值</strong>：可以是<strong>方向</strong>或者<strong>角度</strong>（<strong>可以省略</strong>）</p>
-<ul>
-<li><p><strong>方向</strong></p>
-<ul>
-<li><p><strong>to top</strong>：  渐变从下到上。相当于: <strong>0deg</strong> </p>
-<p><code>background-image: linear-gradient(to top,green,yellow);</code></p>
-<p><img src="\images\2.1-1550376839085.png" alt="2.1"></p>
-</li>
-<li><p><strong>to right</strong>：  渐变从左到右。相当于: <strong>90deg</strong> </p>
-<p><code>background-image: linear-gradient(to right,green,yellow);</code></p>
-<p><img src="\images\2.2.png" alt="2.2"></p>
-</li>
-<li><p><strong>to bottom</strong>：  渐变从上到下。相当于: <strong>180deg</strong>（<strong>默认值</strong>）</p>
-<p><code>background-image: linear-gradient(to bottom,green,yellow);</code></p>
-<p><img src="\images\2.3.png" alt="2.3"></p>
-</li>
-<li><p><strong>to left</strong>：  渐变为从右到左。相当于: <strong>270deg</strong> </p>
-<p><code>background-image: linear-gradient(to left,green,yellow);</code></p>
-<p><img src="\images\2.4.png" alt="2.4"></p>
-</li>
-</ul>
-</li>
-<li><p><strong>角度（效果对比上图）</strong></p>
-<ul>
-<li><strong>0deg</strong>：渐变从下往上</li>
-<li><strong>90deg</strong>：渐变从左往右</li>
-<li><strong>180deg</strong>：渐变从上往下（默认值）</li>
-<li><strong>270deg</strong>：渐变从右往左</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p><strong>第二个值</strong>：渐变的<strong>起止颜色</strong>（<strong>可以写两个或者多个</strong>）</p>
-<p><code>background-image: linear-gradient(to right,red,green,blue);</code></p>
-<p>第一个是开始颜色，在最左端是纯红色</p>
-<p>中间是绿色，所以最中间是纯绿色</p>
-<p>最后一个是结束颜色，在最右端是纯蓝色</p>
-<p>（之后每对颜色之间就是渐变）</p>
-<p><img src="\images\2.5.png" alt="2.5"></p>
-</li>
-</ul>
-<p>  纯颜色的点默认是<strong>等分线段</strong>的。</p>
-<p>  <img src="\images\线性渐变.png" alt="线性渐变"></p>
-<blockquote>
-<p>如果不想默认等分线段，想手动设置纯颜色的位置怎么做呢？</p>
-</blockquote>
-<p>  可以在颜色的后面加上<strong>对应的长度</strong>（类似于线段的坐标）</p>
-<ul>
-<li><p>可以在颜色的后面写上对应的长度</p>
-<ul>
-<li><p>具体的数值</p>
-<blockquote>
-<p>开始是第一个颜色，结束时最后一个颜色</p>
-<p>然后把纯色放到对应的坐标上，再渐变即可</p>
-</blockquote>
-<p><code>background-image: linear-gradient(to right,red 100px,green 200px,blue 300px);</code></p>
-<p><img src="\images\2.6.png" alt="2.6"></p>
-<p><img src="\images\线性渐变2.png" alt="线性渐变2"></p>
-</li>
-<li><p>百分比（原理同上）</p>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong>拓展（了解）</strong>：</p>
-<blockquote>
-<p>如果要求是几个纯色块呢？</p>
-</blockquote>
-<p><img src="\images\2.8.png" alt="2.8"></p>
-<p>其实，可以分析：</p>
-<ul>
-<li>开始是红色</li>
-<li>结束时蓝色</li>
-<li>中间一半的地方红色和蓝色（50%，先红色，在蓝色）</li>
-</ul>
-<p><code>background-image: linear-gradient(to right,red 50%,blue 50%);</code></p>
-<blockquote>
-<p>那如果是多个色块会不会呢？</p>
-</blockquote>
-<p><img src="\images\2.7-1550380975824.png" alt="2.7"></p>
-<p><code>background-image: linear-gradient(to right,red 25%,blue 25%,blue 50%,red 50%,red 75%,blue 75%);</code></p>
-<h3 id="径向渐变"><a href="#径向渐变" class="headerlink" title="径向渐变"></a>径向渐变</h3><blockquote>
-<p>由中心向四周渐变（圆或者椭圆的效果）</p>
-</blockquote>
-<p><strong>代码：</strong> <code>background-image: radial-gradient(green,yellow);</code> （<strong>默认从中点向四周渐变</strong>）</p>
-<p><img src="\images\3.1.png" alt="3.1"></p>
-<p><strong>取值：</strong></p>
-<ul>
-<li><p><strong>第一个值</strong>：可以是<strong>形状</strong>或者<strong>半径</strong>（<strong>可以省略</strong>）</p>
-<ul>
-<li><p><strong>形状</strong>：</p>
-<ul>
-<li><p><strong>circle</strong>：圆形</p>
-<p><code>background-image: radial-gradient(circle,yellow,blue);</code></p>
-<p><img src="\images\3.2.png" alt="3.2"></p>
-</li>
-<li><p><strong>ellipse</strong>：椭圆（默认值，要求盒子是一个矩形才会有效果，正方形时是圆形的效果）</p>
-<p><code>background-image: radial-gradient(ellipse,yellow,blue);</code></p>
-<p><img src="\images\3.3.png" alt="3.3"></p>
-</li>
-</ul>
-</li>
-<li><p><strong>半径</strong></p>
-<blockquote>
-<p>指的是渐变范围的半径</p>
-</blockquote>
-<ul>
-<li><p>设置两个相同的半径是一个正圆</p>
-<p><code>background-image: radial-gradient(100px 100px,yellow,blue);</code></p>
-<p><img src="\images\3.4.png" alt="3.4"></p>
-</li>
-<li><p>设置两个不同半径是一个椭圆</p>
-<p><code>background-image: radial-gradient(300px 100px,yellow,blue);</code></p>
-<p><img src="\images\3.5.png" alt="3.5"></p>
-</li>
-</ul>
-</li>
-<li><p><strong>圆形的位置</strong></p>
-<blockquote>
-<p>默认渐变的圆心在盒子的中点上，如果想改变圆心的位置怎么做呢？</p>
-</blockquote>
-<p><strong>代码：</strong> <code>background-image: radial-gradient(100px 100px at 100px 100px,yellow,blue);</code> </p>
-<p>设置圆心的位置：<code>at 100px 100px</code> 指的是盒子的坐标点</p>
-<p><img src="\images\3.6.png" alt="3.6"></p>
-</li>
-</ul>
-</li>
-<li><p><strong>第二个值</strong>：渐变的<strong>起止颜色</strong>（<strong>可以写两个或者多个</strong>）</p>
-<p>线性渐变一样的套路。</p>
-</li>
-<li><p><strong>拓展（了解）</strong>：</p>
-<blockquote>
-<p>可以完成一个立体小球的效果</p>
-</blockquote>
-<p><img src="\images\3.7.png" alt="3.7"></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 立体球的效果 */</span></span><br><span class="line"><span class="comment">/*先变成一个圆*/</span></span><br><span class="line"><span class="selector-tag">border-radius</span>: 50%;</span><br><span class="line"><span class="comment">/*给球设置一个背景颜色*/</span></span><br><span class="line"><span class="selector-tag">background-color</span>: <span class="selector-tag">pink</span>;</span><br><span class="line"><span class="comment">/*设置渐变的圆心，然后使用半透明的渐变效果*/</span></span><br><span class="line"><span class="selector-tag">background-image</span>: <span class="selector-tag">radial-gradient</span>(<span class="selector-tag">at</span> 100<span class="selector-tag">px</span> 100<span class="selector-tag">px</span>,<span class="selector-tag">rgba</span>(0,0,0,0),<span class="selector-tag">rgba</span>(0,0,0,<span class="selector-class">.8</span>));</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="多背景写法"><a href="#多背景写法" class="headerlink" title="多背景写法"></a>多背景写法</h2><blockquote>
-<p>在CSS3中，可以做到给一个盒子设置多个背景图片</p>
-</blockquote>
-<p>使用背景的连写形式，通过逗号分隔不同的背景图片即可。</p>
-<p><strong>注意点：</strong></p>
-<ul>
-<li>一个元素可以设置多个背景图片</li>
-<li>每组背景属性之间需要通过逗号隔开</li>
-<li>如果多组背景图片之间存在层叠关系，则前面的会覆盖在后面的背景图上</li>
-<li>如果需要设置背景颜色，则背景颜色需要设置到最后一组中。</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background</span>:  <span class="selector-tag">url</span>(1<span class="selector-class">.jpg</span>) <span class="selector-tag">no-repeat</span> <span class="selector-tag">left</span> <span class="selector-tag">top</span>,</span><br><span class="line">			<span class="selector-tag">url</span>(2<span class="selector-class">.jpg</span>)  <span class="selector-tag">no-repeat</span> <span class="selector-tag">right</span> <span class="selector-tag">bottom</span>,</span><br><span class="line">			url(3.gif) no-repeat center center/100px 100px;</span><br></pre></td></tr></table></figure>
-<h2 id="元素本身透明（opacity）"><a href="#元素本身透明（opacity）" class="headerlink" title="元素本身透明（opacity）"></a>元素本身透明（opacity）</h2><blockquote>
-<p>除了可以让背景颜色透明之外，还可以让元素整体（包括里面的内容）一起透明</p>
-</blockquote>
-<p><strong>代码：</strong> <code>opacity:0</code> </p>
-<p><strong>取值：</strong> 0~1之间的一位小数</p>
-<p><strong>注意点：</strong></p>
-<ul>
-<li>opacity会让元素整体透明，包括里面的内容（文字或者子元素）</li>
-<li>背景透明仅仅只是让背景颜色变得透明，要根据需求选取方法。</li>
-</ul>
-<h2 id="通过phpstudy把静态页面部署到web服务器"><a href="#通过phpstudy把静态页面部署到web服务器" class="headerlink" title="通过phpstudy把静态页面部署到web服务器"></a>通过phpstudy把静态页面部署到web服务器</h2><ol>
-<li><p>安装phpstudy，注意不能有中文路径</p>
-<ul>
-<li><p>双击软件</p>
-</li>
-<li><p>选择安装目录（注意，要求路径中不能有中文！！！默认的路径即可）</p>
-<p><img src="\images\php1.png" alt="php1"></p>
-</li>
-<li><p>点击ok之后，会默认跳转到phpstudy官网上，然后提示<code>为了防止重复初始化，选择是</code> 点击是即可！</p>
-<p><img src="\images\php2.png" alt="php2"></p>
-</li>
-<li><p>然后可以访问自己本地的服务器，在地址栏中输入<code>127.0.0.1</code> 访问</p>
-</li>
-</ul>
-</li>
-<li><p>把自己的网页放到www文件夹中，找到安装目录下面的www文件夹，把自己写好的页面放到这个文件夹中去</p>
-</li>
-<li><p>通过查看自己的ip，通过浏览器输入ip地址访问自己写的网页</p>
-<p>win+r 输入cmd，往黑窗口中输入ipconfig，回车，以太网适配器查看192.168开头</p>
-</li>
-</ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/20/1-基础班day14笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2354,8 +1199,7 @@
 
       
         
-          
-            <h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><blockquote>
+          <h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><blockquote>
 <ul>
 <li style="list-style: none"><input type="checkbox"> 能够完成品优购首页推荐模块</li>
 </ul>
@@ -2366,90 +1210,13 @@
 <li style="list-style: none"><input type="checkbox"> 能够完成品优购首页楼层模块</li>
 </ul>
 </blockquote>
-<p><strong>理解上课的知识点……</strong></p>
-<h2 id="使用css写出一个三角形"><a href="#使用css写出一个三角形" class="headerlink" title="使用css写出一个三角形"></a>使用css写出一个三角形</h2><blockquote>
-<p>有时候需要在页面中展示一个三角形，并且要求只使用css代码，不用图片或者字体图标，怎么实现？</p>
-</blockquote>
-<p><strong>例如：</strong></p>
-<p><img src="\images\jd.png" alt="jd"></p>
-<p><strong>可以通过边框来实现：</strong></p>
-<ul>
-<li>设置一个盒子</li>
-<li>设置四周不同颜色的边框</li>
-<li>盒子的宽高设置为0</li>
-</ul>
-<p><img src="\images\css三角形.png" alt=""></p>
-<ul>
-<li>此时每一个方向的边框就是一个三角形了，选择一个之后让其他边框的颜色为<strong>全透明</strong>即可</li>
-</ul>
-<h3 id="背景透明"><a href="#背景透明" class="headerlink" title="背景透明"></a>背景透明</h3><blockquote>
-<p>设置透明的方法</p>
-</blockquote>
-<ul>
-<li><strong>rgba（0,0,0,0）</strong></li>
-<li><strong>transparent</strong>：表示全透明的颜色</li>
-</ul>
-<p><strong>代码：</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* ------------------------------------方法一------------------------------------ */</span></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">100px</span> solid purple;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">100px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">100px</span> solid transparent;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* -----------------------------------方法二--------------------------------------- */</span></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">border-width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">border-style</span>: solid;</span><br><span class="line">    <span class="attribute">border-color</span>: transparent transparent transparent purple;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="三种鼠标常见的样式"><a href="#三种鼠标常见的样式" class="headerlink" title="三种鼠标常见的样式"></a>三种鼠标常见的样式</h2><blockquote>
-<p>通过cursor属性来设置鼠标移入盒子中的样式</p>
-</blockquote>
-<p>取值：</p>
-<ul>
-<li><strong>default</strong> ：光标为一个箭头（默认样式） </li>
-<li><strong>pointer</strong> ：光标为一只小手（a标签的默认样式）</li>
-<li><strong>text</strong> ：此光标指示文本 </li>
-<li><strong>move</strong>：显示十字光标（表示可移动的效果）</li>
-</ul>
-<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><h3 id="相邻兄弟选择器（知道即可）"><a href="#相邻兄弟选择器（知道即可）" class="headerlink" title="相邻兄弟选择器（知道即可）"></a>相邻兄弟选择器（知道即可）</h3><blockquote>
-<p>用的不多</p>
-</blockquote>
-<h3 id="相邻选择器（-）"><a href="#相邻选择器（-）" class="headerlink" title="相邻选择器（+）"></a>相邻选择器（+）</h3><blockquote>
-<p>选择<strong>某个元素后面紧贴着的的第一个兄弟元素</strong>（ <strong>只找一个</strong>）</p>
-</blockquote>
-<p><strong>例子：</strong>如何通过.son1找到.son2呢？</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>可以通过相邻选择器找到：</p>
-<p><code>.son+div {}</code></p>
-<p>注意点：</p>
-<ul>
-<li>相邻兄弟选择只会选择相邻的那个元素，本身元素不会选中。</li>
-</ul>
-<h3 id="兄弟选择器（-）"><a href="#兄弟选择器（-）" class="headerlink" title="兄弟选择器（~）"></a>兄弟选择器（~）</h3><blockquote>
-<p>选择<strong>某个元素后面的所有兄弟元素</strong>（<strong>会找一堆</strong>）</p>
-</blockquote>
-<p><strong>例子：</strong>找到h1标签后面所有兄弟中的p标签</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>1<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>2<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>3<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>4<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>5<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>6<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>7<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>8<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>可以通过兄弟选择器找到：</p>
-<p><code>h1~p {}</code></p>
-<h3 id="属性选择器的一些匹配规则（知道即可）"><a href="#属性选择器的一些匹配规则（知道即可）" class="headerlink" title="属性选择器的一些匹配规则（知道即可）"></a>属性选择器的一些匹配规则（知道即可）</h3><blockquote>
-<p>可以通过标签的属性选择标签</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com"</span> <span class="attr">class</span>=<span class="string">"baidu"</span>&gt;</span>百度一下<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>点击不跳转<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.itcast.cn"</span> <span class="attr">class</span>=<span class="string">"itcast"</span>&gt;</span>传智播客<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><p><strong>E:[class]</strong></p>
-<p>选择带有class属性的E元素。 </p>
-<p>如：选中<strong>带有class属性</strong>的元素为红色</p>
-</li>
-<li><p><strong>E:[class=”attr”]</strong></p>
-<p>选择带有class属性，并且属性值是attr的E元素</p>
-<p>如：选中<strong>class属性值为baidu</strong>的元素为黄色</p>
-</li>
-<li><p><strong>E:[class^=”attr”]</strong></p>
-<p>选择带有class属性，并且属性值是 <strong>以attr开头</strong> 的E元素</p>
-<p>如：选中<strong>href属性值以http开头</strong>的元素为粉色</p>
-</li>
-<li><p><strong>E:[class$=”attr”]</strong></p>
-<p>选择带有class属性，并且属性值是 <strong>以attr结尾</strong> 的E元素</p>
-<p>如：选中<strong>href属性值以cn结尾</strong>的元素为橘色</p>
-</li>
-<li><p><strong>E:[class*=”attr”]</strong></p>
-<p>选择带有class属性，并且属性值是 <strong>包含attr</strong> 的E元素</p>
-<p>如：选中<strong>href属性值里包含www</strong>的元素为紫色</p>
-</li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/20/1-基础班day13笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2597,8 +1364,7 @@
 
       
         
-          
-            <h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><blockquote>
+          <h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><blockquote>
 <ul>
 <li style="list-style: none"><input type="checkbox"> 能够使用ps进行基本操作</li>
 </ul>
@@ -2616,142 +1382,13 @@
 </ul>
 <p>。。。。。。</p>
 </blockquote>
-<p><strong>理解上课的知识点……</strong></p>
-<h2 id="CSS3边框圆角（border-radius）"><a href="#CSS3边框圆角（border-radius）" class="headerlink" title="CSS3边框圆角（border-radius）"></a>CSS3边框圆角（border-radius）</h2><blockquote>
-<p>边框圆角： <code>border-radius</code> 可以让盒子的四角变得圆润，也可以画一个圆</p>
-<p>border：边框</p>
-<p>radius：半径</p>
-</blockquote>
-<p><img src="\images\css画一个圆.png" alt="css画一个圆"></p>
-<p><strong>取值：</strong></p>
-<ul>
-<li>一个值：左上右上右下左下</li>
-<li>两个值：左上右下、右上左下</li>
-<li>三个值：左上、右上左下、右下</li>
-<li>四个值：左上、右上、右下、左下</li>
-</ul>
-<p><strong>记忆方法：</strong> 先从左上开始赋值，顺时针赋值，如果没有赋值的，看对面的。</p>
-<p><strong>常见的应用：</strong></p>
-<ul>
-<li><p><strong>画一个圆</strong></p>
-<ul>
-<li>盒子必须是一个正方形</li>
-<li>border-radius：50%</li>
-</ul>
-</li>
-<li><p><strong>胶囊按钮</strong></p>
-<ul>
-<li>盒子是一个矩形</li>
-<li>border-radius：盒子高度的一半</li>
-</ul>
-</li>
-</ul>
-<p><img src="\images\jn.png" alt="jn"></p>
-<h2 id="样式初始化的补充"><a href="#样式初始化的补充" class="headerlink" title="样式初始化的补充"></a>样式初始化的补充</h2><blockquote>
-<p>有时候会需要去除input默认的边框和textarea的自由缩放</p>
-</blockquote>
-<p><strong>去除边框：</strong></p>
-<ul>
-<li>border：none</li>
-</ul>
-<p><strong>去除input点击之后的边框轮廓线：</strong></p>
-<ul>
-<li>outline-style: none</li>
-</ul>
-<p><strong>设置禁止textarea自由缩放：</strong></p>
-<ul>
-<li>resize：none</li>
-</ul>
-<h2 id="盒子宽高的百分比设置"><a href="#盒子宽高的百分比设置" class="headerlink" title="盒子宽高的百分比设置"></a>盒子宽高的百分比设置</h2><p><strong>需求：</strong></p>
-<p>如果需要一个父盒子中的四个子盒子，宽度为父盒子的四分之一，高度为父盒子的高度，怎么去完成？</p>
-<p><strong>方案：</strong></p>
-<ul>
-<li>可以直接设置数值（自己计算）</li>
-<li>可以直接设置百分比（百分比相对于父盒子的宽高，让浏览器去计算）</li>
-</ul>
-<h2 id="品优购项目搭建"><a href="#品优购项目搭建" class="headerlink" title="品优购项目搭建"></a>品优购项目搭建</h2><blockquote>
-<p>每一个项目开始之前都要有项目的搭建。</p>
-<p>品优购作为一个<strong>有很多页面</strong>的<strong>大型的项目</strong>，每个页面都有自己对应的css文件，所以css文件需要单独放在一个<strong>css文件夹</strong>中</p>
-</blockquote>
-<p><strong>项目搭建步骤：</strong></p>
-<ul>
-<li><p>新建项目文件夹</p>
-</li>
-<li><p>新建images文件夹，把图片放在images文件夹中</p>
-</li>
-<li><p>新建css文件夹，把所有页面的css文件放入</p>
-<blockquote>
-<p>大型项目有多个页面，每个页面都有对应的css文件，为了项目的查阅方便，一般会把所有的css专门放在一个文件夹汇总</p>
-</blockquote>
-<ul>
-<li>新建index.css放入文件夹</li>
-</ul>
-</li>
-<li><p>新建页面index.html</p>
-</li>
-</ul>
-<p><strong>样式的初始化：</strong></p>
-<ul>
-<li><p>index.css中进行样式的初始化（把项目中要用的样式先写好）</p>
-<ul>
-<li><p>因为样式的初始化每个项目都是一样的，所有公司开发的时候会把样式初始化代码写成一个单独的<strong>base.css</strong>文件，开发的时候直接引入即可</p>
-<h5 id="ヾ-๑╹◡╹-ﾉ”查看公司写好的base-css的代码"><a href="#ヾ-๑╹◡╹-ﾉ”查看公司写好的base-css的代码" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”查看公司写好的base.css的代码"></a>ヾ(๑╹◡╹)ﾉ”查看公司写好的base.css的代码</h5><blockquote>
-<p>问题：为什么要进行css初始化？请举例说明</p>
-</blockquote>
-<p><strong>为什么要进行css初始化？</strong></p>
-<ol>
-<li>因为不同浏览器对于不同标签有默认样式（比如默认padding和margin、a标签默认的下划线……）</li>
-<li>开发的时候并不需要默认的样式。并且需要在不同浏览器中展示的效果是一样的</li>
-<li>所以我们一般在项目开始的时候，会去除浏览器默认的样式即：css的初始化，需要的时候自己设置样式即可。</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 举例说明 --&gt;</span></span><br><span class="line"></span><br><span class="line">1.清除标签的默认margin和padding：</span><br><span class="line">* &#123;</span><br><span class="line">    margin: 0; </span><br><span class="line">    padding: 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">2.清除li标签之前的小点：</span><br><span class="line">ul&#123;</span><br><span class="line">    list-style: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">3.清除a的下划线：</span><br><span class="line">a &#123;</span><br><span class="line">    text-decoration:none；</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">......（base.css中有一堆）</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>在index.html中通过link标签引入index.css</p>
-</li>
-</ul>
-<h2 id="页面ico图标的使用（了解）"><a href="#页面ico图标的使用（了解）" class="headerlink" title="页面ico图标的使用（了解）"></a>页面ico图标的使用（了解）</h2><blockquote>
-<p>较大的网站的title前面会有一个小的图标，这个小图标一般使用的就是ico图标</p>
-</blockquote>
-<p><strong>使用步骤：</strong></p>
-<ul>
-<li><p>获取<code>ico图标</code></p>
-<ul>
-<li>一般是由UI设计师提供.ico图片</li>
-<li>可以通过 <a href="http://www.bitbug.net/" target="_blank" rel="noopener">一些转换网站</a> 将图片上传，获取ico图标</li>
-</ul>
-</li>
-<li><p>使用<code>ico图标</code></p>
-<ul>
-<li><code>&lt;link rel=&quot;icon&quot; href=&quot; favicon.ico的路径&quot;&gt;</code> </li>
-</ul>
-</li>
-</ul>
-<p><strong>一般将ico图标放到根目录下面</strong></p>
-<h2 id="页面seo三大标签（了解）"><a href="#页面seo三大标签（了解）" class="headerlink" title="页面seo三大标签（了解）"></a>页面seo三大标签（了解）</h2><blockquote>
-<p>页面中有三个标签对于seo非常重要！</p>
-</blockquote>
-<h3 id="title：标题标签"><a href="#title：标题标签" class="headerlink" title="title：标题标签"></a>title：标题标签</h3><blockquote>
-<p>表示网页的标题，对于网页的seo权重很高！！</p>
-</blockquote>
-<p><img src="\images\title标签.png" alt=""></p>
-<p><strong>一个大型的网页，也需要有对应的title标签的：</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>38期品优购<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="Description：描述标签"><a href="#Description：描述标签" class="headerlink" title="Description：描述标签"></a>Description：描述标签</h3><blockquote>
-<p>是对于网页内容的描述，可以是对于标题的补充，一般文字不超过120个字。</p>
-</blockquote>
-<p><img src="\images\description标签.png" alt="description标签"></p>
-<p><strong>一个大型的网页，也需要有对应的description标签的：</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"品优购-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="Keywords：关键字标签"><a href="#Keywords：关键字标签" class="headerlink" title="Keywords：关键字标签"></a>Keywords：关键字标签</h3><blockquote>
-<p>是页面内容的关键字，对于seo也较为重要。</p>
-</blockquote>
-<p><img src="\images\Keywords标签.png" alt="Keywords标签"></p>
-<p><strong>一个大型的网页，也需要有对应的Keywords标签的：</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"Keywords"</span> <span class="attr">content</span>=<span class="string">"网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,品优购"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/20/1-基础班day12笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2899,8 +1536,7 @@
 
       
         
-          
-            <h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><blockquote>
+          <h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><blockquote>
 <ul>
 <li style="list-style: none"><input type="checkbox"> 能够理解什么是精灵图及优点（将很多小图片放到一张图片上，减少对服务器请求次数，减轻服务器压力）</li>
 </ul>
@@ -2919,160 +1555,15 @@
 <ul>
 <li style="list-style: none"><input type="checkbox"> 能够了解BFC的作用以及触发BFC的几种方式</li>
 </ul>
+<p>。。。。。。</p>
 </blockquote>
-<p><strong>理解上课的知识点……</strong></p>
-<h2 id="双伪元素清除浮动（了解）"><a href="#双伪元素清除浮动（了解）" class="headerlink" title="双伪元素清除浮动（了解）"></a>双伪元素清除浮动（了解）</h2><blockquote>
-<p>伪元素清除浮动升级版（既解决了清除浮动、又解决了塌陷 ）</p>
-<p>两个伪元素清除法的合并方法如下：</p>
-</blockquote>
-<p><strong>清除浮动：</strong></p>
-<blockquote>
-<p>可以使用单伪元素浮动法 <code>::after</code></p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>margin的塌陷问题：</strong></p>
-<blockquote>
-<p>可以使用伪元素 <code>::before</code> 解决margin的塌陷问题</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="comment">/* 触发BFC + 并且转换成块级元素 */</span></span><br><span class="line">    <span class="attribute">display</span>: table;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>合并起来：</strong></p>
-<blockquote>
-<p>使用并集选择器合并代码</p>
-<p>此时.clearfix这个类既可以清除浮动，又可以解决margin的塌陷现象</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::before</span>,</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="comment">/* BFC + 转化为块级元素 */</span></span><br><span class="line">    <span class="attribute">display</span>: table;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 兼容 IE 67 */</span></span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">    *zoom: 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="ヾ-๑╹◡╹-ﾉ”检查网页"><a href="#ヾ-๑╹◡╹-ﾉ”检查网页" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”检查网页"></a>ヾ(๑╹◡╹)ﾉ”检查网页</h5><blockquote>
-<p>检查大网页的样式（<strong>小米、淘宝</strong>），一般用双伪元素</p>
-</blockquote>
-<p><strong>只需要把双伪元素清除法的代码在样式初始化的时候写好，使用的时候直接加类名即可</strong></p>
-<h2 id="精灵图（会使用）"><a href="#精灵图（会使用）" class="headerlink" title="精灵图（会使用）"></a>精灵图（会使用）</h2><blockquote>
-<p>实际开发中，会把很多小图片合并成一张大图片，这张大图片就是精灵图。</p>
-</blockquote>
-<p><strong>问题：</strong> 浏览器打开淘宝网，网页中的图片怎么显示到用户的电脑中的呢？</p>
-<p> → 图片并不是用户电脑本地有的，而是通过服务器发送给用户，才在浏览器中显示的！！</p>
-<h5 id="ヾ-๑╹◡╹-ﾉ”画图了解下前端与后端交互"><a href="#ヾ-๑╹◡╹-ﾉ”画图了解下前端与后端交互" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”画图了解下前端与后端交互"></a>ヾ(๑╹◡╹)ﾉ”画图了解下前端与后端交互</h5><p><strong>好处：</strong> </p>
-<p>原本每张小图片要发送很多次，服务器亚历山大</p>
-<p>但是如果使用精灵图，只需要发送一次即可。</p>
-<p><strong>减少服务器的请求次数，减轻服务器的压力。</strong></p>
-<h3 id="精灵图的使用（必会）"><a href="#精灵图的使用（必会）" class="headerlink" title="精灵图的使用（必会）"></a>精灵图的使用（必会）</h3><blockquote>
-<p>如何在页面中显示出精灵图中的小图片呢？</p>
-</blockquote>
-<p><strong>步骤：</strong></p>
-<ol>
-<li>创建一个盒子</li>
-<li>通过PS量取小图片的尺寸，将对应小图片的宽高直接设置给盒子</li>
-<li>将精灵图设置为盒子的背景图片</li>
-<li>将小图片的坐标取负值添加给<code>background-position：x y;</code><ul>
-<li>让背景图片往上移动，y轴坐标是负数</li>
-<li>让背景图片往左移动，x轴坐标是负数</li>
-</ul>
-</li>
-</ol>
-<p><strong>注意：</strong></p>
-<ul>
-<li>盒子和小图片大小一致</li>
-<li>精灵图通过背景定位， 让所有的小图片都能显示</li>
-<li>在ps中，通过切片，量取对应的坐标，直接取赋值（负数）即可</li>
-</ul>
-<h5 id="ヾ-๑╹◡╹-ﾉ”拼出自己的名字"><a href="#ヾ-๑╹◡╹-ﾉ”拼出自己的名字" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”拼出自己的名字"></a>ヾ(๑╹◡╹)ﾉ”拼出自己的名字</h5><h2 id="字体图标（了解）"><a href="#字体图标（了解）" class="headerlink" title="字体图标（了解）"></a>字体图标（了解）</h2><blockquote>
-<p>在网页的很多地方，比如下箭头、照相机图标、搜索图标… 使用的就是字体图标</p>
-<p>字体图标本质上就是文字，所以可以通过css中文字相关的属性操作字体图标。</p>
-</blockquote>
-<p><strong>需求：</strong> </p>
-<p>页面中有很多的图标（左右箭头、购物车、用户、等等），怎么完成页面的效果？？</p>
-<p><strong>方案：</strong></p>
-<ul>
-<li><p>使用图片 → 可以。</p>
-<p><strong>缺点：</strong>图片在放大的时候会失真（边缘模糊）</p>
-</li>
-<li><p>字体图标 → 可以。</p>
-<p><strong>优点：</strong>放大不会失真，还可以设置css样式</p>
-</li>
-</ul>
-<p><strong>总结：</strong></p>
-<p>本质是文字，可以通过css文字相关样式设置字体图标的样式（颜色、大小、加粗），并且不会失真</p>
-<h3 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h3><p><strong>下载字体图标（一般UI会给）：</strong></p>
-<ol>
-<li>登录<a href="http://www.iconfont.cn/" target="_blank" rel="noopener">阿里 iconfont 字库</a>，将自己想要的图标加入购物车</li>
-<li>点击购物车图标，选择<strong>下载代码</strong></li>
-</ol>
-<p><strong>使用字体图标步骤：</strong></p>
-<ol>
-<li><p>在项目目录新建 fonts 文件夹，将字体图标文件内所有文件拷贝进 fonts 文件夹</p>
-</li>
-<li><p>在项目中通过link标签引入字体css文件（<strong>iconfont.css</strong>）</p>
-<blockquote>
-<p>字体文件包中的 <strong>demo_fontclass.html</strong> 为说明书</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"fonts/iconfont.css"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通过i标签上面设置对应类名来使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;i class=&quot;iconfont icon-refresh&quot;&gt;&lt;/i&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><strong>注意：</strong></p>
-<ul>
-<li>设置字体图标样式时，注意层叠性问题！！（通过iconfont类名找到i标签）</li>
-<li>不能改变字体图标的font-family，否则样式不生效</li>
-</ul>
-<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><h3 id="滑动门（了解）"><a href="#滑动门（了解）" class="headerlink" title="滑动门（了解）"></a>滑动门（了解）</h3><blockquote>
-<p>利用已学技术，根据文本内容，让背景自适应。可以实现一些特殊的效果（QQ聊天气泡）</p>
-<p><a href="https://weixin.qq.com/" target="_blank" rel="noopener">微信滑动门</a></p>
-</blockquote>
-<p><img src="\images\%E6%BB%91%E5%8A%A8%E9%97%A8.jpg" alt=""></p>
-<p><strong>滑动门步骤：</strong></p>
-<ul>
-<li>三个盒子要在一行中显示，都需要<strong>浮动起来</strong>。<ul>
-<li>left：宽高和背景图片的大小一致</li>
-<li>center：高度为背景图片的高度，宽度由内容撑开（浮动之后的元素宽度默认由内容撑开），<strong>背景平铺</strong></li>
-<li>right：宽高和背景图片的大小一致</li>
-</ul>
-</li>
-</ul>
-<h3 id="浮动元素的覆盖问题（了解）"><a href="#浮动元素的覆盖问题（了解）" class="headerlink" title="浮动元素的覆盖问题（了解）"></a>浮动元素的覆盖问题（了解）</h3><blockquote>
-<p>浮动：不能覆盖文字、图片和行内块，会把这些元素挤到一边去。</p>
-<p>说白了，<strong>浮动元素一般只能覆盖标准流中的块级元素</strong></p>
-</blockquote>
-<h5 id="ヾ-๑╹◡╹-ﾉ”行内元素与浮动的特殊情况"><a href="#ヾ-๑╹◡╹-ﾉ”行内元素与浮动的特殊情况" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”行内元素与浮动的特殊情况"></a>ヾ(๑╹◡╹)ﾉ”行内元素与浮动的特殊情况</h5><ul>
-<li>浮动的元素可以覆盖标准流中的块级元素</li>
-<li>浮动的元素不能覆盖行内块元素</li>
-<li>浮动元素不能覆盖行内元素</li>
-<li>浮动的元素不能覆盖文字（图文环绕）</li>
-</ul>
-<h3 id="触发BFC的方法（了解）"><a href="#触发BFC的方法（了解）" class="headerlink" title="触发BFC的方法（了解）"></a>触发BFC的方法（了解）</h3><blockquote>
-<p>BFC → <code>Block Formatting Context</code>：块级格式化上下文</p>
-</blockquote>
-<p><strong>知道BFC的作用：</strong></p>
-<ul>
-<li>触发父盒子的BFC → 可以<strong>解决margin的塌陷</strong></li>
-<li>触发父盒子的BFC → 可以<strong>清除浮动</strong></li>
-</ul>
-<p><strong>方法：</strong></p>
-<blockquote>
-<p>可以通过测试是否能清除浮动</p>
-</blockquote>
-<p><strong>给父盒子设置：</strong></p>
-<ul>
-<li>float的值不为none</li>
-<li>overflow的值不为visible。</li>
-<li>display的值为table，table-cell，inline-block</li>
-<li>position的值不为relative和static</li>
-<li>等等……</li>
-</ul>
-<h3 id="小米练习"><a href="#小米练习" class="headerlink" title="小米练习"></a>小米练习</h3><blockquote>
-<p>每个项目都是一个单独的文件夹，文件夹中放项目相关的资源（图片、inde.html、index.css等等）</p>
-</blockquote>
-<p><strong>步骤：</strong></p>
-<ul>
-<li>新建项目文件夹</li>
-<li>新建images文件夹，把图片放在images文件夹中</li>
-<li>新建页面index.html</li>
-<li>新建css文件index.css</li>
-<li>index.css中进行样式的初始化（可以把初始化CSS文件引入）</li>
-<li>在index.html中通过link标签引入index.css</li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/20/1-基础班day11笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -3220,31 +1711,18 @@
 
       
         
-          
-            <h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><blockquote>
+          <h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><blockquote>
 <ul>
 <li style="list-style: none"><input type="checkbox"> 理解定位的使用场景（一般用于解决盒子之间的层叠问题）</li>
 </ul>
 <ul>
-<li style="list-style: none"><input type="checkbox"> 能够说出相对定位的特点<ul>
-<li>相对于自己原来的位置进行移动</li>
-<li>占位置-》没有脱标</li>
-</ul>
-</li>
+<li style="list-style: none"><input type="checkbox"> 能够说出相对定位的特点</li>
 </ul>
 <ul>
-<li style="list-style: none"><input type="checkbox"> 能够说出绝对定位的特点<ul>
-<li>默认相对于浏览器移动，如果有父元素，相对于有定位的父元素移动</li>
-<li>不占位置-》脱标</li>
-</ul>
-</li>
+<li style="list-style: none"><input type="checkbox"> 能够说出绝对定位的特点</li>
 </ul>
 <ul>
-<li style="list-style: none"><input type="checkbox"> 能够说出固定定位的特点<ul>
-<li>永远相对于浏览器移动</li>
-<li>不占位置-》脱标</li>
-</ul>
-</li>
+<li style="list-style: none"><input type="checkbox"> 能够说出固定定位的特点</li>
 </ul>
 <ul>
 <li style="list-style: none"><input type="checkbox"> 能够理解子绝父相（子盒子绝对定位，父盒子相对定位，布局中会经常使用到）</li>
@@ -3260,327 +1738,13 @@
 </ul>
 <p> 。。。。。。</p>
 </blockquote>
-<p><strong>理解上课的知识点……</strong></p>
-<h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><blockquote>
-<p>可以解决盒子与盒子之间的层叠问题</p>
-</blockquote>
-<p><strong>需求：</strong>现在在页面上有两个盒子，其中第二个盒子将第一个盒子压住了一半，怎么完成？？？</p>
-<p><img src="\images\1.png" alt="1"></p>
-<p><strong>解决方案：</strong></p>
-<ul>
-<li><p><strong>使用margin的单方向应用</strong></p>
-<blockquote>
-<p>但是实际开发中并不会使用marign完成层叠的效果</p>
-</blockquote>
-</li>
-<li><p>使用 <strong>定位</strong> 来完成效果</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.blue</span> &#123;</span><br><span class="line">  <span class="comment">/*定位：position*/</span></span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="comment">/*定位需要配合方位属性一起使用的！！*/</span></span><br><span class="line">  <span class="attribute">top</span>: <span class="number">150px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">150px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="定位初体验"><a href="#定位初体验" class="headerlink" title="定位初体验"></a>定位初体验</h3><p><code>position：absolute；</code> 设置定位</p>
-<p><strong>方位属性：</strong></p>
-<blockquote>
-<p>水平和垂直方向各选一个使用即可，选取的原则是<strong>就近原则</strong> （离哪边近用哪个）</p>
-</blockquote>
-<ul>
-<li>水平方向：<ul>
-<li>left：相对于左边框的距离</li>
-<li>right：相对于右边框的距离</li>
-</ul>
-</li>
-<li>垂直方向：<ul>
-<li>top：相对于上边框的距离</li>
-<li>bottom：相对于下边框的距离</li>
-</ul>
-</li>
-</ul>
-<h3 id="静态定位（static）"><a href="#静态定位（static）" class="headerlink" title="静态定位（static）"></a>静态定位（static）</h3><blockquote>
-<p>标准流中的元素默认都是静态定位</p>
-</blockquote>
-<p><strong>代码：</strong> <code>position: static;</code> （默认值）静态定位</p>
-<blockquote>
-<p>静态定位是有一定争议的（有些人认为静态定位不算定位）</p>
-</blockquote>
-<p><strong>面试时候回答：</strong>三种定位方式，优先回答其他三个（相对、绝对、固定），如果四种再写静态定位</p>
-<p><strong>注意点： </strong>静态定位不能通过方位属性进行移动</p>
-<h3 id="相对定位（relative）"><a href="#相对定位（relative）" class="headerlink" title="相对定位（relative）"></a>相对定位（relative）</h3><blockquote>
-<p>盒子相对于自己之前的位置定位移动（红绿蓝）</p>
-</blockquote>
-<p><strong>代码：</strong><code>position: relative；</code> 相对定位</p>
-<p><strong>特点：</strong></p>
-<ul>
-<li><p>要配合方位属性使用，不然无法移动</p>
-</li>
-<li><p>相对于自己原来的位置进行偏移</p>
-</li>
-<li><p>设置了相对定位的元素在页面上占据了位置-》<strong>没有脱标</strong></p>
-</li>
-</ul>
-<p><strong>应用场景：</strong></p>
-<ul>
-<li>配合绝对定位组CP（子绝父相），用的最多</li>
-<li>用于小范围的移动（比如让某个标签稍微往下移动几个像素）</li>
-</ul>
-<h3 id="绝对定位（absolute）"><a href="#绝对定位（absolute）" class="headerlink" title="绝对定位（absolute）"></a>绝对定位（absolute）</h3><blockquote>
-<p>绝对定位相对于非静态定位的父元素进行定位移动</p>
-</blockquote>
-<p><strong>代码：</strong><code>position: absolute;</code> 绝对定位</p>
-<p><strong>特点：</strong></p>
-<ul>
-<li>需要配合方位属性移动使用</li>
-</ul>
-<hr>
-<ul>
-<li><p>绝对定位相对谁移动？</p>
-<blockquote>
-<p>默认相对于浏览器进行移动，但是如果有父元素，则相对于有定位的父元素进行移动</p>
-</blockquote>
-<ul>
-<li>没有父元素 → 默认相对于浏览器进行移动</li>
-<li>有父元素（判断父元素有没有定位）<ul>
-<li>没有定位  →  默认相对于浏览器进行移动</li>
-<li>有定位  →  相对于有定位的父元素进行移动</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>绝对定位的元素在页面中 <strong>不占位置</strong> → 脱标</p>
-</li>
-</ul>
-<p><strong>应用场景：</strong></p>
-<ul>
-<li>子绝父相</li>
-</ul>
-<h3 id="子绝父相"><a href="#子绝父相" class="headerlink" title="子绝父相"></a>子绝父相</h3><blockquote>
-<p>让子元素相对于父元素进行移动 → 使用子绝父相，即子元素绝对定位，父元素相对定位</p>
-</blockquote>
-<p>子绝父相在定位中使用的最常见，并且子绝父相不会影响页面的布局</p>
-<blockquote>
-</blockquote>
-<h5 id="ヾ-๑╹◡╹-ﾉ”比较子绝父相的好处"><a href="#ヾ-๑╹◡╹-ﾉ”比较子绝父相的好处" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”比较子绝父相的好处"></a>ヾ(๑╹◡╹)ﾉ”比较子绝父相的好处</h5><blockquote>
-<p>不会影响之后的布局</p>
-</blockquote>
-<p><strong>特殊情况：</strong> 当使用子绝父相的时候，父元素已经有绝对定位了，此时忽略父元素，直接使用子绝即可</p>
-<blockquote>
-<p>子绝父绝的特殊情况</p>
-</blockquote>
-<hr>
-<h5 id="ヾ-๑╹◡╹-ﾉ”子绝父相定位居中案例"><a href="#ヾ-๑╹◡╹-ﾉ”子绝父相定位居中案例" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”子绝父相定位居中案例"></a>ヾ(๑╹◡╹)ﾉ”子绝父相定位居中案例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">父盒子：600*400  子盒子：200*100</span><br></pre></td></tr></table></figure>
-<p><strong>需求1：</strong> 通过定位让子盒子在父盒子水平居中</p>
-<p><strong>思路：</strong></p>
-<ol>
-<li><p>先让子盒子往右移动父盒子的一半</p>
-<blockquote>
-<p>子绝父相，<code>left：50%;</code></p>
-</blockquote>
-</li>
-<li><p>再让子盒子往左移动自己的一半</p>
-<ul>
-<li><p>普通做法：<code>margin-left:负子盒子宽度的一半</code> → 属性值是<strong>负数</strong></p>
-<blockquote>
-<p>缺点：子盒子宽度变化之后，需要重新改代码</p>
-</blockquote>
-</li>
-<li><p>优化做法：CSS3的新属性：<code>transform：translateX（-50%）</code></p>
-<blockquote>
-<p><code>transform：translateX（-50%）</code> → 表示沿着x轴的负方向移动自己的一半</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ol>
-<p><strong>需求2：</strong> 通过的定位让子盒子在父盒子中水平垂直都居中</p>
-<p>同理嘛~</p>
-<blockquote>
-<p>但是需要注意，transform属性也会层叠。</p>
-</blockquote>
-<h5 id="ヾ-๑╹◡╹-ﾉ”课堂练习：网站头部hot图标"><a href="#ヾ-๑╹◡╹-ﾉ”课堂练习：网站头部hot图标" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”课堂练习：网站头部hot图标"></a>ヾ(๑╹◡╹)ﾉ”课堂练习：网站头部hot图标</h5><p><img src="\images\hot.png" alt="hot"></p>
-<h5 id="ヾ-๑╹◡╹-ﾉ”课堂练习：小米商品页半透明效果"><a href="#ヾ-๑╹◡╹-ﾉ”课堂练习：小米商品页半透明效果" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”课堂练习：小米商品页半透明效果"></a>ヾ(๑╹◡╹)ﾉ”课堂练习：小米商品页半透明效果</h5><p><img src="\images\toumin.png" alt="toumin"></p>
-<h3 id="固定定位-（fixed）"><a href="#固定定位-（fixed）" class="headerlink" title="固定定位 （fixed）"></a>固定定位 （fixed）</h3><blockquote>
-<p>盒子相对于浏览器进行定位移动</p>
-</blockquote>
-<p><strong>代码：</strong><code>position: fixed;</code>  固定定位</p>
-<p><strong>特点：</strong></p>
-<ul>
-<li><p>配合方位属性一起使用</p>
-</li>
-<li><p>永远相进行移动</p>
-</li>
-<li>固定定位的元素也不在页面中占据位置 → <strong>脱标</strong></li>
-</ul>
-<h5 id="ヾ-๑╹◡╹-ﾉ”课堂练习：新浪网页"><a href="#ヾ-๑╹◡╹-ﾉ”课堂练习：新浪网页" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”课堂练习：新浪网页"></a>ヾ(๑╹◡╹)ﾉ”课堂练习：新浪网页</h5><blockquote>
-<p>注意的是：脱标后的元素宽度默认由内容撑开</p>
-<p>就算是div，脱标之后宽度也不再默认是父元素宽度</p>
-</blockquote>
-<h3 id="四种定位总结"><a href="#四种定位总结" class="headerlink" title="四种定位总结"></a>四种定位总结</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">定位方式</th>
-<th style="text-align:center">属性值</th>
-<th style="text-align:center">相对于谁移动</th>
-<th style="text-align:center">占不占位置</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">静态定位</td>
-<td style="text-align:center">static</td>
-<td style="text-align:center">不能通过方位属性移动</td>
-<td style="text-align:center">占位置</td>
-</tr>
-<tr>
-<td style="text-align:center">相对定位</td>
-<td style="text-align:center">relative</td>
-<td style="text-align:center">相对于自己原来的位置</td>
-<td style="text-align:center">占位置</td>
-</tr>
-<tr>
-<td style="text-align:center">绝对地位</td>
-<td style="text-align:center">absolute</td>
-<td style="text-align:center">默认浏览器/相对于有定位的父元素移动</td>
-<td style="text-align:center">不占位置（脱标）</td>
-</tr>
-<tr>
-<td style="text-align:center">固定定位</td>
-<td style="text-align:center">fixed</td>
-<td style="text-align:center">永远相对于浏览器</td>
-<td style="text-align:center">不占位置（脱标）</td>
-</tr>
-</tbody>
-</table>
-<h2 id="元素的层级关系"><a href="#元素的层级关系" class="headerlink" title="元素的层级关系"></a>元素的层级关系</h2><blockquote>
-<p>开发者有时候需要设置元素的层级关系，层叠是谁在上面</p>
-</blockquote>
-<h3 id="标准流、浮动、定位的层级关系"><a href="#标准流、浮动、定位的层级关系" class="headerlink" title="标准流、浮动、定位的层级关系"></a>标准流、浮动、定位的层级关系</h3><blockquote>
-<p>两个盒子之间的比较</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">三种层叠关系：</span><br><span class="line">标准流 &lt; 浮动 &lt; 定位（相对、绝对、固定）</span><br></pre></td></tr></table></figure>
-<h3 id="定位的层级关系"><a href="#定位的层级关系" class="headerlink" title="定位的层级关系"></a>定位的层级关系</h3><p><strong>总结：</strong></p>
-<ul>
-<li><p>三者的层叠关系<strong>相同</strong>，HTML中写在下面元素的覆盖上面的</p>
-</li>
-<li><p>可以通过 <code>z-index</code> 属性手动设置定位元素的层级关系</p>
-<p><strong>取值：</strong>没有单位的数字</p>
-<p><strong>效果：</strong>数值越大，层级越高</p>
-</li>
-</ul>
-<h2 id="垂直对齐方式（vertical-align）"><a href="#垂直对齐方式（vertical-align）" class="headerlink" title="垂直对齐方式（vertical-align）"></a>垂直对齐方式（vertical-align）</h2><blockquote>
-<p>在开发中可能会遇到行内块元素垂直对齐的问题，此时可以使用 <code>vertical-align</code> 属性让图片</p>
-</blockquote>
-<p><strong>问题：</strong>  当图片和文字在一行中显示时，其实底部是不对齐的！</p>
-<blockquote>
-<p>图片和文字底部对齐怎么做？</p>
-</blockquote>
-<p><img src="\images\q1.png" alt="q1"></p>
-<p><strong>解决方法：</strong></p>
-<p>此时可以给图片设置 <code>vertical-align:bottom;</code> 即可</p>
-<blockquote>
-<p><code>vertical-align</code> 就是用来设置行内/行内块元素垂直对齐的问题的</p>
-</blockquote>
-<hr>
-<p><strong>取值：</strong></p>
-<ul>
-<li>baseline：基线对齐</li>
-<li>top：顶部对齐</li>
-<li>middle：中线对齐</li>
-<li>bottom：底部对齐</li>
-</ul>
-<p><strong>项目中可以使用 <code>vertical-align</code> 解决的bug：</strong></p>
-<ul>
-<li>场景1 :  文本框（text）和表单按钮（button）无法对齐问题；</li>
-<li>场景2 :  input 和 img无法对齐的问题；</li>
-<li>场景3 : div里放一个文本框 ，此时文本框无法靠顶；</li>
-<li>场景4：div有img标签撑开，此时img标签下方有间隙（给img标签设置vertical-align即可）；</li>
-<li>场景5 : 使用line-height让img标签垂直居中，需要给img标签单独设置vertical-align：middle</li>
-</ul>
-<p><strong>注意点：</strong></p>
-<p>在学习完浮动之后，就不推荐优先使用行内块元素让div一行中显示，因为会出现垂直对齐的问题，以后<strong>优先使用浮动完成效果</strong></p>
-<h2 id="溢出内容效果（overflow）"><a href="#溢出内容效果（overflow）" class="headerlink" title="溢出内容效果（overflow）"></a>溢出内容效果（overflow）</h2><blockquote>
-<p>设置盒子内容超出部分的显示效果</p>
-</blockquote>
-<p><strong>取值：</strong></p>
-<ul>
-<li>visible：超出部分可见（默认值）</li>
-<li>hidden：超出部分隐藏</li>
-<li>scroll：显示滚动条</li>
-<li>auto：根据内容的多少，自动显示或者隐藏滚动条</li>
-</ul>
-<h2 id="CSS三种隐藏方式"><a href="#CSS三种隐藏方式" class="headerlink" title="CSS三种隐藏方式"></a>CSS三种隐藏方式</h2><blockquote>
-<p>CSS中有三种与隐藏相关的属性，需要知道他们之间的区别</p>
-</blockquote>
-<h3 id="内容超出隐藏-overflow-hidden；"><a href="#内容超出隐藏-overflow-hidden；" class="headerlink" title="内容超出隐藏 overflow:hidden；"></a>内容超出隐藏 <code>overflow:hidden；</code></h3><blockquote>
-<p>盒子内容超出部分隐藏</p>
-</blockquote>
-<p><strong>注意：</strong> 隐藏的元素的超出内容，元素本身可见</p>
-<h3 id="元素隐藏-visibility：hidden；"><a href="#元素隐藏-visibility：hidden；" class="headerlink" title="元素隐藏 visibility：hidden；"></a>元素隐藏 <code>visibility：hidden；</code></h3><blockquote>
-<p>让元素隐藏，但在页面中仍然<strong>占位置</strong> → 相当于穿上了隐形斗篷</p>
-</blockquote>
-<p><strong>注意：</strong>让元素隐藏，并且占位置</p>
-<h3 id="元素隐藏-display：none；"><a href="#元素隐藏-display：none；" class="headerlink" title="元素隐藏 display：none；"></a>元素隐藏 <code>display：none；</code></h3><blockquote>
-<p>让元素隐藏，并且在页面中<strong>不占位置</strong> → 相当于把元素删除了</p>
-</blockquote>
-<p><strong>注意：</strong>让元素隐藏，并且不占位置</p>
-<h2 id="CSS三种隐藏方式总结"><a href="#CSS三种隐藏方式总结" class="headerlink" title="CSS三种隐藏方式总结"></a>CSS三种隐藏方式总结</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">属性</th>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">特点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>overflow：hidden;</code></td>
-<td style="text-align:center">超出<strong>内容隐藏</strong></td>
-<td style="text-align:center">超出盒子部分的<strong>内容隐藏</strong></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>visibility：hidden;</code></td>
-<td style="text-align:center">元素<strong>本身隐藏</strong></td>
-<td style="text-align:center">在页面中<strong>占位置</strong></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>display：none;</code></td>
-<td style="text-align:center">元素<strong>本身隐藏</strong></td>
-<td style="text-align:center">在页面中<strong>不占位置</strong></td>
-</tr>
-</tbody>
-</table>
-<h2 id="html-标签的嵌套规范（了解）"><a href="#html-标签的嵌套规范（了解）" class="headerlink" title="html 标签的嵌套规范（了解）"></a>html 标签的嵌套规范（了解）</h2><blockquote>
-<p>块级元素一般用于布局：比如div在页面的布局用的最多；</p>
-<p>行内元素一般用于放文字：比如span、a标签里面一般放文字</p>
-<p>标签之间是不能随意嵌套的，书写的时候应该有对应的规范：</p>
-</blockquote>
-<p><strong>注意点：</strong></p>
-<ul>
-<li>行内元素一般放文字或者行内元素，但是<strong>a标签之间不能互相嵌套</strong>（会被浏览器解析成两个a标签）；</li>
-<li><p>块级元素相当于一个容器，里面可以放文字、行内元素、块级元素，但是<strong>p标签不能嵌套块级元素</strong>（p标签会被拆分成两个p标签）</p>
-<blockquote>
-<p>p标签作为一个段落标签，只有文字才会组成段落，所以p标签里面一般只放文字，不要放块级元素！！！</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="拓展（了解）"><a href="#拓展（了解）" class="headerlink" title="拓展（了解）"></a>拓展（了解）</h2><h3 id="字符间距（letter-spacing）"><a href="#字符间距（letter-spacing）" class="headerlink" title="字符间距（letter-spacing）"></a>字符间距（letter-spacing）</h3><blockquote>
-<p>默认情况下，页面中的文字都是紧挨着的，但是有少数情况下，我们也可以让文字之间的距离变大一点</p>
-<p>文字有英文和中文</p>
-</blockquote>
-<p><strong>效果演示：</strong> </p>
-<p><img src="\images\letterspancing.png" alt="letterspancing"></p>
-<p><strong>作用：</strong>设置文本中<strong>字符（中文汉字/英文字母）</strong>之间的距离</p>
-<p><strong>代码：</strong> <code>letter-spacing: 20px;</code></p>
-<p><strong>取值：</strong> 可以是不同单位的数值，允许使用负值</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    div p &#123;</span></span><br><span class="line"><span class="undefined">      letter-spacing: 20px;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>hello world! 来啦老弟！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- letter spacing：设置的是字符间距，英文即字母之间的间距，中文即文字之间的间距 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="单词间距（word-spacing）"><a href="#单词间距（word-spacing）" class="headerlink" title="单词间距（word-spacing）"></a>单词间距（word-spacing）</h3><blockquote>
-<p>对于英文来说，有的时候还需要设置单词之间的距离，这个怎么操作呢？</p>
-</blockquote>
-<p>其实，英文单词之间的距离，指的得就是空格的宽度</p>
-<p><strong>效果：</strong></p>
-<p><img src="\images\wordspacing.png" alt="wordspacing"></p>
-<p><strong>代码：</strong> <code>word-spacing: 20px;</code></p>
-<p><strong>取值：</strong> 可以是不同单位的数值，允许使用负值</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    div p&#123;</span></span><br><span class="line"><span class="undefined">      word-spacing: 20px;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>hello world! 来啦 老弟！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- word spacing：设置的是单词间距，一般只会用在英文中，对于中文来说，可以看做是段落中空格的间距 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/20/1-基础班day10笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -3728,8 +1892,7 @@
 
       
         
-          
-            <h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><blockquote>
+          <h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><blockquote>
 <ul>
 <li style="list-style: none"><input type="checkbox"> 能够完成尚合项目的头部部分</li>
 </ul>
@@ -3744,78 +1907,13 @@
 </ul>
 <p>。。。。。。</p>
 </blockquote>
-<p><strong>理解上课的知识点……</strong></p>
-<h2 id="版心"><a href="#版心" class="headerlink" title="版心"></a>版心</h2><blockquote>
-<p>宽度固定且水平居中的盒子</p>
-</blockquote>
-<p><strong>为什么要有版心?</strong></p>
-<blockquote>
-<p>因为每台电脑的屏幕不一样大，为了让不同屏幕大小的电脑都能看到页面的主体内容，我们需要把网页的内容约束在版心里。</p>
-</blockquote>
-<p><strong>屏幕大能看到主体内容：</strong></p>
-<p><img src="\images\big.png" alt="big"></p>
-<p><strong>屏幕小也能看到主体内容：</strong></p>
-<p><img src="\images\small.png" alt="small"></p>
-<blockquote>
-<p>因为主要内容都放在版心中，所以能让更多大小的屏幕完整的看到页面的主体内容。</p>
-</blockquote>
-<p><strong>版心代码：</strong></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*通常版心命名为w*/</span></span><br><span class="line"><span class="selector-class">.w</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">1200px</span>；</span><br><span class="line">    margin：<span class="number">0</span> auto；</span><br><span class="line">&#125;</span><br><span class="line">/----------------------------------------------------/</span><br><span class="line"><span class="comment">/*给主体内容的盒子设置版心，直接加上w这个类即可*/</span></span><br><span class="line">&lt;div class="w"&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="常见的布局方式（了解）"><a href="#常见的布局方式（了解）" class="headerlink" title="常见的布局方式（了解）"></a>常见的布局方式（了解）</h2><blockquote>
-<p>注意点：实际项目中，写每个盒子的时候都要判断有没有版心，版心很重要！！</p>
-</blockquote>
-<p><strong>常见的三种布局方式：</strong></p>
-<blockquote>
-<p>了解即可，在之后的项目中会写到对应的布局</p>
-</blockquote>
-<h3 id="一列固定宽度且居中"><a href="#一列固定宽度且居中" class="headerlink" title="一列固定宽度且居中"></a>一列固定宽度且居中</h3><blockquote>
-<p>常见的布局结构，一般每个盒子都设置了版心</p>
-</blockquote>
-<p><img src="\images\yl.jpg" alt="yl"></p>
-<h3 id="两列左窄右宽型"><a href="#两列左窄右宽型" class="headerlink" title="两列左窄右宽型"></a>两列左窄右宽型</h3><blockquote>
-<p>常见的就是banner部分左侧导航，右侧轮播图的效果</p>
-<p>如：<a href="http://www.mi.com" target="_blank"> 小米官网 </a></p>
-</blockquote>
-<p><img src="\images\ll.jpg" alt="ll"></p>
-<h3 id="通栏平均分布型"><a href="#通栏平均分布型" class="headerlink" title="通栏平均分布型"></a>通栏平均分布型</h3><blockquote>
-<p>占满浏览器的一行叫做<strong>通栏</strong>，对于通栏的div，可以不用设置宽度，默认就是独占一行的</p>
-<p> <a href="http://www.smartisan.com/" target="_blank"> 锤子官网 </a></p>
-</blockquote>
-<p><img src="\images\tl.jpg" alt="tl"></p>
-<p><strong>一般布局方式会综合运用：</strong></p>
-<p><img src="\images\常见的布局情况.png" alt="常见的布局情况"></p>
-<h2 id="上课的记录"><a href="#上课的记录" class="headerlink" title="上课的记录"></a>上课的记录</h2><blockquote>
-<p>上课敲的项目首要任务是听懂</p>
-<p>学习的是写页面的步骤，每个知识点都会，不会的是接下来做什么</p>
-<p>如果有记笔记习惯的同学，可以把老师的步骤记下来，然后忘记怎么做的时候根据自己写的步骤看看能不能一步一步做出来</p>
-</blockquote>
-<p><strong>比如：</strong></p>
-<ol>
-<li>页面的顶部区域<ol>
-<li>大盒子需要一个版心</li>
-<li>里面两张图片，分别左右浮动</li>
-<li>图片离上面有距离，给大盒子设置 <code>padding-top</code></li>
-<li>……</li>
-</ol>
-</li>
-</ol>
-<h2 id="尚合项目"><a href="#尚合项目" class="headerlink" title="尚合项目"></a>尚合项目</h2><h3 id="项目搭建"><a href="#项目搭建" class="headerlink" title="项目搭建"></a>项目搭建</h3><blockquote>
-<p>整个项目应该就是一个文件夹，文件夹中放项目中的所有资源（图片、html、css）</p>
-</blockquote>
-<p><strong>步骤：</strong></p>
-<ol>
-<li>新建一个文件夹，作为<strong>项目文件夹</strong> → 一个项目就应该有一个文件夹</li>
-<li>在项目文件夹中新建<strong>images文件夹</strong> → 存放项目相关图片</li>
-<li>在项目文件夹中新建 <strong><code>index.html</code>文件</strong> → 页面文件</li>
-<li>在项目文件夹中新建 <strong><code>index.css</code>文件</strong> → 样式文件</li>
-</ol>
-<h3 id="样式初始化"><a href="#样式初始化" class="headerlink" title="样式初始化"></a>样式初始化</h3><blockquote>
-<p>开始的时候先把项目中<strong>常见的css样式先写好</strong>→样式的初始化</p>
-</blockquote>
-<p><strong>代码：</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*-----------------------------项目样式的初始化--------------------------------------------*/</span></span><br><span class="line"><span class="comment">/*清除默认的marign和padding*/</span></span><br><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*消除页面中li的小点*/</span></span><br><span class="line"><span class="selector-tag">ul</span> &#123;</span><br><span class="line">  <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*消除a标签默认的下划线*/</span></span><br><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*左浮动的类*/</span></span><br><span class="line"><span class="selector-class">.fl</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: left;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*右浮动的类*/</span></span><br><span class="line"><span class="selector-class">.fr</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*清除浮动的代码*/</span></span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">clear</span>: both;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">visibility</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*版心的样式*/</span></span><br><span class="line"><span class="comment">/*版心就是宽度固定水平居中的盒子*/</span></span><br><span class="line"><span class="selector-class">.w</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">980px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*为了在上面看到下面的标签 最后删掉*/</span></span><br><span class="line"><span class="comment">/*body &#123;</span></span><br><span class="line"><span class="comment">  height: 2000px;</span></span><br><span class="line"><span class="comment">&#125;*/</span></span><br></pre></td></tr></table></figure>
-<h3 id="写代码-´-ω-･-▄︻┻┳══━一"><a href="#写代码-´-ω-･-▄︻┻┳══━一" class="headerlink" title="写代码(　 ´-ω ･)▄︻┻┳══━一"></a>写代码(　 ´-ω ･)▄︻┻┳══━一</h3>
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/20/1-基础班day09笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -3916,7 +2014,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
