@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="授课笔记,移动web," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="梦溪笔谈" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="《部分案例代码下载》学习目标   了解bootstrap的栅格系统的使用  能够完成微金所的头部  能够使用导航条组件完成微金所导航  能够完成微金所轮播图  能够完成微金所信息区块  能够完成微金所预约区块  。。。。。。  理解上课的知识点…… bootstrap框架 在之前使用媒体查询的方式能手动写出响应式的简单效果，但是非常的麻烦，代码非常的多。 在实际开发过程中，一般咱们会借助框架来完成">
+<meta name="keywords" content="授课笔记,移动web">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动webday05笔记">
+<meta property="og:url" content="http://yoursite.com/2020/02/06/1-移动webday05笔记/index.html">
+<meta property="og:site_name" content="梦溪笔谈">
+<meta property="og:description" content="《部分案例代码下载》学习目标   了解bootstrap的栅格系统的使用  能够完成微金所的头部  能够使用导航条组件完成微金所导航  能够完成微金所轮播图  能够完成微金所信息区块  能够完成微金所预约区块  。。。。。。  理解上课的知识点…… bootstrap框架 在之前使用媒体查询的方式能手动写出响应式的简单效果，但是非常的麻烦，代码非常的多。 在实际开发过程中，一般咱们会借助框架来完成">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/container容器.gif">
+<meta property="og:image" content="http://yoursite.com/images/container-fluid容器.gif">
+<meta property="og:image" content="http://yoursite.com/images/微金所模块划分.png">
+<meta property="og:updated_time" content="2020-03-11T08:23:47.099Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="移动webday05笔记">
+<meta name="twitter:description" content="《部分案例代码下载》学习目标   了解bootstrap的栅格系统的使用  能够完成微金所的头部  能够使用导航条组件完成微金所导航  能够完成微金所轮播图  能够完成微金所信息区块  能够完成微金所预约区块  。。。。。。  理解上课的知识点…… bootstrap框架 在之前使用媒体查询的方式能手动写出响应式的简单效果，但是非常的麻烦，代码非常的多。 在实际开发过程中，一般咱们会借助框架来完成">
+<meta name="twitter:image" content="http://yoursite.com/images/container容器.gif">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/02/06/1-移动webday05笔记/"/>
+
+
+
+
+
+  <title>移动webday05笔记 | 梦溪笔谈</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3098f283255b5d06bb9bf71621a4a003";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">梦溪笔谈</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/06/1-移动webday05笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="棠哥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/master.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="梦溪笔谈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">移动webday05笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-06T10:00:00+08:00">
+                2020-02-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3.9k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  16
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="《部分案例代码下载》"><a href="#《部分案例代码下载》" class="headerlink" title="《部分案例代码下载》"></a><a href="/download/移动webday05部分案例代码.zip">《部分案例代码下载》</a></h2><h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 了解bootstrap的栅格系统的使用</li>
+<li style="list-style: none"><input type="checkbox"> 能够完成微金所的头部</li>
+<li style="list-style: none"><input type="checkbox"> 能够使用导航条组件完成微金所导航</li>
+<li style="list-style: none"><input type="checkbox"> 能够完成微金所轮播图</li>
+<li style="list-style: none"><input type="checkbox"> 能够完成微金所信息区块</li>
+<li style="list-style: none"><input type="checkbox"> 能够完成微金所预约区块</li>
+</ul>
+<p>。。。。。。</p>
+</blockquote>
+<p><strong>理解上课的知识点……</strong></p>
+<h1 id="bootstrap框架"><a href="#bootstrap框架" class="headerlink" title="bootstrap框架"></a>bootstrap框架</h1><blockquote>
+<p>在之前使用媒体查询的方式能手动写出响应式的简单效果，但是非常的麻烦，代码非常的多。</p>
+<p>在实际开发过程中，一般咱们会借助框架来完成响应式的开发，提高效率（但是底层仍然是媒体查询的原理）</p>
+<p>Bootstrap，来自 Twitter，是目前很受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。<a href="https://www.awesomes.cn/rank" target="_blank" rel="noopener">前端流行框架排名</a> </p>
+</blockquote>
+<h2 id="bootstrap的初体验"><a href="#bootstrap的初体验" class="headerlink" title="bootstrap的初体验"></a>bootstrap的初体验</h2><blockquote>
+<p> bootstrap框架现阶段可以简单的当做别人写好的代码。想要用，先去下载下来</p>
+<p> <a href="http://www.bootcss.com/" target="_blank" rel="noopener">bootstrap中文网</a> </p>
+</blockquote>
+<p><strong>版本：</strong></p>
+<ul>
+<li><p>2.x.x 停止维护</p>
+<blockquote>
+<p>做了很多兼容性处理，但是代码不够简洁，功能不够完善</p>
+</blockquote>
+</li>
+<li><p>3.x.x <strong>目前使用较多</strong></p>
+<blockquote>
+<p>偏向于响应式开发布局，稳定。但是放弃了IE67的兼容，对IE8支持但是界面效果不友好</p>
+</blockquote>
+</li>
+<li><p>4.x.x 阶段</p>
+</li>
+</ul>
+<p><strong>注意点：</strong> Bootstrap中的  <strong>js功能效果依赖于 jQuery</strong> （ 第三方库, 后面有专门的课程讲解）</p>
+<h3 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h3><blockquote>
+<p>说白了，bootstrap框架就是别人写好的代码，类似于：需要使用别人写好的css文件，只需要直接引入即可</p>
+</blockquote>
+<ul>
+<li><p><strong>引入文件</strong>：<code>&lt;link rel=&quot;stylesheet&quot; href=&quot;bootstrap/css/bootstrap.css&quot;&gt;</code></p>
+</li>
+<li><p>bootstrap样式文件中有一些简单的<strong>样式初始化</strong>，所以引入之后不用再引入 <code>base.css</code> 文件</p>
+<blockquote>
+<p>但是bootstrap并没有将所有样式都重置，所有之后还需要自己手动写代码重置</p>
+</blockquote>
+</li>
+<li><p><strong>学习bootstrap框架说白了就是学习类（学习每一个类的含义）</strong></p>
+<blockquote>
+<p>比如：fl——》左浮动、fr——》右浮动、clearfix——》清除浮动</p>
+</blockquote>
+<p><strong>以部分按钮为例：</strong></p>
+<p>|     类名     |             含义             |<br>| :———-: | :————————–: |<br>|     .btn     | 按钮的基础类（按钮必加的类） |<br>| .btn-success |           绿色按钮           |<br>| .btn-danger  |           红色按钮           |<br>| .btn-primary |           深蓝按钮           |<br>| .btn-default |           白色按钮           |</p>
+</li>
+</ul>
+<h2 id="bootstrap的布局容器"><a href="#bootstrap的布局容器" class="headerlink" title="bootstrap的布局容器"></a>bootstrap的布局容器</h2><blockquote>
+<p>之前给一个盒子设置响应式布局（不同屏幕下版心不同，移动端宽度100%），代码写了很多很麻烦</p>
+<p>但是使用bootstrap框架之后就非常方便，框架中响应式的框架已经写好的，使用的之后直接给标签加类即可</p>
+</blockquote>
+<h3 id="响应式布局容器（-container）"><a href="#响应式布局容器（-container）" class="headerlink" title="响应式布局容器（.container）"></a>响应式布局容器（.container）</h3><blockquote>
+<p><strong>比较常用</strong></p>
+</blockquote>
+<p><img src="\images\container容器.gif" alt="container容器"></p>
+<ul>
+<li><p>设置了该类的盒子，在不同屏幕下有不同的版心，到了移动端宽度为100%（之前写的效果一样）</p>
+<blockquote>
+<p>底层原理：就是之前写的媒体查询</p>
+</blockquote>
+</li>
+<li><p>设置了该类的盒子，左右有默认15px的padding</p>
+<blockquote>
+<p>写框架的作者觉得内容直接贴两边不好看，就设置了左右15px的padding</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="流式布局容器（-container-fluid）（了解）"><a href="#流式布局容器（-container-fluid）（了解）" class="headerlink" title="流式布局容器（.container-fluid）（了解）"></a>流式布局容器（.container-fluid）（了解）</h3><blockquote>
+<p><strong>了解即可</strong></p>
+</blockquote>
+<p><img src="\images\container-fluid容器.gif" alt="container-fluid容器"></p>
+<ul>
+<li>设置了该类的盒子，宽度永远是100%</li>
+<li>设置了该类的盒子，左右也有默认15px的padding</li>
+</ul>
+<h3 id="抵消父元素padding的类（-row）（了解）"><a href="#抵消父元素padding的类（-row）（了解）" class="headerlink" title="抵消父元素padding的类（.row）（了解）"></a>抵消父元素padding的类（.row）（了解）</h3><blockquote>
+<p>bootstrap中的布局容器默认都设置了左右15px的padding。</p>
+<p>如果不需要这个效果，除了<strong>可以通过选择器padding:0;直接覆盖</strong>，还<strong>可以通过.row类去掉</strong></p>
+</blockquote>
+<ul>
+<li><p>设置了该类的子盒子，会抵消父元素左右15px的padding</p>
+<blockquote>
+<p>底层原理：通过margin为负值实现</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="栅格系统（重点）"><a href="#栅格系统（重点）" class="headerlink" title="栅格系统（重点）"></a>栅格系统（重点）</h2><blockquote>
+<p>在bootstrap中会把一行分成12列，通过对应的类名实现每个盒子宽度的动态变化</p>
+<p>其实其中的原理大家一秒能懂</p>
+</blockquote>
+<h3 id="栅格系统的模拟"><a href="#栅格系统的模拟" class="headerlink" title="栅格系统的模拟"></a>栅格系统的模拟</h3><p><strong>需求：</strong> 响应式容器中有两个盒子，只在大屏设备中宽度各占一半一行中显示，其他屏幕占满一行</p>
+<ul>
+<li>使用之前的方法：浮动 + 宽度百分比 + 媒体查询 可以实现</li>
+</ul>
+<hr>
+<ul>
+<li><p>其实在bootstrap中，也可以通过类完成以上效果（如：给两个盒子设置<code>.col-lg-6</code>）</p>
+<blockquote>
+<p>底层原理也是通过：浮动 + 宽度百分比 + 媒体查询 做到的。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="栅格系统的介绍"><a href="#栅格系统的介绍" class="headerlink" title="栅格系统的介绍"></a>栅格系统的介绍</h3><blockquote>
+<p>bootstrap中将一行分成了12份（12份更容易分配盒子的空间）</p>
+</blockquote>
+<p><strong>底层原理：</strong> <strong>浮动（一行中显示） + 百分比（宽度均分） + 媒体查询（不同屏幕时才生效）</strong></p>
+<p><strong>比如： </strong><code>.col-lg-6</code> 表示在大屏及以上屏幕生效，盒子宽度为一行的6/12——》50%；浮动在一行中显示</p>
+<p><strong>语法：</strong></p>
+<h5 id="col-取值1-取值2"><a href="#col-取值1-取值2" class="headerlink" title=".col-取值1-取值2"></a><code>.col-取值1-取值2</code></h5><table>
+<thead>
+<tr>
+<th style="text-align:center">取值1</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">lg</td>
+<td style="text-align:center">大屏及以上屏幕时生效</td>
+</tr>
+<tr>
+<td style="text-align:center">md</td>
+<td style="text-align:center">中屏及以上屏幕时生效</td>
+</tr>
+<tr>
+<td style="text-align:center">sm</td>
+<td style="text-align:center">小屏及以上屏幕时生效</td>
+</tr>
+<tr>
+<td style="text-align:center">xs</td>
+<td style="text-align:center">超小屏及以上屏幕生效（所有屏幕生效）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值2：</strong> 份数（0~12）</p>
+<blockquote>
+<p>表示在一行中的宽度占几份</p>
+</blockquote>
+<h3 id="栅格系统的练习"><a href="#栅格系统的练习" class="headerlink" title="栅格系统的练习"></a>栅格系统的练习</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">    需求:  响应式布局容器中一共有 12 个div</span></span><br><span class="line"><span class="comment">      如果是大屏幕设备, 每行放 6 个 div,  共两行</span></span><br><span class="line"><span class="comment">      如果是中屏设备,   每行放 4 个 div,  共三行</span></span><br><span class="line"><span class="comment">      如果是小屏设备,   每行放 3 个 div,  共四行</span></span><br><span class="line"><span class="comment">      如果是超小屏设备, 每行放 2 个 div,  共六行</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    .col-取值1-取值2</span></span><br><span class="line"><span class="comment">      lg：大屏及以上生效</span></span><br><span class="line"><span class="comment">      md：中屏及以上生效</span></span><br><span class="line"><span class="comment">      sm：小屏及以上生效</span></span><br><span class="line"><span class="comment">      xs：所有屏幕都生效</span></span><br><span class="line"><span class="comment">  --&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="ヾ-๑╹◡╹-ﾉ”-写微金所新手体验模块的响应式效果"><a href="#ヾ-๑╹◡╹-ﾉ”-写微金所新手体验模块的响应式效果" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 写微金所新手体验模块的响应式效果"></a>ヾ(๑╹◡╹)ﾉ” 写微金所新手体验模块的响应式效果</h5><blockquote>
+<p>栅格系统中一般先从小屏开始写！</p>
+</blockquote>
+<h5 id="————————–"><a href="#————————–" class="headerlink" title="————————–"></a>————————–</h5><h2 id="bootstrap全局样式阅读（了解）"><a href="#bootstrap全局样式阅读（了解）" class="headerlink" title="bootstrap全局样式阅读（了解）"></a>bootstrap全局样式阅读（了解）</h2><blockquote>
+<p><a href="https://v3.bootcss.com/css/" target="_blank" rel="noopener">bootstrap全局样式</a></p>
+</blockquote>
+<p><strong>排版：对齐</strong></p>
+<blockquote>
+<p>底层原理：就是一个text-align：left/center/right</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类名</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.text-left</td>
+<td style="text-align:center">文本左对齐</td>
+</tr>
+<tr>
+<td style="text-align:center">.text-center</td>
+<td style="text-align:center">文本居中对齐</td>
+</tr>
+<tr>
+<td style="text-align:center">.text-right</td>
+<td style="text-align:center">文本右对齐</td>
+</tr>
+</tbody>
+</table>
+<p><strong>表格：基本（了解）</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类名</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.table</td>
+<td style="text-align:center">表格的基本样式（配合thead和tbody使用）</td>
+</tr>
+<tr>
+<td style="text-align:center">.table-striped</td>
+<td style="text-align:center">隔行变色</td>
+</tr>
+</tbody>
+</table>
+<p><strong>按钮：颜色</strong></p>
+<blockquote>
+<p>按钮需要加上基本类 <code>.btn</code></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类名</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.btn-danger</td>
+<td style="text-align:center">红色按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">.btn-success</td>
+<td style="text-align:center">绿色按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">.btn-primary</td>
+<td style="text-align:center">深蓝按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">.btn-default</td>
+<td style="text-align:center">白色按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">.btn-info（了解）</td>
+<td style="text-align:center">浅蓝按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">.btn-warning（了解）</td>
+<td style="text-align:center">黄色按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">.btn-link（了解）</td>
+<td style="text-align:center">链接按钮</td>
+</tr>
+</tbody>
+</table>
+<p><strong>按钮：尺寸</strong></p>
+<blockquote>
+<p>按钮默认是中按钮</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类名</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.btn-lg</td>
+<td style="text-align:center">大按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">.btn-sm</td>
+<td style="text-align:center">小按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">.btn-xs</td>
+<td style="text-align:center">超小按钮</td>
+</tr>
+</tbody>
+</table>
+<h2 id="响应式工具介绍"><a href="#响应式工具介绍" class="headerlink" title="响应式工具介绍"></a>响应式工具介绍</h2><blockquote>
+<p>在响应式布局中，有时候会设置不同屏幕下元素的显示或者隐藏</p>
+</blockquote>
+<p><strong>需求：</strong> 一个盒子大屏、中屏显示，小屏、超小屏隐藏</p>
+<ul>
+<li>自己通过媒体查询实现</li>
+</ul>
+<hr>
+<ul>
+<li>使用bootstrap中预定的.hidden相关类实现</li>
+</ul>
+<p><strong>代码：</strong></p>
+<blockquote>
+<p>bootstrap中预定了一些类，可以控制盒子的显示或者隐藏</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类名</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.hidden</td>
+<td style="text-align:center">所有屏幕都隐藏</td>
+</tr>
+<tr>
+<td style="text-align:center">.hidden-xs</td>
+<td style="text-align:center">只在超小屏隐藏</td>
+</tr>
+<tr>
+<td style="text-align:center">.hidden-sm</td>
+<td style="text-align:center">只在小屏隐藏</td>
+</tr>
+<tr>
+<td style="text-align:center">.hidden-md</td>
+<td style="text-align:center">只在中屏隐藏</td>
+</tr>
+<tr>
+<td style="text-align:center">.hidden-lg</td>
+<td style="text-align:center">只在大屏隐藏</td>
+</tr>
+</tbody>
+</table>
+<h2 id="组件介绍（了解）"><a href="#组件介绍（了解）" class="headerlink" title="组件介绍（了解）"></a>组件介绍（了解）</h2><blockquote>
+<p>组件比全局样式会多出一些功能出来，但是注意这些功能需要配合js文件一起使用</p>
+</blockquote>
+<p><strong>组件：字体图标</strong></p>
+<blockquote>
+<p>在bootstrap内部，内置了字体图标，只需要直接复制粘贴类名即可</p>
+</blockquote>
+<p><strong>比如：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"glyphicon glyphicon-heart"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>组件：导航条</strong></p>
+<blockquote>
+<p>bootstrap中已经写好导航条的代码，使用的时候直接复制粘贴即可</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">"navbar navbar-default"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container-fluid"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Brand and toggle get grouped for better mobile display --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"navbar-header"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"navbar-toggle collapsed"</span> <span class="attr">data-toggle</span>=<span class="string">"collapse"</span> <span class="attr">data-target</span>=<span class="string">"#bs-example-navbar-collapse-1"</span> <span class="attr">aria-expanded</span>=<span class="string">"false"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"sr-only"</span>&gt;</span>Toggle navigation<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"navbar-brand"</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Brand<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"collapse navbar-collapse"</span> <span class="attr">id</span>=<span class="string">"bs-example-navbar-collapse-1"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"nav navbar-nav"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"active"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Link <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"sr-only"</span>&gt;</span>(current)<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"dropdown"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"dropdown-toggle"</span> <span class="attr">data-toggle</span>=<span class="string">"dropdown"</span> <span class="attr">role</span>=<span class="string">"button"</span> <span class="attr">aria-haspopup</span>=<span class="string">"true"</span> <span class="attr">aria-expanded</span>=<span class="string">"false"</span>&gt;</span>Dropdown <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"caret"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"dropdown-menu"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Action<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Another action<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Something else here<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">"separator"</span> <span class="attr">class</span>=<span class="string">"divider"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Separated link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">"separator"</span> <span class="attr">class</span>=<span class="string">"divider"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>One more separated link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">"navbar-form navbar-left"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">placeholder</span>=<span class="string">"Search"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">class</span>=<span class="string">"btn btn-default"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"nav navbar-nav navbar-right"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"dropdown"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"dropdown-toggle"</span> <span class="attr">data-toggle</span>=<span class="string">"dropdown"</span> <span class="attr">role</span>=<span class="string">"button"</span> <span class="attr">aria-haspopup</span>=<span class="string">"true"</span> <span class="attr">aria-expanded</span>=<span class="string">"false"</span>&gt;</span>Dropdown <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"caret"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"dropdown-menu"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Action<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Another action<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Something else here<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">"separator"</span> <span class="attr">class</span>=<span class="string">"divider"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Separated link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="comment">&lt;!-- /.navbar-collapse --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="comment">&lt;!-- /.container-fluid --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>注意点：</strong></p>
+<ul>
+<li>如果需要实现组件中如导航条的功能，需要引入bootstrap中的js文件才行</li>
+<li>bootstrap中的js需要依赖与jquery这个js文件的，所以需要一起引入jquery这个js文件才能生效！</li>
+<li>js文件通过script的src属性引入</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./jquery/jquery-1.12.4.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./bootstrap/js/bootstrap.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="—————————"><a href="#—————————" class="headerlink" title="—————————"></a>—————————</h5><h1 id="微金所项目"><a href="#微金所项目" class="headerlink" title="微金所项目"></a>微金所项目</h1><h2 id="微金所项目搭建"><a href="#微金所项目搭建" class="headerlink" title="微金所项目搭建"></a>微金所项目搭建</h2><ul>
+<li><p>新建项目文件夹</p>
+<ul>
+<li><p>images文件夹：放项目需要的图片</p>
+</li>
+<li><p>css文件夹：放自己写的css文件</p>
+</li>
+<li><p>fonts文件夹：放自己项目的字体图标文件</p>
+<blockquote>
+<p>虽然bootstrap框架中内置了字体图标，但是实际开发中设计师会针对每个网页单独设计字体图标，使用方法和基础班一样</p>
+</blockquote>
+</li>
+<li><p><strong>lib文件夹</strong>：放项目中框架相关的代码</p>
+<blockquote>
+<p>lib文件夹中一般放框架（别人写好的代码）相关的代码</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>放入.ico图标</p>
+</li>
+<li><p>在 <code>index.html</code> 文件中引入相关文件</p>
+<ul>
+<li><p>引入.ico图标</p>
+</li>
+<li><p>引入字体图标文件</p>
+</li>
+<li><p>引入框架的css文件和js文件和jquery文件（因为bootstrap框架中的js依赖jquery）</p>
+<blockquote>
+<p>知道引入js之后能生效即可，js之后会详细去说</p>
+</blockquote>
+</li>
+<li><p>引入自己写的css文件</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="微金所模块划分"><a href="#微金所模块划分" class="headerlink" title="微金所模块划分"></a>微金所模块划分</h2><p><img src="\images\微金所模块划分.png" alt=""></p>
+<h2 id="响应式项目的思路"><a href="#响应式项目的思路" class="headerlink" title="响应式项目的思路"></a>响应式项目的思路</h2><ol>
+<li><p>先看有没有响应式版心（版心会不会跟随屏幕大小变化而变化）</p>
+<blockquote>
+<p>如果有响应式版心，设置 <code>.container</code> 即可</p>
+</blockquote>
+</li>
+<li><p>在响应式版心中分配每一个盒子的空间</p>
+<blockquote>
+<p>利用栅格系统进行空间的分配</p>
+</blockquote>
+</li>
+<li><p>设置整体大模块是否有显示与隐藏，直接给大模块设置hidden相关属性即可</p>
+</li>
+</ol>
+<h2 id="bootstrap导航条的改写（不做要求）"><a href="#bootstrap导航条的改写（不做要求）" class="headerlink" title="bootstrap导航条的改写（不做要求）"></a>bootstrap导航条的改写（不做要求）</h2><blockquote>
+<p>在bootstrap文档的组件中，有写好的导航条的代码，使用的时候直接复制改写即可。</p>
+<p>因为现在还没学js等相关内容，所以对于以下改写的内容同学们可以直接复制改好的代码，现在学习的重点在于之后样式的覆盖（如果能理解是一种进阶）</p>
+</blockquote>
+<p><strong>改写前先把不需要的属性和标签删除：</strong></p>
+<blockquote>
+<p>以下属性和标签，在改写过程中可以直接删除，因为是给盲人设备使用的，删除之后便于理解结构（不删也可以）</p>
+</blockquote>
+<ul>
+<li><code>aria-</code> 开头的属性，该属性可以直接删除</li>
+<li><code>role</code> 属性，该属性可以直接删除</li>
+<li>有 <code>sr-only</code> 类的标签，该标签可以直接删除 </li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">"navbar navbar-default"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 有版心的布局容器 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 小屏设备显示的左边大标题和右边切换按钮的组合 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"navbar-header"</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 小屏下右边的按钮 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"navbar-toggle collapsed"</span> <span class="attr">data-toggle</span>=<span class="string">"collapse"</span></span></span><br><span class="line"><span class="tag">                    <span class="attr">data-target</span>=<span class="string">"#bs-example-navbar-collapse-1"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 左边的大标题 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"navbar-brand"</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>左边的大标题<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!---------------------------------------------------------------------------------------&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 用于切换显示内容的结构 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"collapse navbar-collapse"</span> <span class="attr">id</span>=<span class="string">"bs-example-navbar-collapse-1"</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 左侧的导航 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"nav navbar-nav"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"active"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>我要投资<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>我要借贷<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>平台介绍<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>新手专区<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>最新动态<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>微平台<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 右侧的导航 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"nav navbar-nav navbar-right"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>个人中心<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="bootstrap标签页（tab栏）的改写"><a href="#bootstrap标签页（tab栏）的改写" class="headerlink" title="bootstrap标签页（tab栏）的改写"></a>bootstrap标签页（tab栏）的改写</h2><blockquote>
+<p>在bootstrap文本的JavaScript插件中，有写好的标签页（tab栏）的代码，使用的时候直接复制改写即可。</p>
+</blockquote>
+<p><strong>改写前先把不需要的属性和标签删除：</strong></p>
+<ul>
+<li><code>aria-</code> 开头的属性，该属性可以直接删除</li>
+<li><code>role</code> 属性，该属性可以直接删除</li>
+<li>有 <code>sr-only</code> 类的标签，该标签可以直接删除 </li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">    1、先去除没用的标签和属性</span></span><br><span class="line"><span class="comment">        1、aria-开头的属性，属性都删除</span></span><br><span class="line"><span class="comment">        2、role属性，该属性删除</span></span><br><span class="line"><span class="comment">        3、有sr-only类的标签，该标签直接删除</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    2、bootstrap中，data-开头的属性，是用于添加js功能的，不要删除</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    3、通过id属性将导航的按钮和面板绑定起来，所以id属性需要一一对应才行</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    原理：点击某一个导航按钮时，让对应的导航面板显示，其他面板都隐藏即可！！！</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 用于点击切换的按钮 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"nav nav-tabs"</span> <span class="attr">role</span>=<span class="string">"tablist"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"active"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#product01"</span> <span class="attr">data-toggle</span>=<span class="string">"tab"</span>&gt;</span>特别推荐<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#product02"</span> <span class="attr">data-toggle</span>=<span class="string">"tab"</span>&gt;</span>微平台1<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#product03"</span> <span class="attr">data-toggle</span>=<span class="string">"tab"</span>&gt;</span>微平台2<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#product04"</span> <span class="attr">data-toggle</span>=<span class="string">"tab"</span>&gt;</span>微平台3<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#product05"</span> <span class="attr">data-toggle</span>=<span class="string">"tab"</span>&gt;</span>微平台4<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#product06"</span> <span class="attr">data-toggle</span>=<span class="string">"tab"</span>&gt;</span>微平台5<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#product07"</span> <span class="attr">data-toggle</span>=<span class="string">"tab"</span>&gt;</span>微平台6<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 用于点击切换的面板 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tab-content"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tab-pane active"</span> <span class="attr">id</span>=<span class="string">"product01"</span>&gt;</span>111<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tab-pane"</span> <span class="attr">id</span>=<span class="string">"product02"</span>&gt;</span>222<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tab-pane"</span> <span class="attr">id</span>=<span class="string">"product03"</span>&gt;</span>333<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tab-pane"</span> <span class="attr">id</span>=<span class="string">"product04"</span>&gt;</span>444<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tab-pane"</span> <span class="attr">id</span>=<span class="string">"product05"</span>&gt;</span>555<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tab-pane"</span> <span class="attr">id</span>=<span class="string">"product06"</span>&gt;</span>666<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tab-pane"</span> <span class="attr">id</span>=<span class="string">"product07"</span>&gt;</span>777<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/授课笔记/" rel="tag"><i class="fa fa-tag"></i> 授课笔记</a>
+          
+            <a href="/tags/移动web/" rel="tag"><i class="fa fa-tag"></i> 移动web</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/20/1-PS的基本操作/" rel="next" title="基础班PS的基本操作">
+                <i class="fa fa-chevron-left"></i> 基础班PS的基本操作
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/02/06/1-移动webday03笔记/" rel="prev" title="移动webday03笔记">
+                移动webday03笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/master.jpg"
+                alt="棠哥" />
+            
+              <p class="site-author-name" itemprop="name">棠哥</p>
+              <p class="site-description motion-element" itemprop="description">棠哥的测试博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#《部分案例代码下载》"><span class="nav-number">1.</span> <span class="nav-text">《部分案例代码下载》</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习目标"><span class="nav-number"></span> <span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bootstrap框架"><span class="nav-number"></span> <span class="nav-text">bootstrap框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#bootstrap的初体验"><span class="nav-number">1.</span> <span class="nav-text">bootstrap的初体验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单使用"><span class="nav-number">1.1.</span> <span class="nav-text">简单使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bootstrap的布局容器"><span class="nav-number">2.</span> <span class="nav-text">bootstrap的布局容器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#响应式布局容器（-container）"><span class="nav-number">2.1.</span> <span class="nav-text">响应式布局容器（.container）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流式布局容器（-container-fluid）（了解）"><span class="nav-number">2.2.</span> <span class="nav-text">流式布局容器（.container-fluid）（了解）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抵消父元素padding的类（-row）（了解）"><span class="nav-number">2.3.</span> <span class="nav-text">抵消父元素padding的类（.row）（了解）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栅格系统（重点）"><span class="nav-number">3.</span> <span class="nav-text">栅格系统（重点）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#栅格系统的模拟"><span class="nav-number">3.1.</span> <span class="nav-text">栅格系统的模拟</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栅格系统的介绍"><span class="nav-number">3.2.</span> <span class="nav-text">栅格系统的介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#col-取值1-取值2"><span class="nav-number">3.2.0.1.</span> <span class="nav-text">.col-取值1-取值2</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栅格系统的练习"><span class="nav-number">3.3.</span> <span class="nav-text">栅格系统的练习</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”-写微金所新手体验模块的响应式效果"><span class="nav-number">3.3.0.1.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ” 写微金所新手体验模块的响应式效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#————————–"><span class="nav-number">3.3.0.2.</span> <span class="nav-text">————————–</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bootstrap全局样式阅读（了解）"><span class="nav-number">4.</span> <span class="nav-text">bootstrap全局样式阅读（了解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应式工具介绍"><span class="nav-number">5.</span> <span class="nav-text">响应式工具介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件介绍（了解）"><span class="nav-number">6.</span> <span class="nav-text">组件介绍（了解）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#—————————"><span class="nav-number">6.0.0.1.</span> <span class="nav-text">—————————</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#微金所项目"><span class="nav-number"></span> <span class="nav-text">微金所项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#微金所项目搭建"><span class="nav-number">1.</span> <span class="nav-text">微金所项目搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微金所模块划分"><span class="nav-number">2.</span> <span class="nav-text">微金所模块划分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应式项目的思路"><span class="nav-number">3.</span> <span class="nav-text">响应式项目的思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bootstrap导航条的改写（不做要求）"><span class="nav-number">4.</span> <span class="nav-text">bootstrap导航条的改写（不做要求）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bootstrap标签页（tab栏）的改写"><span class="nav-number">5.</span> <span class="nav-text">bootstrap标签页（tab栏）的改写</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">棠哥</span>
+
+  
+</div>
+
+
+  <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+ <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div> -->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <!-- 点击出现大气泡的效果 -->
+  
+</body>
+</html>

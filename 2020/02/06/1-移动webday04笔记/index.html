@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="授课笔记,移动web," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="梦溪笔谈" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="《部分案例代码下载》学习目标   能够说出伸缩布局的主轴对齐方式和侧轴对齐方式  能够说出如何让伸缩布局换行  能够完成六面神骰  了解响应式开发的原理  。。。。。。  理解上课的知识点…… flex布局（弹性布局） 通过给父元素添加flex属性，调整子元素在水平和垂直方向上的位置   布局方法的选取：  如果是pc端页面布局，我们一般还是考虑传统布局方式  如果是移动端或者不考虑兼容性问题的p">
+<meta name="keywords" content="授课笔记,移动web">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动webday04笔记">
+<meta property="og:url" content="http://yoursite.com/2020/02/06/1-移动webday04笔记/index.html">
+<meta property="og:site_name" content="梦溪笔谈">
+<meta property="og:description" content="《部分案例代码下载》学习目标   能够说出伸缩布局的主轴对齐方式和侧轴对齐方式  能够说出如何让伸缩布局换行  能够完成六面神骰  了解响应式开发的原理  。。。。。。  理解上课的知识点…… flex布局（弹性布局） 通过给父元素添加flex属性，调整子元素在水平和垂直方向上的位置   布局方法的选取：  如果是pc端页面布局，我们一般还是考虑传统布局方式  如果是移动端或者不考虑兼容性问题的p">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/传统布局和flex布局对比.png">
+<meta property="og:image" content="http://yoursite.com/images/flex-start.png">
+<meta property="og:image" content="http://yoursite.com/images/flex-end.png">
+<meta property="og:image" content="http://yoursite.com/images/center.png">
+<meta property="og:image" content="http://yoursite.com/images/space-around.png">
+<meta property="og:image" content="http://yoursite.com/images/space-between.png">
+<meta property="og:image" content="http://yoursite.com/images/aflex-start.png">
+<meta property="og:image" content="http://yoursite.com/images/aflex-end.png">
+<meta property="og:image" content="http://yoursite.com/images/acenter.png">
+<meta property="og:image" content="http://yoursite.com/images/astretch.png">
+<meta property="og:image" content="http://yoursite.com/images/123.png">
+<meta property="og:updated_time" content="2020-03-11T07:55:37.795Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="移动webday04笔记">
+<meta name="twitter:description" content="《部分案例代码下载》学习目标   能够说出伸缩布局的主轴对齐方式和侧轴对齐方式  能够说出如何让伸缩布局换行  能够完成六面神骰  了解响应式开发的原理  。。。。。。  理解上课的知识点…… flex布局（弹性布局） 通过给父元素添加flex属性，调整子元素在水平和垂直方向上的位置   布局方法的选取：  如果是pc端页面布局，我们一般还是考虑传统布局方式  如果是移动端或者不考虑兼容性问题的p">
+<meta name="twitter:image" content="http://yoursite.com/images/传统布局和flex布局对比.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/02/06/1-移动webday04笔记/"/>
+
+
+
+
+
+  <title>移动webday04笔记 | 梦溪笔谈</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3098f283255b5d06bb9bf71621a4a003";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">梦溪笔谈</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/06/1-移动webday04笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="棠哥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/master.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="梦溪笔谈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">移动webday04笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-06T10:00:00+08:00">
+                2020-02-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.9k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  10
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="《部分案例代码下载》"><a href="#《部分案例代码下载》" class="headerlink" title="《部分案例代码下载》"></a><a href="/download/移动webday04部分案例代码.zip">《部分案例代码下载》</a></h2><h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 能够说出伸缩布局的主轴对齐方式和侧轴对齐方式</li>
+<li style="list-style: none"><input type="checkbox"> 能够说出如何让伸缩布局换行</li>
+<li style="list-style: none"><input type="checkbox"> 能够完成六面神骰</li>
+<li style="list-style: none"><input type="checkbox"> 了解响应式开发的原理</li>
+</ul>
+<p>。。。。。。</p>
+</blockquote>
+<p><strong>理解上课的知识点……</strong></p>
+<h1 id="flex布局（弹性布局）"><a href="#flex布局（弹性布局）" class="headerlink" title="flex布局（弹性布局）"></a>flex布局（弹性布局）</h1><blockquote>
+<p>通过给父元素添加flex属性，调整子元素在水平和垂直方向上的位置</p>
+</blockquote>
+<p><img src="\images\传统布局和flex布局对比.png" alt="传统布局和flex布局对比"></p>
+<p><strong>布局方法的选取：</strong></p>
+<ul>
+<li><p>如果是pc端页面布局，我们一般还是考虑传统布局方式</p>
+</li>
+<li><p>如果是移动端或者不考虑兼容性问题的pc端页面布局，我们一般就可以考虑flex弹性布局</p>
+<blockquote>
+<p>如果不用考虑兼容性问题，flex布局会更加方便</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="flex布局的初体验"><a href="#flex布局的初体验" class="headerlink" title="flex布局的初体验"></a>flex布局的初体验</h2><h5 id="ヾ-๑╹◡╹-ﾉ”-让一个子盒子在父盒子中水平垂直居中"><a href="#ヾ-๑╹◡╹-ﾉ”-让一个子盒子在父盒子中水平垂直居中" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 让一个子盒子在父盒子中水平垂直居中"></a>ヾ(๑╹◡╹)ﾉ” 让一个子盒子在父盒子中水平垂直居中</h5><ul>
+<li><p>之前使用子绝父相完成</p>
+</li>
+<li><p>通过flex布局，三行代码完成</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 设置当前盒子为弹性盒子*/</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">flex</span>;</span><br><span class="line"><span class="comment">/* 设置主轴方向的对齐方式：justify-content */</span></span><br><span class="line"><span class="selector-tag">justify-content</span>: <span class="selector-tag">center</span>;</span><br><span class="line"><span class="comment">/* 设置侧轴方向的对齐方式：align-items */</span></span><br><span class="line"><span class="selector-tag">align-items</span>: <span class="selector-tag">center</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>设置了 <code>display：flex;</code> 的盒子会变成一个<strong>弹性盒子</strong>。弹性盒子会多出了<strong>主轴</strong>和<strong>侧轴</strong>的概念。</p>
+<p><strong>主轴：</strong> <strong>默认水平向右</strong> （类似于x轴）</p>
+<p><strong>侧轴：</strong>与主轴垂直的就是侧轴，<strong>默认垂直向下</strong>（类似于y轴）</p>
+<p>弹性盒子内部的<strong>子元素会默认沿着主轴方向</strong> 排布，默认水平向右布局。（类似于羊肉串）</p>
+<hr>
+<blockquote>
+<p>接下来学习一些flex布局中相关的属性</p>
+</blockquote>
+<h2 id="主轴方向（flex-direction）（了解）"><a href="#主轴方向（flex-direction）（了解）" class="headerlink" title="主轴方向（flex-direction）（了解）"></a>主轴方向（flex-direction）（了解）</h2><blockquote>
+<p>弹性盒子中主轴方向默认是水平向右的。</p>
+<p>但是其实可以通过<code>flex-diretion</code> 属性修改主轴的方向（一般很少改变）</p>
+</blockquote>
+<p><strong>取值（主轴方向）：</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">取值</th>
+<th style="text-align:center">效果（主轴方向）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">row</td>
+<td style="text-align:center">水平向右（默认）</td>
+</tr>
+<tr>
+<td style="text-align:center">row-reverse</td>
+<td style="text-align:center">水平向左</td>
+</tr>
+<tr>
+<td style="text-align:center">column</td>
+<td style="text-align:center">垂直向下</td>
+</tr>
+<tr>
+<td style="text-align:center">column-reverse</td>
+<td style="text-align:center">垂直向上</td>
+</tr>
+</tbody>
+</table>
+<h2 id="主轴对齐方式（justify-content）（重点）"><a href="#主轴对齐方式（justify-content）（重点）" class="headerlink" title="主轴对齐方式（justify-content）（重点）"></a>主轴对齐方式（justify-content）（重点）</h2><blockquote>
+<p>元素在主轴上排布，可以通过 <code>justify-content</code> 属性设置元素的对齐方式</p>
+</blockquote>
+<p><strong>取值：</strong></p>
+<ul>
+<li><p><strong>flex-start：向主轴的开始位置对齐</strong></p>
+<blockquote>
+<p>默认相当于左对齐</p>
+</blockquote>
+<p><img src="\images\flex-start.png" alt="flex-start"></p>
+</li>
+<li><p><strong>flex-end：向主轴的结束位置对齐</strong></p>
+<blockquote>
+<p>默认相当于右对齐</p>
+</blockquote>
+<p><img src="\images\flex-end.png" alt="flex-end"></p>
+</li>
+<li><p><strong>center：居中对齐</strong></p>
+<p><img src="\images\center.png" alt="center"></p>
+</li>
+<li><p><strong>space-around：让空白环绕盒子显示</strong></p>
+<p><img src="\images\space-around.png" alt="space-around"></p>
+</li>
+<li><p><strong>space-between：让空白只在盒子之间显示</strong></p>
+<p><img src="\images\space-between.png" alt="space-between"></p>
+</li>
+</ul>
+<h2 id="单行侧轴对齐方式（align-items）（重点）"><a href="#单行侧轴对齐方式（align-items）（重点）" class="headerlink" title="单行侧轴对齐方式（align-items）（重点）"></a>单行侧轴对齐方式（align-items）（重点）</h2><blockquote>
+<p>可以通过 <code>align-items</code> 设置单行元素在侧轴的对齐方式。 </p>
+</blockquote>
+<p><strong>取值：</strong></p>
+<ul>
+<li><p><strong>flex-start：向侧轴的开始位置对齐</strong></p>
+<p><img src="\images\aflex-start.png" alt="aflex-start"></p>
+</li>
+<li><p><strong>flex-end：向侧轴的结束位置对齐</strong></p>
+<p><img src="\images\aflex-end.png" alt="aflex-end"></p>
+</li>
+<li><p><strong>center：居中对齐</strong></p>
+<p><img src="\images\acenter.png" alt="acenter"></p>
+</li>
+<li><p><strong>stretch：让子盒子的高度拉伸显示（默认值）</strong></p>
+<blockquote>
+<p>只有当子元素没有高度时，才会有拉伸效果（否则以设置的高度为准）</p>
+</blockquote>
+<p><img src="\images\astretch.png" alt="astretch"></p>
+</li>
+</ul>
+<hr>
+<h2 id="是否换行（flex-wrap）"><a href="#是否换行（flex-wrap）" class="headerlink" title="是否换行（flex-wrap）"></a>是否换行（flex-wrap）</h2><blockquote>
+<p>flex布局中，默认是单行显示的，如果子元素的宽度之和超出了父元素的宽度，此时子盒子会默认压缩显示。</p>
+<p>此时，如果需要设置子元素换行显示，可以使用属性 <code>flex-wrap</code></p>
+</blockquote>
+<p><strong>取值：</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">属性值</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">nowrap</td>
+<td style="text-align:center">不换行（默认值）</td>
+</tr>
+<tr>
+<td style="text-align:center">wrap</td>
+<td style="text-align:center">换行</td>
+</tr>
+</tbody>
+</table>
+<h2 id="多行侧轴对齐方式（align-content）"><a href="#多行侧轴对齐方式（align-content）" class="headerlink" title="多行侧轴对齐方式（align-content）"></a>多行侧轴对齐方式（align-content）</h2><blockquote>
+<p>之前学习的 <code>align-items</code> 只是针对于单行元素的侧轴对齐方式。</p>
+<p>如果需要设置多行元素的侧轴对齐方式，此时需要使用 <code>align-content</code> 才行</p>
+</blockquote>
+<p><strong>取值（和align-items差不多）：</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">取值</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">flex-start</td>
+<td style="text-align:center">向侧轴的开始位置对齐</td>
+</tr>
+<tr>
+<td style="text-align:center">flex-end</td>
+<td style="text-align:center">向侧轴的结束位置对齐</td>
+</tr>
+<tr>
+<td style="text-align:center">center</td>
+<td style="text-align:center">居中对齐</td>
+</tr>
+<tr>
+<td style="text-align:center">stretch</td>
+<td style="text-align:center">子元素高度拉伸显示（只有没设高才有效果）</td>
+</tr>
+<tr>
+<td style="text-align:center">space-around</td>
+<td style="text-align:center">空白环绕盒子显示</td>
+</tr>
+<tr>
+<td style="text-align:center">space-between</td>
+<td style="text-align:center">空白只在盒子之间显示</td>
+</tr>
+</tbody>
+</table>
+<p><strong>align-items与align-content的区别：</strong></p>
+<ul>
+<li>如果子元素没有换行，<strong>只有一行</strong>的时候使用 <code>align-items</code></li>
+<li>如果子元素有<strong>多行</strong>，此时使用 <code>align-content</code></li>
+</ul>
+<hr>
+<h5 id="—————"><a href="#—————" class="headerlink" title="—————-"></a>—————-</h5><p>学习到这里，给父元素设置的相关样式已经说完了，稍微小结一下！</p>
+<hr>
+<p>以下都是给子元素设置的相关属性~</p>
+<h2 id="分配子元素空间（flex属性）"><a href="#分配子元素空间（flex属性）" class="headerlink" title="分配子元素空间（flex属性）"></a>分配子元素空间（flex属性）</h2><blockquote>
+<p>可以通过flex属性设置子元素的分配的空间</p>
+</blockquote>
+<p><strong>需求：</strong> 让弹性盒子中的三个子元素等分！</p>
+<p><strong>作用：</strong> 按照份数分配父元素主轴（宽度）的剩余空间</p>
+<blockquote>
+<p>优先分配具体的宽度，剩余的空间再按照分数分配。</p>
+</blockquote>
+<p><strong>代码：</strong> <code>flex:份数;</code></p>
+<p><strong>通过flex属性可以很轻松的完成圣杯布局。</strong></p>
+<h2 id="子元素排序（order属性）-了解"><a href="#子元素排序（order属性）-了解" class="headerlink" title="子元素排序（order属性）(了解)"></a>子元素排序（order属性）(了解)</h2><blockquote>
+<p>在不能修改html结构的时候，要求改变子元素的属性，此时可以使用order属性设置</p>
+</blockquote>
+<p><strong>需求：</strong> 让弹性盒子中第二个子元素显示在左边第一个？？</p>
+<p><strong>作用：</strong> 设置弹性盒子中子元素的排列顺序，<strong>数值越小，排列靠前，默认是0</strong></p>
+<p><strong>代码：</strong> <code>order：数字;</code></p>
+<h2 id="单个子元素侧轴对齐方式（align-self）"><a href="#单个子元素侧轴对齐方式（align-self）" class="headerlink" title="单个子元素侧轴对齐方式（align-self）"></a>单个子元素侧轴对齐方式（align-self）</h2><blockquote>
+<p>可以通过 <code>align-self</code> 属性设置单个子元素侧轴的对齐方式</p>
+</blockquote>
+<p><strong>需求：</strong> 让父元素中的单行子元素居中，然后让第一个子元素跑到侧轴开始位置！</p>
+<p><strong>作用：</strong> 设置单个子元素在侧轴的对齐方式</p>
+<p><strong>取值（和align-items取值一样）：</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">取值</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">flex-start</td>
+<td style="text-align:center">向侧轴的开始位置对齐（默认相当于顶部对齐）</td>
+</tr>
+<tr>
+<td style="text-align:center">flex-end</td>
+<td style="text-align:center">向侧轴的结束位置对齐（默认相当于底部对齐）</td>
+</tr>
+<tr>
+<td style="text-align:center">center</td>
+<td style="text-align:center">居中对齐</td>
+</tr>
+<tr>
+<td style="text-align:center">stretch</td>
+<td style="text-align:center">子元素高度拉伸显示（只有没设高才有效果）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>对于其他内容有兴趣可以看看<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="noopener">阮一峰的博客</a></p>
+</blockquote>
+<h5 id="ヾ-๑╹◡╹-ﾉ”-六面神骰"><a href="#ヾ-๑╹◡╹-ﾉ”-六面神骰" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 六面神骰"></a>ヾ(๑╹◡╹)ﾉ” 六面神骰</h5><h5 id="———————–"><a href="#———————–" class="headerlink" title="———————–"></a>———————–</h5><h1 id="携程网移动端首页项目"><a href="#携程网移动端首页项目" class="headerlink" title="携程网移动端首页项目"></a>携程网移动端首页项目</h1><blockquote>
+<p><a href="https://m.ctrip.com/html5/" target="_blank" rel="noopener">携程网移动端</a></p>
+</blockquote>
+<h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><ul>
+<li>方案：单独制作移动端页面</li>
+<li>技术：采用flex布局</li>
+</ul>
+<h2 id="项目搭建"><a href="#项目搭建" class="headerlink" title="项目搭建"></a>项目搭建</h2><blockquote>
+<p>和之前的操作一样</p>
+</blockquote>
+<ul>
+<li><p>新建一个项目文件夹</p>
+<ul>
+<li><p>新建images文件夹：放入常用的图片资源</p>
+</li>
+<li><p>新建css文件夹：放入index.css</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="代码的编写"><a href="#代码的编写" class="headerlink" title="代码的编写"></a>代码的编写</h2><ul>
+<li><p><strong>视口</strong>需要设置完整：</p>
+<blockquote>
+<p>移动端开发第一个注意点</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在html中引入css文件</p>
+</li>
+<li><p>移动端网页整体需要有一个<strong>整体的大容器</strong></p>
+<ul>
+<li>可以直接把body当做整体大容器</li>
+<li>或者设置一个全局容器：container</li>
+</ul>
+</li>
+<li><p>先把整个网页的各个模块划分好</p>
+<ul>
+<li><strong>携程轮播：xc_banner</strong></li>
+<li><strong>携程导航：xc_nav</strong></li>
+<li><strong>携程产品：xc_product</strong></li>
+<li><strong>携程底部：xc_footer</strong></li>
+</ul>
+</li>
+<li><p>再每一个部分写</p>
+</li>
+</ul>
+<h1 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h1><blockquote>
+<p>响应式布局（respond layout）是Ethan Marcotte在2010年5月份提出的一个概念，简而言之，就是<strong>一个网站能够兼容多个终端（pc、手机、平板）</strong></p>
+</blockquote>
+<h2 id="什么是响应式布局"><a href="#什么是响应式布局" class="headerlink" title="什么是响应式布局"></a>什么是响应式布局</h2><p><strong>单独制作移动端页面方案（主流）：</strong> </p>
+<blockquote>
+<p>同一个页面需要开发两套不同设备的版本</p>
+</blockquote>
+<ul>
+<li>pc端需要开发写一套页面，专门给pc端看</li>
+<li>移动端再开发一套页面，专门给移动端看</li>
+</ul>
+<p><strong>响应式布局方案（较少）：</strong></p>
+<blockquote>
+<p>同一个页面只需要开发一套网页</p>
+</blockquote>
+<ul>
+<li>只需要写一套代码，同时给pc端和移动端看</li>
+</ul>
+<h5 id="ヾ-๑╹◡╹-ﾉ”-看看微金所项目"><a href="#ヾ-๑╹◡╹-ﾉ”-看看微金所项目" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”  看看微金所项目~"></a>ヾ(๑╹◡╹)ﾉ”  看看微金所项目~</h5><h2 id="响应式开发的原理（记忆）"><a href="#响应式开发的原理（记忆）" class="headerlink" title="响应式开发的原理（记忆）"></a>响应式开发的原理（记忆）</h2><p><strong><em>动态根据当前屏幕的宽度，自动改变页面中盒子的宽度、盒子的显示或隐藏</em></strong></p>
+<h2 id="响应式开发的优缺点"><a href="#响应式开发的优缺点" class="headerlink" title="响应式开发的优缺点"></a>响应式开发的优缺点</h2><p><strong>优点：</strong> </p>
+<ul>
+<li>一套网页可以适配多个终端。只需要开发一套网页即可</li>
+</ul>
+<p><strong>缺点： </strong></p>
+<ul>
+<li>一个页面需要兼容多个终端，考虑的情况多种，开发效率较慢</li>
+<li>代码会更多，网页的加载速度较慢</li>
+</ul>
+<h2 id="响应式开发的现状"><a href="#响应式开发的现状" class="headerlink" title="响应式开发的现状"></a>响应式开发的现状</h2><blockquote>
+<p>在国内并不是很流行，国外较多</p>
+</blockquote>
+<ul>
+<li><p>如果已经有了一套pc端网页，此时直接再写一套移动端网页即可，此时不需要使用响应式布局（比如：京东、淘宝）</p>
+</li>
+<li><p>如果开发一套网页都没有，是<strong>新建的项目</strong>，此时可以考虑使用响应式，写一套即可兼容多个设备。</p>
+</li>
+<li><p>比较<strong>简单的网页</strong>，可以考虑使用响应式，但是复杂的网页考虑的情况会很多，一般不用。</p>
+</li>
+</ul>
+<h5 id="——————"><a href="#——————" class="headerlink" title="——————-"></a>——————-</h5><h1 id="响应式开发的屏幕分类"><a href="#响应式开发的屏幕分类" class="headerlink" title="响应式开发的屏幕分类"></a>响应式开发的屏幕分类</h1><blockquote>
+<p>在响应式开发中需要动态根据屏幕的宽度改变样式，但是不可能每变化1px就改变样式。</p>
+<p>在响应式开发中，把各种屏幕宽度分为四大类，开发中只需要考虑这四种屏幕的情况即可</p>
+</blockquote>
+<h2 id="设备屏幕的分类"><a href="#设备屏幕的分类" class="headerlink" title="设备屏幕的分类"></a>设备屏幕的分类</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">分类名称</th>
+<th style="text-align:center">宽度范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">超小屏设备</td>
+<td style="text-align:center">0 ~ 768px</td>
+</tr>
+<tr>
+<td style="text-align:center">小屏设备</td>
+<td style="text-align:center">768px ~ 992px</td>
+</tr>
+<tr>
+<td style="text-align:center">中屏设备</td>
+<td style="text-align:center">992px ~ 1200px</td>
+</tr>
+<tr>
+<td style="text-align:center">大屏设备</td>
+<td style="text-align:center">1200px ~ 正无穷</td>
+</tr>
+</tbody>
+</table>
+<p><img src="\images\123.png" alt="1"></p>
+<h1 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h1><blockquote>
+<p>刚刚说了响应式原理是：<strong><em>动态根据当前屏幕的宽度，自动改变页面中盒子的宽度、盒子的显示或隐藏</em></strong></p>
+<p>所以需要根据不同屏幕的宽度改变样式。</p>
+<p>可以通过css3中新增的媒体查询完成效果。</p>
+</blockquote>
+<p><strong>媒体查询（Media Query）：</strong>是CSS3新增的方法，媒体查询可以动态查询屏幕的宽度，根据不同的屏幕宽度设置样式是否生效！！</p>
+<p><strong>语法：</strong> </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> screen and (条件) &#123;</span><br><span class="line">    选择器......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>作用：</strong> 只有当屏幕宽度满足条件时，媒体查询中的选择器才能生效！！！</p>
+<p><strong>注意点：</strong> 媒体查询仅仅只是控制选择器是否生效，不会提升选择器的优先级！！</p>
+<blockquote>
+<p>具体谁说了算，还是需要看优先级</p>
+</blockquote>
+<p><strong>条件：</strong></p>
+<ul>
+<li><p><code>min-width</code>：样式生效的屏幕最小宽度</p>
+<blockquote>
+<p>只有当屏幕宽度大于等于该宽度时，样式才会生效</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 样式生效的最小宽为600px——》只有当屏幕宽度大于等于600px时，样式才会生效！！*/</span></span><br><span class="line">@<span class="keyword">media</span> screen and (min-width:<span class="number">600px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">div</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: green;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p><code>max-width</code> ：样式生效的屏幕最大宽度</p>
+<blockquote>
+<p>只有当屏幕宽度小于等于该宽度时，样式才会生效</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 样式生效的最大宽为800px——》只有当屏幕宽度小于等于800px时，样式才会生效*/</span></span><br><span class="line">@<span class="keyword">media</span> screen and (max-width:<span class="number">800px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">div</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: blue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p><code>width</code> ：样式生效的宽度</p>
+<blockquote>
+<p>只有当屏幕宽度正好等于该宽度时，样式才会生效</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 样式只在700px宽度的时候才会生效 */</span></span><br><span class="line">@<span class="keyword">media</span> screen and (width:<span class="number">700px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">div</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: purple;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="ヾ-๑╹◡╹-ﾉ”-如果需要在600-800之间样式生效，怎么写？？"><a href="#ヾ-๑╹◡╹-ﾉ”-如果需要在600-800之间样式生效，怎么写？？" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 如果需要在600~800之间样式生效，怎么写？？"></a>ヾ(๑╹◡╹)ﾉ” 如果需要在600~800之间样式生效，怎么写？？</h5><blockquote>
+<p>一个媒体查询中可以同时写多个条件，中间通过and连接即可</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 样式在 600~800中间生效 */</span></span><br><span class="line">@<span class="keyword">media</span> screen and (min-width:<span class="number">600px</span>) and (max-width:<span class="number">800px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">div</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: orange;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="使用媒体查询完成响应式适配"><a href="#使用媒体查询完成响应式适配" class="headerlink" title="使用媒体查询完成响应式适配"></a>使用媒体查询完成响应式适配</h2><blockquote>
+<p>可以通过媒体查询实现不同终端的布局和样式的切换，完成响应式布局。</p>
+</blockquote>
+<p><strong>需求：</strong>手动设置全局容器.container的响应式适配四种屏幕。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 需求： */</span></span><br><span class="line"><span class="comment">/* 超小屏幕: 0 - 768px      	版心：100% 	背景颜色：绿色 */</span></span><br><span class="line"><span class="comment">/* 小屏设备: 768px - 992px  	版心：750px 	背景颜色：蓝色 */</span></span><br><span class="line"><span class="comment">/* 中屏设备: 992px - 1200px 	版心：970px 	背景颜色：黄色 */</span></span><br><span class="line"><span class="comment">/* 大屏设备: 1200 ~  正无穷     版心：1170px   背景颜色：粉色 */</span></span><br></pre></td></tr></table></figure>
+<p><strong>弊端：现在只有一个div，要做一套响应式布局，就需要如此多的代码，非常的麻烦。真正开发中我们会借助一些响应式的框架，比如bootstrap。</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/授课笔记/" rel="tag"><i class="fa fa-tag"></i> 授课笔记</a>
+          
+            <a href="/tags/移动web/" rel="tag"><i class="fa fa-tag"></i> 移动web</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/06/1-移动webday02笔记/" rel="next" title="移动webday02笔记">
+                <i class="fa fa-chevron-left"></i> 移动webday02笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/02/06/1-移动webday01笔记/" rel="prev" title="移动webday01笔记">
+                移动webday01笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/master.jpg"
+                alt="棠哥" />
+            
+              <p class="site-author-name" itemprop="name">棠哥</p>
+              <p class="site-description motion-element" itemprop="description">棠哥的测试博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#《部分案例代码下载》"><span class="nav-number">1.</span> <span class="nav-text">《部分案例代码下载》</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习目标"><span class="nav-number"></span> <span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flex布局（弹性布局）"><span class="nav-number"></span> <span class="nav-text">flex布局（弹性布局）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#flex布局的初体验"><span class="nav-number">1.</span> <span class="nav-text">flex布局的初体验</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”-让一个子盒子在父盒子中水平垂直居中"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ” 让一个子盒子在父盒子中水平垂直居中</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主轴方向（flex-direction）（了解）"><span class="nav-number">2.</span> <span class="nav-text">主轴方向（flex-direction）（了解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主轴对齐方式（justify-content）（重点）"><span class="nav-number">3.</span> <span class="nav-text">主轴对齐方式（justify-content）（重点）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单行侧轴对齐方式（align-items）（重点）"><span class="nav-number">4.</span> <span class="nav-text">单行侧轴对齐方式（align-items）（重点）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#是否换行（flex-wrap）"><span class="nav-number">5.</span> <span class="nav-text">是否换行（flex-wrap）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多行侧轴对齐方式（align-content）"><span class="nav-number">6.</span> <span class="nav-text">多行侧轴对齐方式（align-content）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#—————"><span class="nav-number">6.0.0.1.</span> <span class="nav-text">—————-</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分配子元素空间（flex属性）"><span class="nav-number">7.</span> <span class="nav-text">分配子元素空间（flex属性）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子元素排序（order属性）-了解"><span class="nav-number">8.</span> <span class="nav-text">子元素排序（order属性）(了解)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单个子元素侧轴对齐方式（align-self）"><span class="nav-number">9.</span> <span class="nav-text">单个子元素侧轴对齐方式（align-self）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”-六面神骰"><span class="nav-number">9.0.0.1.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ” 六面神骰</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#———————–"><span class="nav-number">9.0.0.2.</span> <span class="nav-text">———————–</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#携程网移动端首页项目"><span class="nav-number"></span> <span class="nav-text">携程网移动端首页项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#技术选型"><span class="nav-number">1.</span> <span class="nav-text">技术选型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目搭建"><span class="nav-number">2.</span> <span class="nav-text">项目搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码的编写"><span class="nav-number">3.</span> <span class="nav-text">代码的编写</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#响应式布局"><span class="nav-number"></span> <span class="nav-text">响应式布局</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是响应式布局"><span class="nav-number">1.</span> <span class="nav-text">什么是响应式布局</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”-看看微金所项目"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ”  看看微金所项目~</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应式开发的原理（记忆）"><span class="nav-number">2.</span> <span class="nav-text">响应式开发的原理（记忆）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应式开发的优缺点"><span class="nav-number">3.</span> <span class="nav-text">响应式开发的优缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应式开发的现状"><span class="nav-number">4.</span> <span class="nav-text">响应式开发的现状</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#——————"><span class="nav-number">4.0.0.1.</span> <span class="nav-text">——————-</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#响应式开发的屏幕分类"><span class="nav-number"></span> <span class="nav-text">响应式开发的屏幕分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设备屏幕的分类"><span class="nav-number">1.</span> <span class="nav-text">设备屏幕的分类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#媒体查询"><span class="nav-number"></span> <span class="nav-text">媒体查询</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”-如果需要在600-800之间样式生效，怎么写？？"><span class="nav-number">0.0.0.1.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ” 如果需要在600~800之间样式生效，怎么写？？</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用媒体查询完成响应式适配"><span class="nav-number">1.</span> <span class="nav-text">使用媒体查询完成响应式适配</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">棠哥</span>
+
+  
+</div>
+
+
+  <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+ <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div> -->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <!-- 点击出现大气泡的效果 -->
+  
+</body>
+</html>

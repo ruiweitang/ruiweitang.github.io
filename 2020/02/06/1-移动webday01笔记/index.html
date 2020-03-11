@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="授课笔记,移动web," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="梦溪笔谈" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="《部分案例代码下载》学习目标   能够使用2d转换属性  能够认识3d坐标系  能够使用3d转换属性  能够理解perspective和 transform-style：preserve-3d的区别  。。。。。。  理解上课的知识点…… CSS3的补充知识点过渡的基本认识（transition） 而在CSS3中，提供了一个过渡属性，可以让元素的样式慢慢的变化（过渡的效果）  需求： 一个div默">
+<meta name="keywords" content="授课笔记,移动web">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动webday01笔记">
+<meta property="og:url" content="http://yoursite.com/2020/02/06/1-移动webday01笔记/index.html">
+<meta property="og:site_name" content="梦溪笔谈">
+<meta property="og:description" content="《部分案例代码下载》学习目标   能够使用2d转换属性  能够认识3d坐标系  能够使用3d转换属性  能够理解perspective和 transform-style：preserve-3d的区别  。。。。。。  理解上课的知识点…… CSS3的补充知识点过渡的基本认识（transition） 而在CSS3中，提供了一个过渡属性，可以让元素的样式慢慢的变化（过渡的效果）  需求： 一个div默">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/2d转换缩放.gif">
+<meta property="og:image" content="http://yoursite.com/images//2d转换旋转.gif">
+<meta property="og:image" content="http://yoursite.com/images/2d转换平移.gif">
+<meta property="og:image" content="http://yoursite.com/images/zbz.png">
+<meta property="og:image" content="http://yoursite.com/images/3d坐标系.png">
+<meta property="og:image" content="http://yoursite.com/images/per1.jpg">
+<meta property="og:image" content="http://yoursite.com/images/per2.jpg">
+<meta property="og:image" content="http://yoursite.com/images/3d旋转rotateX.gif">
+<meta property="og:image" content="http://yoursite.com/images/3d旋转rotateY.gif">
+<meta property="og:image" content="http://yoursite.com/images/3d旋转rotateZ.gif">
+<meta property="og:image" content="http://yoursite.com/images/立方体思路2.gif">
+<meta property="og:image" content="http://yoursite.com/images/默认.gif">
+<meta property="og:image" content="http://yoursite.com/images/perspective.gif">
+<meta property="og:image" content="http://yoursite.com/images/preserve-3d.gif">
+<meta property="og:image" content="http://yoursite.com/images/3d导航.gif">
+<meta property="og:image" content="http://yoursite.com/images/3d导航思路.gif">
+<meta property="og:updated_time" content="2020-03-11T07:45:35.013Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="移动webday01笔记">
+<meta name="twitter:description" content="《部分案例代码下载》学习目标   能够使用2d转换属性  能够认识3d坐标系  能够使用3d转换属性  能够理解perspective和 transform-style：preserve-3d的区别  。。。。。。  理解上课的知识点…… CSS3的补充知识点过渡的基本认识（transition） 而在CSS3中，提供了一个过渡属性，可以让元素的样式慢慢的变化（过渡的效果）  需求： 一个div默">
+<meta name="twitter:image" content="http://yoursite.com/images/2d转换缩放.gif">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/02/06/1-移动webday01笔记/"/>
+
+
+
+
+
+  <title>移动webday01笔记 | 梦溪笔谈</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3098f283255b5d06bb9bf71621a4a003";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">梦溪笔谈</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/06/1-移动webday01笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="棠哥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/master.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="梦溪笔谈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">移动webday01笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-06T10:00:00+08:00">
+                2020-02-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.7k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  9
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="《部分案例代码下载》"><a href="#《部分案例代码下载》" class="headerlink" title="《部分案例代码下载》"></a><a href="/download/移动webday01部分案例代码.zip">《部分案例代码下载》</a></h2><h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 能够使用2d转换属性</li>
+<li style="list-style: none"><input type="checkbox"> 能够认识3d坐标系</li>
+<li style="list-style: none"><input type="checkbox"> 能够使用3d转换属性</li>
+<li style="list-style: none"><input type="checkbox"> 能够理解<code>perspective</code>和 <code>transform-style：preserve-3d</code>的区别</li>
+</ul>
+<p>。。。。。。</p>
+</blockquote>
+<p><strong>理解上课的知识点……</strong></p>
+<h1 id="CSS3的补充知识点"><a href="#CSS3的补充知识点" class="headerlink" title="CSS3的补充知识点"></a>CSS3的补充知识点</h1><h2 id="过渡的基本认识（transition）"><a href="#过渡的基本认识（transition）" class="headerlink" title="过渡的基本认识（transition）"></a>过渡的基本认识（transition）</h2><blockquote>
+<p>而在CSS3中，提供了一个过渡属性，可以让元素的样式慢慢的变化（过渡的效果）</p>
+</blockquote>
+<p><strong>需求：</strong> 一个div默认200*200，背景红色，要求鼠标移入之后宽度 <strong>变成800px</strong></p>
+<blockquote>
+<p>之前设置元素hover的样式，元素的样式是瞬间改变的，很突然。</p>
+<p>如果需要让元素样式的变成慢慢的进行，可以怎么做呢？此时可以使用过渡来完成。</p>
+</blockquote>
+<ul>
+<li>慢慢的变化是过渡的效果，除了宽度之外，其他属性都可以进行过渡，如颜色等</li>
+</ul>
+<p><strong>代码：</strong> <code>transition:1s;</code></p>
+<p><strong>注意点：</strong></p>
+<ul>
+<li><p>过渡属性给需要过渡的元素本身加</p>
+</li>
+<li><p>过渡一般需要有两个状态不同的样式才能有效果</p>
+<ul>
+<li>默认状态</li>
+<li>hover状态</li>
+</ul>
+<blockquote>
+<p>默认一般只要两个状态的样式不同，都会有过渡效果（有特殊情况）</p>
+</blockquote>
+</li>
+<li><p>transition属性设置在不同状态中，效果不同。</p>
+<ul>
+<li><p>如果写在默认状态中，那么鼠标移入移出时都有过渡效果</p>
+</li>
+<li><p>如果写在hover状态中，那么鼠标只有移入时有过渡效果，移出时没有。</p>
+<blockquote>
+<p>因为移出时hover选择器不能选中元素，此时元素上没有transition属性了，所以移出时就没有过渡效果了。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2D转换（transform）"><a href="#2D转换（transform）" class="headerlink" title="2D转换（transform）"></a>2D转换（transform）</h2><blockquote>
+<p>transform: 转换，是CSS3最具颠覆性的几个特性之一，既可以用于2D转换，也可以用于3D转换。</p>
+<p>transform：2D转换，元素在平面上实现缩放、旋转、平移等操作</p>
+</blockquote>
+<h3 id="缩放（scale）"><a href="#缩放（scale）" class="headerlink" title="缩放（scale）"></a>缩放（scale）</h3><p><img src="/images/2d转换缩放.gif" alt="2d转换缩放"></p>
+<blockquote>
+<p>缩放可以让元素进行放大或者缩小</p>
+</blockquote>
+<p><strong>需求：</strong>此时需要让一个<strong>有内容的div</strong>鼠标移入之后，让<strong>整体宽度放大</strong>为两倍，可以怎么实现呢？（如果包括内容也缩放呢？）</p>
+<p><strong>方案：</strong></p>
+<ul>
+<li><p>可以hover之后设置width为原来的两倍</p>
+<blockquote>
+<p>但是div里面的内容并不会缩放</p>
+</blockquote>
+</li>
+<li><p>可以使用<code>transform:scaleX(2);</code> 对div进行缩放，并且div的<strong>内容也会缩放</strong></p>
+</li>
+</ul>
+<p><strong>代码：</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 让宽度进行缩放 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">scaleX</span>(2);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 让高度进行缩放 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">scaleY</span>(2);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 如果需要同时设置宽度和高度进行缩放 */</span></span><br><span class="line"><span class="selector-tag">transform</span><span class="selector-pseudo">:scale(2</span>,2);</span><br><span class="line"><span class="comment">/* 特殊情况：或者只设置一个，表示宽高都是一个比例 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">scale</span>(2);</span><br></pre></td></tr></table></figure>
+<p><strong>取值：</strong></p>
+<ul>
+<li><p>没有单位的数字（倍数）</p>
+<blockquote>
+<p>如果scale中是一个值，这个值表示宽高都是这个比例进行缩放</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="ヾ-๑╹◡╹-ﾉ”-图片放大效果（类似于穷游网的效果）"><a href="#ヾ-๑╹◡╹-ﾉ”-图片放大效果（类似于穷游网的效果）" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 图片放大效果（类似于穷游网的效果）"></a>ヾ(๑╹◡╹)ﾉ” 图片放大效果（类似于穷游网的效果）</h5><blockquote>
+<p>如：<a href="https://www.qyer.com/" target="_blank" rel="noopener">穷游网</a></p>
+<p>hover时，让其中的img图片放大</p>
+</blockquote>
+<blockquote>
+<p>缩放效果默认是以元素中心点放大的，如果需要让元素以特殊的位置放大，可以怎么做呢？</p>
+</blockquote>
+<h3 id="转换原点（transform-origin）"><a href="#转换原点（transform-origin）" class="headerlink" title="转换原点（transform-origin）"></a>转换原点（transform-origin）</h3><blockquote>
+<p>通过transform-origin可以设置转换的中心原点</p>
+</blockquote>
+<p><strong>代码：</strong> <code>transform-origin:center center;</code></p>
+<p><strong>取值：</strong></p>
+<blockquote>
+<p>原点的取值和之前学习的background-position是一样的</p>
+</blockquote>
+<ul>
+<li>方位名词：<ul>
+<li>水平：left、center、right</li>
+<li>垂直：top、center、bottom</li>
+</ul>
+</li>
+<li>坐标点：以元素左上角为原点，水平向右是x轴，垂直向下是y轴</li>
+</ul>
+<h5 id="————————"><a href="#————————" class="headerlink" title="————————"></a>————————</h5><h3 id="旋转（rotate）"><a href="#旋转（rotate）" class="headerlink" title="旋转（rotate）"></a>旋转（rotate）</h3><p><img src="/images//2d转换旋转.gif" alt="2d转换旋转"></p>
+<blockquote>
+<p>通过rotate可以让元素进行旋转</p>
+</blockquote>
+<p><strong>代码：</strong> <code>transform:rotate(90deg);</code></p>
+<p><strong>取值：</strong></p>
+<ul>
+<li><p>角度（deg）</p>
+<blockquote>
+<p>顺时针进行转动</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>注意点：</strong></p>
+<ul>
+<li>也可以通过 <code>transform-origin</code> 属性来设置旋转原点</li>
+</ul>
+<h5 id="ヾ-๑╹◡╹-ﾉ”-扑克牌效果"><a href="#ヾ-๑╹◡╹-ﾉ”-扑克牌效果" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 扑克牌效果"></a>ヾ(๑╹◡╹)ﾉ” 扑克牌效果</h5><h3 id="平移（translate）"><a href="#平移（translate）" class="headerlink" title="平移（translate）"></a>平移（translate）</h3><p><img src="/images/2d转换平移.gif" alt="2d转换平移"></p>
+<blockquote>
+<p>可以通过translate让元素进行平移</p>
+</blockquote>
+<p><strong>代码：</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 沿着x轴进行平移 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">translateX</span>(100<span class="selector-tag">px</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 沿着y轴进行平移 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">translateY</span>(100<span class="selector-tag">px</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 沿着x轴和y轴进行移动 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">translate</span>(100<span class="selector-tag">px</span>,100<span class="selector-tag">px</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>取值：</strong></p>
+<ul>
+<li><p>可以是具体的数值</p>
+</li>
+<li><p>可以是百分比</p>
+<blockquote>
+<p>百分比是相对于自身元素的百分比！</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>注意点：</strong></p>
+<ul>
+<li>translate平移不会影响其他盒子的位置，是相对于自己原来的位置进行移动的，类似于相对定位的效果。</li>
+</ul>
+<h5 id="ヾ-๑╹◡╹-ﾉ”-让一个盒子水平垂直都居中"><a href="#ヾ-๑╹◡╹-ﾉ”-让一个盒子水平垂直都居中" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 让一个盒子水平垂直都居中"></a>ヾ(๑╹◡╹)ﾉ” 让一个盒子水平垂直都居中</h5><blockquote>
+<p>之前我们使用定位居中时，是具体通过margin完成效果的。但是当元素的宽高不确定，如由内容撑开时，使用translate会更好点。</p>
+</blockquote>
+<h5 id="ヾ-๑╹◡╹-ﾉ”-2d转换的小结"><a href="#ヾ-๑╹◡╹-ﾉ”-2d转换的小结" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 2d转换的小结"></a>ヾ(๑╹◡╹)ﾉ” 2d转换的小结</h5><h3 id="转换的合写问题"><a href="#转换的合写问题" class="headerlink" title="转换的合写问题"></a>转换的合写问题</h3><blockquote>
+<p>之前每种转换都是分开实现的，如果需要让一个盒子同时实现三种转换，就需要使用到转换的合写形式</p>
+</blockquote>
+<p><strong>需求：</strong> 一个盒子在页面中居中，当hover到body时，让一个盒子往右平移400px，同时旋转360度，同时宽高都缩小为原来的0.5倍，可以怎么实现？</p>
+<blockquote>
+<p>transform属性只能写一个，所以需要设置一个transform的连写形式。</p>
+</blockquote>
+<p><strong>代码：</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">translateX</span>(1000<span class="selector-tag">px</span>) <span class="selector-tag">rotate</span>(360<span class="selector-tag">deg</span>) <span class="selector-tag">scale</span>(0<span class="selector-class">.5</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果先写rotate（360deg）可不可以呢？</p>
+</blockquote>
+<p><strong>注意点：</strong></p>
+<ul>
+<li><p>transform属性值之间需要以空格隔开</p>
+</li>
+<li><p>rotate属性如果写在第一个，rotate会让坐标轴也一起旋转，坐标轴改变之后会平移的方向！</p>
+<blockquote>
+<p>写在<strong>第一个的属性值会影响坐标轴</strong></p>
+</blockquote>
+</li>
+</ul>
+<h5 id="————————-1"><a href="#————————-1" class="headerlink" title="————————"></a>————————</h5><h2 id="3D转换（transform）"><a href="#3D转换（transform）" class="headerlink" title="3D转换（transform）"></a>3D转换（transform）</h2><blockquote>
+<p>transform不仅仅可以进行2D转换（平面内转换），还可以进行3D转换（立体的空间）</p>
+</blockquote>
+<p><strong>问题：</strong> 2D和3D的区别是什么呢？</p>
+<blockquote>
+<p>2D是一个平面，一个平面坐标系（只有x轴和y轴）</p>
+<p>3D是一个立体的空间，一个立体坐标系（有x轴和y轴还有z轴）</p>
+<p>说白了，3D就比2D多出了一个<strong>z轴</strong></p>
+</blockquote>
+<h3 id="3D坐标系"><a href="#3D坐标系" class="headerlink" title="3D坐标系"></a>3D坐标系</h3><blockquote>
+<p>实际在浏览器中有一个立体坐标系，用x、y、z分别表示空间的3个维度，三条轴互相垂直。</p>
+</blockquote>
+<p><strong>x轴：</strong> 水平向右是x轴正方向</p>
+<p><strong>y轴：</strong> 垂直向下是y轴正方向</p>
+<p><strong>z轴：</strong> 做浏览器平面垂直向脸方向是z轴正方向</p>
+<p><img src="/images/zbz.png" alt=""></p>
+<p><img src="/images/3d坐标系.png" alt="3d坐标系"></p>
+<h3 id="透视-视距（perspective）"><a href="#透视-视距（perspective）" class="headerlink" title="透视/视距（perspective）"></a>透视/视距（perspective）</h3><p><strong>需求：</strong> 让图片沿着x轴进行旋转，此时会立体旋转，看一下此时图片是往里还是往外旋转的？</p>
+<blockquote>
+<p>因为电脑显示屏是一个2D的平面，所以直接沿着x轴立体旋转看不出效果。</p>
+<p>此时可以通过perspective属性，可以定义眼睛距视图的距离，单位是px。</p>
+</blockquote>
+<p><strong><code>perspective</code> 属性给父元素设置，可以让其子元素有近大远小的效果。</strong></p>
+<p><strong>代码：</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">perspective</span>：1000<span class="selector-tag">px</span>;</span><br></pre></td></tr></table></figure>
+<p><strong>其实和生活中的场景是一样的：</strong></p>
+<p><img src="/images/per1.jpg" alt="per1"></p>
+<blockquote>
+<p>路实质都是一样的宽的，那怎么看出来那边更近呢？近的会大一点，远的会小一点。</p>
+</blockquote>
+<p><img src="/images/per2.jpg" alt="per2"></p>
+<blockquote>
+<p>房子实质都是一样大的，那怎么看出来右边的更近，左边的更远？近大远小</p>
+</blockquote>
+<p><code>perspective</code> 的取值：设置的是观察者眼睛离元素初始平面（z=0平面）的距离</p>
+<ul>
+<li>如果取值越大，表示距离越远，近大远小的效果就越不明显</li>
+<li>如果取值越小，表示距离越近，近大远小的效果就越明显</li>
+</ul>
+<blockquote>
+<p>一般不会给太小，适中即可。</p>
+</blockquote>
+<p>接下来我们主要学习最常用的两个3d转换~</p>
+<h3 id="3d旋转（rotate）"><a href="#3d旋转（rotate）" class="headerlink" title="3d旋转（rotate）"></a>3d旋转（rotate）</h3><blockquote>
+<p>rotate直接设置就是2D平面效果。</p>
+<p>当rotate沿着x轴或者y轴进行旋转时，此时就是3D的效果</p>
+</blockquote>
+<p><strong>代码：</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 让元素沿着x轴旋转 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">rotateX</span>(45<span class="selector-tag">deg</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="/images/3d旋转rotateX.gif" alt="3d旋转rotateX" style="zoom:50%;"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 让元素沿着y轴旋转 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">rotateY</span>(45<span class="selector-tag">deg</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="/images/3d旋转rotateY.gif" alt="3d旋转rotateY" style="zoom:50%;"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 让元素沿着z轴旋转，就是默认平面的效果，即rotate() */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">rotateZ</span>(45<span class="selector-tag">deg</span>);</span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">rotate</span>(45<span class="selector-tag">deg</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="/images/3d旋转rotateZ.gif" alt="3d旋转rotateZ" style="zoom:50%;"></p>
+<h5 id="ヾ-๑╹◡╹-ﾉ”-演示3D旋转沿着不同轴旋转的效果"><a href="#ヾ-๑╹◡╹-ﾉ”-演示3D旋转沿着不同轴旋转的效果" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 演示3D旋转沿着不同轴旋转的效果"></a>ヾ(๑╹◡╹)ﾉ” 演示3D旋转沿着不同轴旋转的效果</h5><blockquote>
+<p>具体旋转的方向可以使用左手法则来判断：</p>
+<ol>
+<li>掏出你的左手，左手握拳，伸出大拇指</li>
+<li>让大拇指的指向轴的正方向</li>
+<li>此时四指弯曲的方向就是图片旋转的方向</li>
+</ol>
+</blockquote>
+<p>当然，其实具体效果不用纠结，写出代码看效果调试即可！</p>
+<h3 id="3d平移（translate）"><a href="#3d平移（translate）" class="headerlink" title="3d平移（translate）"></a>3d平移（translate）</h3><blockquote>
+<p>translate属性如果沿着z轴平移也会有3D的效果</p>
+</blockquote>
+<p><strong>代码：</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 沿着z轴的正方向移动100px */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">translateZ</span>(45<span class="selector-tag">px</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="3d移动的合写："><a href="#3d移动的合写：" class="headerlink" title="3d移动的合写："></a>3d移动的合写：</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 如果需要同时设置三个轴方向的平移，可以写成 */</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">translateX</span>(100<span class="selector-tag">px</span>) <span class="selector-tag">translateY</span>(100<span class="selector-tag">px</span>) <span class="selector-tag">translateZ</span>(100<span class="selector-tag">px</span>);</span><br><span class="line"><span class="comment">/* 也可以使用3d移动的简写方法 */</span></span><br><span class="line"><span class="selector-tag">transform</span><span class="selector-pseudo">:translate3d(x</span>,<span class="selector-tag">y</span>,<span class="selector-tag">z</span>);</span><br></pre></td></tr></table></figure>
+<h5 id="ヾ-๑╹◡╹-ﾉ”-3D立方体效果"><a href="#ヾ-๑╹◡╹-ﾉ”-3D立方体效果" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 3D立方体效果"></a>ヾ(๑╹◡╹)ﾉ” 3D立方体效果</h5><p><strong>先是立方体的铺垫：</strong></p>
+<blockquote>
+<p>当一个元素rotateY(45deg)是什么效果？z轴指向哪里？</p>
+<p>当一个元素rotateY(90deg)是什么效果？z轴指向哪里？</p>
+</blockquote>
+<ul>
+<li>面朝向的方向就是z轴，旋转时，面朝的方向永远是z轴</li>
+</ul>
+<p>实现六个面的思路：</p>
+<ol>
+<li>先让这个面旋转到对应的方向</li>
+<li>往z轴（面朝向）平移到对应的距离即可</li>
+</ol>
+<h5 id="————————-2"><a href="#————————-2" class="headerlink" title="————————"></a>————————</h5><p><strong>整体思路：</strong></p>
+<blockquote>
+<p>整体是一个ul，每一个面是li标签，然后让每一个面沿着不同方向旋转之后移动，组合成立方体</p>
+<p>按照下方思路图一步步完成</p>
+</blockquote>
+<p><img src="/images/立方体思路2.gif" alt="3d正方体思路"></p>
+<h3 id="transform-style"><a href="#transform-style" class="headerlink" title="transform-style"></a>transform-style</h3><blockquote>
+<p>其实perspective是一个伪3D：说白了只是多个一个近大远小的效果而已，但是本质上来说还是一个平面元素</p>
+<p>如果需要真正实现3D空间的转换，需要通过transform-style来实现</p>
+</blockquote>
+<p><strong>演示：</strong> ul里面两个li100*400，让第二个li标签沿着x轴旋转45deg，此时旋转ul盒子看的效果</p>
+<p><strong>默认效果：</strong></p>
+<blockquote>
+<p>默认效果来说发现li标签变短了，看不出3d效果</p>
+</blockquote>
+<p><img src="/images/默认.gif" alt="默认"></p>
+<p><strong>设置perspective：1000px之后：</strong></p>
+<blockquote>
+<p>设置视距之后只是有了近大远小的视觉效果，但是实际旋转看发现还是一个纸片人，不是真的3d元素</p>
+</blockquote>
+<p><img src="/images/perspective.gif" alt="perspective"></p>
+<p><strong>设置<code>transform-style: preserve-3d;</code> 之后：</strong></p>
+<blockquote>
+<p>设置了<code>transform-style: preserve-3d;</code> 元素变成3d元素，是真的3d元素</p>
+</blockquote>
+<p><img src="/images/preserve-3d.gif" alt="preserve-3d"></p>
+<p><strong>代码：</strong> <code>transform-style:preserve-3d;</code></p>
+<p><strong>取值：</strong></p>
+<ul>
+<li>flat：子元素在2d平面中显示（默认值）</li>
+<li>preserve-3d：子元素在3D空间中显示</li>
+</ul>
+<p><strong>注意点：</strong></p>
+<ul>
+<li>transform-style属性同样也是给父元素添加的！！</li>
+</ul>
+<p><strong>transform-style与perspective的区别：</strong></p>
+<ul>
+<li>perspective仅仅只是在平面中模拟出近大远小的效果，并不是真正的3D元素。</li>
+<li>transform-style可以让其子元素在一个3D空间中布局，是真正的3D元素</li>
+<li>以后真正需要完成真正的3D元素需要使用transform-style属性。如果需要有近大远小的视觉效果，可以加上perspective属性。</li>
+</ul>
+<h5 id="————————-3"><a href="#————————-3" class="headerlink" title="————————"></a>————————</h5><h5 id="ヾ-๑╹◡╹-ﾉ”-作业：3D导航效果"><a href="#ヾ-๑╹◡╹-ﾉ”-作业：3D导航效果" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 作业：3D导航效果"></a>ヾ(๑╹◡╹)ﾉ” 作业：3D导航效果</h5><p><img src="/images/3d导航.gif" alt="3d导航"></p>
+<p><strong>思路：</strong> </p>
+<ul>
+<li>整体是ul，每个导航是1（100*50），li有两个面，使用a标签表示</li>
+<li>通过定位先让两个a重叠，然后通过转换改变a标签面的位置<ul>
+<li><code>web前端</code>首先需要沿着x轴旋转90deg，然后沿着z轴直走高度的一半（25）</li>
+<li><code>传智播客</code> 直接沿着z轴直走高度的一半（25）</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/3d导航思路.gif" alt=""></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/授课笔记/" rel="tag"><i class="fa fa-tag"></i> 授课笔记</a>
+          
+            <a href="/tags/移动web/" rel="tag"><i class="fa fa-tag"></i> 移动web</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/06/1-移动webday04笔记/" rel="next" title="移动webday04笔记">
+                <i class="fa fa-chevron-left"></i> 移动webday04笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/02/06/1-移动webday06笔记/" rel="prev" title="移动webday06笔记">
+                移动webday06笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/master.jpg"
+                alt="棠哥" />
+            
+              <p class="site-author-name" itemprop="name">棠哥</p>
+              <p class="site-description motion-element" itemprop="description">棠哥的测试博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#《部分案例代码下载》"><span class="nav-number">1.</span> <span class="nav-text">《部分案例代码下载》</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习目标"><span class="nav-number"></span> <span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS3的补充知识点"><span class="nav-number"></span> <span class="nav-text">CSS3的补充知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#过渡的基本认识（transition）"><span class="nav-number">1.</span> <span class="nav-text">过渡的基本认识（transition）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2D转换（transform）"><span class="nav-number">2.</span> <span class="nav-text">2D转换（transform）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#缩放（scale）"><span class="nav-number">2.1.</span> <span class="nav-text">缩放（scale）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”-图片放大效果（类似于穷游网的效果）"><span class="nav-number">2.1.0.1.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ” 图片放大效果（类似于穷游网的效果）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转换原点（transform-origin）"><span class="nav-number">2.2.</span> <span class="nav-text">转换原点（transform-origin）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#————————"><span class="nav-number">2.2.0.1.</span> <span class="nav-text">————————</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#旋转（rotate）"><span class="nav-number">2.3.</span> <span class="nav-text">旋转（rotate）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”-扑克牌效果"><span class="nav-number">2.3.0.1.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ” 扑克牌效果</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#平移（translate）"><span class="nav-number">2.4.</span> <span class="nav-text">平移（translate）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”-让一个盒子水平垂直都居中"><span class="nav-number">2.4.0.1.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ” 让一个盒子水平垂直都居中</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”-2d转换的小结"><span class="nav-number">2.4.0.2.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ” 2d转换的小结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转换的合写问题"><span class="nav-number">2.5.</span> <span class="nav-text">转换的合写问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#————————-1"><span class="nav-number">2.5.0.1.</span> <span class="nav-text">————————</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3D转换（transform）"><span class="nav-number">3.</span> <span class="nav-text">3D转换（transform）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3D坐标系"><span class="nav-number">3.1.</span> <span class="nav-text">3D坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#透视-视距（perspective）"><span class="nav-number">3.2.</span> <span class="nav-text">透视/视距（perspective）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3d旋转（rotate）"><span class="nav-number">3.3.</span> <span class="nav-text">3d旋转（rotate）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”-演示3D旋转沿着不同轴旋转的效果"><span class="nav-number">3.3.0.1.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ” 演示3D旋转沿着不同轴旋转的效果</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3d平移（translate）"><span class="nav-number">3.4.</span> <span class="nav-text">3d平移（translate）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3d移动的合写："><span class="nav-number">3.4.1.</span> <span class="nav-text">3d移动的合写：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”-3D立方体效果"><span class="nav-number">3.4.1.1.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ” 3D立方体效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#————————-2"><span class="nav-number">3.4.1.2.</span> <span class="nav-text">————————</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#transform-style"><span class="nav-number">3.5.</span> <span class="nav-text">transform-style</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#————————-3"><span class="nav-number">3.5.0.1.</span> <span class="nav-text">————————</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”-作业：3D导航效果"><span class="nav-number">3.5.0.2.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ” 作业：3D导航效果</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">棠哥</span>
+
+  
+</div>
+
+
+  <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+ <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div> -->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <!-- 点击出现大气泡的效果 -->
+  
+</body>
+</html>
