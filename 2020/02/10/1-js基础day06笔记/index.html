@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="授课笔记,js基础," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="梦溪笔谈" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="《部分案例代码下载》学习目标（全天模式）   能够说出数组对象的3-4个方法  能够说出数组对象的增删操作  能够使用数组的排序和翻转操作  能够说出什么是基本包装类型  能够说出字符串对象的3-4个方法  。。。。。。  理解上课的知识点…… Date对象 时间戳  一般日期打印出来，是字符串的形式 时间戳则是日期的数字形式，可以运算  时间戳：表示距离1970年01月01日00时00分00秒起">
+<meta name="keywords" content="授课笔记,js基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js基础day06笔记">
+<meta property="og:url" content="http://yoursite.com/2020/02/10/1-js基础day06笔记/index.html">
+<meta property="og:site_name" content="梦溪笔谈">
+<meta property="og:description" content="《部分案例代码下载》学习目标（全天模式）   能够说出数组对象的3-4个方法  能够说出数组对象的增删操作  能够使用数组的排序和翻转操作  能够说出什么是基本包装类型  能够说出字符串对象的3-4个方法  。。。。。。  理解上课的知识点…… Date对象 时间戳  一般日期打印出来，是字符串的形式 时间戳则是日期的数字形式，可以运算  时间戳：表示距离1970年01月01日00时00分00秒起">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-03-11T11:16:38.707Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js基础day06笔记">
+<meta name="twitter:description" content="《部分案例代码下载》学习目标（全天模式）   能够说出数组对象的3-4个方法  能够说出数组对象的增删操作  能够使用数组的排序和翻转操作  能够说出什么是基本包装类型  能够说出字符串对象的3-4个方法  。。。。。。  理解上课的知识点…… Date对象 时间戳  一般日期打印出来，是字符串的形式 时间戳则是日期的数字形式，可以运算  时间戳：表示距离1970年01月01日00时00分00秒起">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/02/10/1-js基础day06笔记/"/>
+
+
+
+
+
+  <title>js基础day06笔记 | 梦溪笔谈</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3098f283255b5d06bb9bf71621a4a003";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">梦溪笔谈</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/10/1-js基础day06笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="棠哥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/master.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="梦溪笔谈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">js基础day06笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-10T10:00:06+08:00">
+                2020-02-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.9k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  11
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="《部分案例代码下载》"><a href="#《部分案例代码下载》" class="headerlink" title="《部分案例代码下载》"></a><a href="/download/js基础day06部分案例代码.zip">《部分案例代码下载》</a></h2><h1 id="学习目标（全天模式）"><a href="#学习目标（全天模式）" class="headerlink" title="学习目标（全天模式）"></a>学习目标（全天模式）</h1><blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 能够说出数组对象的3-4个方法</li>
+<li style="list-style: none"><input type="checkbox"> 能够说出数组对象的增删操作</li>
+<li style="list-style: none"><input type="checkbox"> 能够使用数组的排序和翻转操作</li>
+<li style="list-style: none"><input type="checkbox"> 能够说出什么是基本包装类型</li>
+<li style="list-style: none"><input type="checkbox"> 能够说出字符串对象的3-4个方法</li>
+</ul>
+<p>。。。。。。</p>
+</blockquote>
+<p><strong>理解上课的知识点……</strong></p>
+<h2 id="Date对象"><a href="#Date对象" class="headerlink" title="Date对象"></a>Date对象</h2><ul>
+<li><p><strong>时间戳</strong></p>
+<blockquote>
+<p>一般日期打印出来，是字符串的形式</p>
+<p><strong>时间戳则是日期的数字形式</strong>，可以运算</p>
+</blockquote>
+<p><strong>时间戳：</strong>表示距离1970年01月01日00时00分00秒起，过去的总毫秒数</p>
+<p><strong>作用：</strong> 用来计算时间差</p>
+<p><strong>代码：</strong> <code>var date = +new Date();</code></p>
+<ul>
+<li><p>可以统计代码执行的时间</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ------------------------获取开始的时间</span></span><br><span class="line"><span class="keyword">var</span> begin = +<span class="keyword">new</span> <span class="built_in">Date</span>(); </span><br><span class="line"><span class="keyword">var</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt;= <span class="number">100000000</span>; i++) &#123;</span><br><span class="line">    sum += i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(sum);</span><br><span class="line"><span class="comment">// -------------------------------获取结束的时间</span></span><br><span class="line"><span class="keyword">var</span> end = +<span class="keyword">new</span> <span class="built_in">Date</span>();  </span><br><span class="line"><span class="built_in">console</span>.log(end - begin);  <span class="comment">// 计算时间差，可以得出代码的执行时间毫秒数</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>倒计时（距离下课的时间）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// -----------------------------------当前时间</span></span><br><span class="line"><span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="comment">// ----------------------------------将来需要倒计时的时间</span></span><br><span class="line"><span class="keyword">var</span> future = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-5-20 12:00:00'</span>); </span><br><span class="line"></span><br><span class="line"><span class="comment">// ------------------------------得到时间差——》转换成秒数（小数后忽略）</span></span><br><span class="line"><span class="keyword">var</span> time = <span class="built_in">parseInt</span>((future - now) / <span class="number">1000</span>);  </span><br><span class="line"></span><br><span class="line"><span class="comment">// --------------------------------秒数中获取时——》1小时=3600秒</span></span><br><span class="line"><span class="keyword">var</span> hours = <span class="built_in">parseInt</span>(time / <span class="number">3600</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// --------秒数中获取分——》1分钟=60秒, 对所有的分钟数, 对60求余数即可(超过60的进位到小时中了）</span></span><br><span class="line"><span class="keyword">var</span> minutes = <span class="built_in">parseInt</span>(time / <span class="number">60</span>) % <span class="number">60</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ---------获取秒数，对秒数求60的余数（超过60的部分进位到分钟去了)</span></span><br><span class="line"><span class="keyword">var</span> seconds = time % <span class="number">60</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"距离下课还有: "</span> + hours + <span class="string">'小时'</span> + minutes + <span class="string">'分钟'</span> + seconds + <span class="string">'秒'</span>;</span><br><span class="line"><span class="built_in">document</span>.write(str);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Array对象"><a href="#Array对象" class="headerlink" title="Array对象"></a>Array对象</h2><blockquote>
+<p>js中内置了一个<strong>Array构造函数</strong>，可以用来创建数组对象（万物皆对象），每个对象中也有对应的方法</p>
+</blockquote>
+<ul>
+<li><p><strong>数组转换成字符串：arr.join(字符串分隔符)</strong></p>
+<blockquote>
+<p>作用：<strong>将数组中的每一项拼接成字符串</strong></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 语法：arr.join(分隔符)</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">'张三'</span>,<span class="string">'李四'</span>,<span class="string">'王五'</span>,<span class="string">'赵六'</span>];</span><br><span class="line"><span class="keyword">var</span> str = arr.join();  <span class="comment">// 不传参数，默认每一项之间以 逗号 进行拼接</span></span><br><span class="line"><span class="keyword">var</span> str = arr.join(<span class="string">"-"</span>);<span class="comment">//按 - 进行拼接</span></span><br><span class="line"><span class="keyword">var</span> str = arr.join(<span class="string">""</span>);<span class="comment">//分隔符为空串，中间就没有分隔符</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="————————"><a href="#————————" class="headerlink" title="————————"></a>————————</h5><ul>
+<li><p><strong>数组的增删操作：push、pop、unshift、shift</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// --------------------在数组的最后，添加一个或多个项，返回添加后数组的length</span></span><br><span class="line">array.push();</span><br><span class="line"><span class="comment">// -------------------在数组的最后，删除一项，返回删除的项</span></span><br><span class="line">array.pop();</span><br><span class="line"><span class="comment">// --------------------在数组的最前面，添加一个或多个项，返回添加后数组的length</span></span><br><span class="line">array.unshift();</span><br><span class="line"><span class="comment">// ---------------------在数组的最前面，删除一项，返回删除的项</span></span><br><span class="line">array.shift();</span><br></pre></td></tr></table></figure>
+<hr>
+<h5 id="ヾ-๑╹◡╹-ﾉ”-数组的增删操作练习"><a href="#ヾ-๑╹◡╹-ﾉ”-数组的增删操作练习" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 数组的增删操作练习"></a>ヾ(๑╹◡╹)ﾉ” 数组的增删操作练习</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//练习1</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">"刘备"</span>];</span><br><span class="line"><span class="comment">//添加数据后变成：["赵云","马超","刘备","关羽","张飞"]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//接着删除数据后变成：["关羽","张飞"]</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line"></span><br><span class="line"><span class="comment">//练习2</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">"赵云"</span>,<span class="string">"马超"</span>,<span class="string">"刘备"</span>,<span class="string">"关羽"</span>,<span class="string">"张飞"</span>];</span><br><span class="line"><span class="comment">//把数组的最后一个元素变成数组的第一个元素</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//把数组的第一个元素变成数组的最后一个元素</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p><strong>数组的翻转与排序：reverse、sort</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//------------------让当前数组反转</span></span><br><span class="line">arr.reverse();</span><br><span class="line"><span class="comment">//-------------------让当前数组排序，默认按照首字符排序</span></span><br><span class="line">arr.sort();</span><br><span class="line"></span><br><span class="line"><span class="comment">//--------------sort方法可以传递一个函数作为参数，设置是升序还是降序排序</span></span><br><span class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// a表示前一项，b表示后一项</span></span><br><span class="line">  <span class="comment">// 如果返回值 &gt;0,则交换位置</span></span><br><span class="line">  <span class="comment">// --------------从小到大升序排列</span></span><br><span class="line">  <span class="keyword">return</span> a - b;</span><br><span class="line">  <span class="comment">//---------------从大到小降序排列</span></span><br><span class="line">  <span class="keyword">return</span> b - a;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<hr>
+<h5 id="ヾ-๑╹◡╹-ﾉ”-数组的排序练习"><a href="#ヾ-๑╹◡╹-ﾉ”-数组的排序练习" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 数组的排序练习"></a>ヾ(๑╹◡╹)ﾉ” 数组的排序练习</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1、将[3, 6, 1, 5, 10, 2,11]从小到大排列</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2、将字符串数组按照字符长度从小到大排列——》比较的a.length和b.age</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">'bb'</span>, <span class="string">'a'</span>, <span class="string">'dddd'</span>, <span class="string">'ccc'</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">//3、将学生数组按照年龄从小到大排列——》比较的a.age和b.age</span></span><br><span class="line"><span class="keyword">var</span> arr = [</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">'zs'</span>, <span class="attr">age</span>: <span class="number">18</span>, <span class="attr">score</span>: <span class="number">100</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">'ls'</span>, <span class="attr">age</span>: <span class="number">38</span>, <span class="attr">score</span>: <span class="number">120</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">'ww'</span>, <span class="attr">age</span>: <span class="number">28</span>, <span class="attr">score</span>: <span class="number">20</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">'zl'</span>, <span class="attr">age</span>: <span class="number">16</span>, <span class="attr">score</span>: <span class="number">15</span>&#125;,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="————————-1"><a href="#————————-1" class="headerlink" title="————————"></a>————————</h5><ul>
+<li><p><strong>数组的合并和截取：concat、slice</strong></p>
+<blockquote>
+<p>数组的合并</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//-----------------合并数组，不会改变原数组，会返回一个新的拼接好的数组</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.concat(arr2);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>数组的截取</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">"赵云"</span>,<span class="string">"马超"</span>,<span class="string">"刘备"</span>,<span class="string">"关羽"</span>,<span class="string">"张飞"</span>];</span><br><span class="line">  <span class="comment">//--------------------------数组的截取，从数组中截取一部分，不会改变原数组，返回截取的新数组</span></span><br><span class="line">  <span class="keyword">var</span> newArr = arr.slice();<span class="comment">// 不传参——》从开始截取到最后，截取整个数组——》相当于复制一份</span></span><br><span class="line">  <span class="keyword">var</span> newArr = arr.slice(begin);<span class="comment">// 从begin（下标）开始，截取到最后，包括begin！！</span></span><br><span class="line">  <span class="keyword">var</span> newArr = arr.slice(begin,end);<span class="comment">// 从begin开始，截取到end，包括begin，不包括end！！！</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p><strong>数组的删除、添加、替换：splice</strong></p>
+<blockquote>
+<p>splice可以在数组的任意位置，添加或者删除任意项，会改变原数组</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//------------------splice 方法可以在数组的任意位置，添加或者删除任一项（会改变原数组）</span></span><br><span class="line">arr.splice(从哪开始删除，删除几个，添加的项<span class="number">1</span>，添加的项<span class="number">2</span>，......)</span><br><span class="line">arr.splice(begin,deleteCount,item1,item2,...)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">"赵云"</span>,<span class="string">"马超"</span>,<span class="string">"刘备"</span>,<span class="string">"关羽"</span>,<span class="string">"张飞"</span>];           </span><br><span class="line">           </span><br><span class="line"><span class="comment">//删除--------------------从下标为1开始删除，删除两项</span></span><br><span class="line">arr.splice(<span class="number">1</span>,<span class="number">2</span>);<span class="comment">// 删除</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//添加--------------------把第一项、第二项添加到下标2的位置</span></span><br><span class="line">arr.splice(<span class="number">2</span>,<span class="number">0</span>,<span class="string">'第一项'</span>,<span class="string">'第二项'</span>);<span class="comment">// 添加</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//替换--------------------把下标2这一项替换成新项（先删除，再添加）</span></span><br><span class="line">  arr.splice(<span class="number">2</span>,<span class="number">1</span>,<span class="string">'新项'</span>);<span class="comment">// 替换</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h5 id="ヾ-๑╹◡╹-ﾉ”-数组的截取与添加练习"><a href="#ヾ-๑╹◡╹-ﾉ”-数组的截取与添加练习" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 数组的截取与添加练习"></a>ヾ(๑╹◡╹)ﾉ” 数组的截取与添加练习</h5>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//练习：</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">"赵云"</span>,<span class="string">"马超"</span>,<span class="string">"刘备"</span>,<span class="string">"关羽"</span>,<span class="string">"张飞"</span>];</span><br><span class="line"><span class="comment">//1、截取["刘备","关羽"]</span></span><br><span class="line"><span class="comment">//2、在马超后面增加 马腾</span></span><br><span class="line"><span class="comment">//3、删除关羽</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>增删操作，都会改变原数组！！</strong></p>
+</blockquote>
+<hr>
+<ul>
+<li><p><strong>数组查找元素：indexOf、lastIndexOf</strong></p>
+<blockquote>
+<p>查找值在数组中某元素的下标</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//------------indexOf()——》查找数组中元素第一次出现的下标——》如果找不到，返回-1</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr.indexOf(<span class="number">2</span>));<span class="comment">// 查找2在数组中第一次出现的下标</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.indexOf(<span class="number">100</span>));<span class="comment">// 数组中不存在的值，返回-1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 需求: 判断 arr 中是否有 赵六</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">'张三'</span>, <span class="string">'田七'</span>, <span class="string">'李四'</span>, <span class="string">'王五'</span>];</span><br><span class="line"><span class="keyword">var</span> index = arr.indexOf(<span class="string">'赵六'</span>);</span><br><span class="line"><span class="keyword">if</span> (index === <span class="number">-1</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'没有'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'有赵六, 下标是'</span> + index);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//-------------lastIndexOf()——》查找数组中元素最后一次出现的下标——》如果找不到，返回-1</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr.lastIndexOf(<span class="number">2</span>));<span class="comment">// 查找2在数组中第一次出现的下标</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.lastIndexOf(<span class="number">100</span>));<span class="comment">// 数组中不存在的值，返回-1</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p><strong>清空数组</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 1、------------------将数组赋值为一个空数组，推荐</span></span><br><span class="line">  arr = [];</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 2、-----------------直接修改数组的长度为0</span></span><br><span class="line">  arr.length = <span class="number">0</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 3、-------------------删除数组中的所有元素</span></span><br><span class="line">arr.splice(<span class="number">0</span>,arr.length);<span class="comment">// 从下标0开始，删除arr.length个元素</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h5 id="ヾ-๑╹◡╹-ﾉ”-数组的综合练习"><a href="#ヾ-๑╹◡╹-ﾉ”-数组的综合练习" class="headerlink" title="ヾ(๑╹◡╹)ﾉ” 数组的综合练习"></a>ヾ(๑╹◡╹)ﾉ” 数组的综合练习</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">"c"</span>, <span class="string">"a"</span>, <span class="string">"z"</span>, <span class="string">"a"</span>, <span class="string">"x"</span>, <span class="string">"a"</span>, <span class="string">"a"</span>, <span class="string">"z"</span>, <span class="string">"c"</span>, <span class="string">"x"</span>, <span class="string">"a"</span>, <span class="string">"x"</span>]</span><br><span class="line"><span class="comment">//1. 找到数组中第一个a出现的位置</span></span><br><span class="line"><span class="comment">//2. 找到数组中最后一个a出现的位置</span></span><br><span class="line"><span class="comment">//3. 找到数组中每一个a出现的位置(遍历——》打印下标)</span></span><br><span class="line"><span class="comment">//4. 数组去重，返回一个新数组</span></span><br><span class="line"><span class="comment">//   1、遍历原数组</span></span><br><span class="line"><span class="comment">//   2、看arr[i] 在 newArr中是否存在，不存在就加入newArr，如果存在，就不加。</span></span><br></pre></td></tr></table></figure>
+<h5 id="————————-2"><a href="#————————-2" class="headerlink" title="————————"></a>————————</h5><h2 id="基本包装类型"><a href="#基本包装类型" class="headerlink" title="基本包装类型"></a>基本包装类型</h2><blockquote>
+<p><strong>简单数据类型是没有任何属性和方法的</strong>。</p>
+<p>但是为了方便操作基本数据类型，js中还提供了三个特殊的复杂类型：String、Number、Boolean对象。可以使用其中的方法：</p>
+<p><code>Number：    var num = new Number(123);</code></p>
+<p><code>String：    var str = new String(&#39;abc&#39;);</code></p>
+<p> <code>Boolean：   var flag = new Boolean(true);</code></p>
+</blockquote>
+<p><strong>基本包装类型：</strong>把基本类型包装成复杂类型</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//-------------------------简单数据类型没有任何的属性和方法</span></span><br><span class="line"><span class="keyword">var</span> str = “abc”;</span><br><span class="line"><span class="comment">//---但是却可以直接使用.length方法——》原因是底层浏览器默认把简单数据类型包装成复杂类型，就可以调用方法了</span></span><br><span class="line"><span class="built_in">console</span>.log(str.length);</span><br></pre></td></tr></table></figure>
+<p><strong>基本包装类型的步骤：</strong></p>
+<ol>
+<li>在js中为了操作方便，如果是简单数据类型要获取方法时——》默认转换成复杂数据类型</li>
+<li>变成复杂数据类型之后——》调用其方法，得出结果</li>
+<li>结束时，在还原成简单数据类型</li>
+</ol>
+<h3 id="Number对象"><a href="#Number对象" class="headerlink" title="Number对象"></a>Number对象</h3><blockquote>
+<p>Number对象是数字的包装类型，数字可以直接使用这些方法</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">11.111111</span>;</span><br><span class="line"><span class="comment">//------------------保留几位小数</span></span><br><span class="line"><span class="built_in">console</span>.log(num.toFixed(<span class="number">2</span>));</span><br><span class="line"><span class="comment">//--------------------转成字符串</span></span><br><span class="line"><span class="built_in">console</span>.log(num.toString(<span class="number">2</span>));</span><br></pre></td></tr></table></figure>
+<h3 id="Boolean对象"><a href="#Boolean对象" class="headerlink" title="Boolean对象"></a>Boolean对象</h3><blockquote>
+<p>Boolean对象是布尔类型的包装类型。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> flag = <span class="literal">true</span>;</span><br><span class="line"><span class="comment">//-------------------转成字符串</span></span><br><span class="line"><span class="built_in">console</span>.log(flag.toString();)<span class="comment">//底层先转成基本包装类型——》使用方法得到字符串——》还原成简单数据类型</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>undefined和null没有包装类型！！！所以没有方法！！</p>
+</blockquote>
+<hr>
+<h3 id="String对象"><a href="#String对象" class="headerlink" title="String对象"></a>String对象</h3><blockquote>
+<p>字符串可以类似于看做是一个数组（不是真的数组——》伪数组）</p>
+</blockquote>
+<ul>
+<li><p><strong>字符串可以遍历——》字符串不是数组，不是真的数组</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'abcdefg'</span>;</span><br><span class="line"><span class="comment">// 底层会默认转换成 String对象，var str = new String('abcdefg');</span></span><br><span class="line"><span class="comment">//----------------------打印字符串中下标为0的字符</span></span><br><span class="line"><span class="built_in">console</span>.log(str[<span class="number">0</span>]);</span><br><span class="line"><span class="comment">//-----------------------字符串的遍历（类似于数组）</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; str.length; i++) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(str[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>查找指定字符的位置：indexOf、lastIndexOf</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//------------indexOf()——》查找字符第一次出现的下标——》如果找不到，返回-1</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"abdedba"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.indexOf(a));<span class="comment">// 查找a在str中第一次出现的下标</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//-------------lastIndexOf()——》查找字符最后一次出现的下标——》如果找不到，返回-1</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"abdedba"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.lastIndexOf(a));<span class="comment">// 查找a在str中最后一次出现的下标</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>去除字符串首尾的空格：trim</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'      hello world      '</span>;</span><br><span class="line"><span class="comment">//----------------------------去除字符串首尾的空格，中间的不管</span></span><br><span class="line">str = str.trim();<span class="comment">// 返回去除首尾空格之后的字符串，重新赋值给str</span></span><br><span class="line"><span class="built_in">console</span>.log(str);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>字母大小写转换：toUpperCase、toLowerCase</strong></p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myName = <span class="string">'ZhangSan'</span>;</span><br><span class="line"><span class="comment">//-----------------------------------每个英文字母转换成大写</span></span><br><span class="line"><span class="built_in">console</span>.log(myName.toUpperCase());</span><br><span class="line"><span class="comment">//-----------------------------------每个英文字母转换成小写</span></span><br><span class="line"><span class="built_in">console</span>.log(myName.toLowerCase());</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p><strong>字符串拼接与截取：concat、slice、substring、substr</strong></p>
+<blockquote>
+<p>拼接——》+用的最多</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str1 = <span class="string">'abc'</span>;</span><br><span class="line"><span class="keyword">var</span> str2 = <span class="string">'def'</span>;</span><br><span class="line"><span class="comment">//----------------------拼接+用的最多</span></span><br><span class="line"><span class="built_in">console</span>.log(str1 + str2);</span><br><span class="line"><span class="comment">//------------------------拼接字符串（不用）会返回一个新字符串</span></span><br><span class="line"><span class="keyword">var</span> newStr = str1.concat(str2);</span><br><span class="line"><span class="built_in">console</span>.log(newStr);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>字符串的截取</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'abcdefg'</span>;</span><br><span class="line"><span class="comment">//-----------------------slice(begin,end)——》从begin开始，截取到end（有始无终）</span></span><br><span class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">1</span>, <span class="number">3</span>)); </span><br><span class="line"><span class="comment">//-------------------------subString(begin,end)——》从begin开始，截取到end（有始无终）</span></span><br><span class="line"><span class="built_in">console</span>.log(str.substring(<span class="number">1</span>, <span class="number">3</span>)); </span><br><span class="line"><span class="comment">//------------------------subStr(begin,length)——》从begin开始，截取length个，包括begin</span></span><br><span class="line"><span class="built_in">console</span>.log(str.substr(<span class="number">1</span>, <span class="number">3</span>));  <span class="comment">// bcd</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p><strong>将字符串分割成一个数组：split</strong></p>
+<blockquote>
+<p>和arr.join（）正好相反</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// join 将数组的值拼接成一个字符串</span></span><br><span class="line"><span class="comment">// split('分割符') 将字符串分割成一个数组, 返回值, 就是分割后得到的数组</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">'a|b|c|d'</span>;</span><br><span class="line"><span class="comment">//-----------------split('分割符'): 将字符串通过分隔符分割成一个数组, 返回分割后得到的数组</span></span><br><span class="line"><span class="keyword">var</span> arr = str.split(<span class="string">'|'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arr);  <span class="comment">// ["a", "b", "c", "d"]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="————————-3"><a href="#————————-3" class="headerlink" title="————————"></a>————————</h5><hr>
+<ul>
+<li><p><strong>字符串替换：replace</strong></p>
+<blockquote>
+<p>可以把字符串中特定字符替换掉</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> words = <span class="string">'大菜鸡, 真坑啊!!! 大菜鸡, 大菜鸡'</span>;</span><br><span class="line"><span class="comment">//-----------------------str.replace('aa','bb'):将str中的第一个aa替换成bb——》返回替换后的结果</span></span><br><span class="line">words = words.replace(<span class="string">'菜鸡'</span>, <span class="string">'***'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(words);</span><br><span class="line"></span><br><span class="line"><span class="comment">//--------------------------------------（拓展）替换所有的需要使用后面讲的正则——》g：全局</span></span><br><span class="line">words = words.replace(<span class="regexp">/你妹的/g</span>, <span class="string">'***'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(words);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h5 id="ヾ-๑╹◡╹-ﾉ”字符串小练习"><a href="#ヾ-๑╹◡╹-ﾉ”字符串小练习" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”字符串小练习"></a>ヾ(๑╹◡╹)ﾉ”字符串小练习</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 截取字符串"我爱中华人民共和国"，中的"中华"</span></span><br><span class="line"><span class="comment">//2. "abcoefoxyozzopp"查找字符串中所有o出现的位置</span></span><br><span class="line"><span class="comment">//3. 把字符串中所有的o替换成!</span></span><br><span class="line"><span class="comment">//4. 把一个字符串中所有的空格全部去掉</span></span><br></pre></td></tr></table></figure>
+<h5 id="ヾ-๑╹◡╹-ﾉ”字符串大练习"><a href="#ヾ-๑╹◡╹-ﾉ”字符串大练习" class="headerlink" title="ヾ(๑╹◡╹)ﾉ”字符串大练习"></a>ヾ(๑╹◡╹)ﾉ”字符串大练习</h5>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// var str = 'my_name_is_jim_green';</span></span><br><span class="line"><span class="comment">// 需求: 变成驼峰命名  myNameIsJimGreen</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/授课笔记/" rel="tag"><i class="fa fa-tag"></i> 授课笔记</a>
+          
+            <a href="/tags/js基础/" rel="tag"><i class="fa fa-tag"></i> js基础</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/10/1-js基础day05笔记/" rel="next" title="js基础day05笔记">
+                <i class="fa fa-chevron-left"></i> js基础day05笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/master.jpg"
+                alt="棠哥" />
+            
+              <p class="site-author-name" itemprop="name">棠哥</p>
+              <p class="site-description motion-element" itemprop="description">棠哥的测试博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#《部分案例代码下载》"><span class="nav-number">1.</span> <span class="nav-text">《部分案例代码下载》</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习目标（全天模式）"><span class="nav-number"></span> <span class="nav-text">学习目标（全天模式）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Date对象"><span class="nav-number">1.</span> <span class="nav-text">Date对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array对象"><span class="nav-number">2.</span> <span class="nav-text">Array对象</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#————————"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">————————</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”-数组的增删操作练习"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ” 数组的增删操作练习</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”-数组的排序练习"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ” 数组的排序练习</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#————————-1"><span class="nav-number">2.0.0.4.</span> <span class="nav-text">————————</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”-数组的截取与添加练习"><span class="nav-number">2.0.0.5.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ” 数组的截取与添加练习</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”-数组的综合练习"><span class="nav-number">2.0.0.6.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ” 数组的综合练习</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#————————-2"><span class="nav-number">2.0.0.7.</span> <span class="nav-text">————————</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本包装类型"><span class="nav-number">3.</span> <span class="nav-text">基本包装类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Number对象"><span class="nav-number">3.1.</span> <span class="nav-text">Number对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Boolean对象"><span class="nav-number">3.2.</span> <span class="nav-text">Boolean对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String对象"><span class="nav-number">3.3.</span> <span class="nav-text">String对象</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#————————-3"><span class="nav-number">3.3.0.1.</span> <span class="nav-text">————————</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”字符串小练习"><span class="nav-number">3.3.0.2.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ”字符串小练习</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ヾ-๑╹◡╹-ﾉ”字符串大练习"><span class="nav-number">3.3.0.3.</span> <span class="nav-text">ヾ(๑╹◡╹)ﾉ”字符串大练习</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">棠哥</span>
+
+  
+</div>
+
+
+  <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+ <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div> -->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <!-- 点击出现大气泡的效果 -->
+  
+</body>
+</html>
