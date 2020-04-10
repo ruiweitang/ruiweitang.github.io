@@ -108,20 +108,20 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[二倍图对比]]></title>
+    <url>%2F2020%2F02%2F06%2F4-%E4%BA%8C%E5%80%8D%E5%9B%BE%E5%AF%B9%E6%AF%94%2F</url>
+    <content type="text"><![CDATA[二倍图对比 一倍图 二倍图]]></content>
+      <tags>
+        <tag>课堂测试demo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[移动webday01笔记]]></title>
     <url>%2F2020%2F02%2F06%2F1-%E7%A7%BB%E5%8A%A8webday01%E7%AC%94%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[《部分案例代码下载》学习目标 能够使用2d转换属性 能够认识3d坐标系 能够使用3d转换属性 能够理解perspective和 transform-style：preserve-3d的区别 。。。。。。 理解上课的知识点…… CSS3的补充知识点过渡的基本认识（transition） 而在CSS3中，提供了一个过渡属性，可以让元素的样式慢慢的变化（过渡的效果） 需求： 一个div默认200*200，背景红色，要求鼠标移入之后宽度 变成800px 之前设置元素hover的样式，元素的样式是瞬间改变的，很突然。 如果需要让元素样式的变成慢慢的进行，可以怎么做呢？此时可以使用过渡来完成。 慢慢的变化是过渡的效果，除了宽度之外，其他属性都可以进行过渡，如颜色等 代码： transition:1s; 注意点： 过渡属性给需要过渡的元素本身加 过渡一般需要有两个状态不同的样式才能有效果 默认状态 hover状态 默认一般只要两个状态的样式不同，都会有过渡效果（有特殊情况） transition属性设置在不同状态中，效果不同。 如果写在默认状态中，那么鼠标移入移出时都有过渡效果 如果写在hover状态中，那么鼠标只有移入时有过渡效果，移出时没有。 因为移出时hover选择器不能选中元素，此时元素上没有transition属性了，所以移出时就没有过渡效果了。 2D转换（transform） transform: 转换，是CSS3最具颠覆性的几个特性之一，既可以用于2D转换，也可以用于3D转换。 transform：2D转换，元素在平面上实现缩放、旋转、平移等操作 缩放（scale） 缩放可以让元素进行放大或者缩小 需求：此时需要让一个有内容的div鼠标移入之后，让整体宽度放大为两倍，可以怎么实现呢？（如果包括内容也缩放呢？） 方案： 可以hover之后设置width为原来的两倍 但是div里面的内容并不会缩放 可以使用transform:scaleX(2); 对div进行缩放，并且div的内容也会缩放 代码： 12345678910/* 让宽度进行缩放 */transform: scaleX(2);/* 让高度进行缩放 */transform: scaleY(2);/* 如果需要同时设置宽度和高度进行缩放 */transform:scale(2,2);/* 特殊情况：或者只设置一个，表示宽高都是一个比例 */transform: scale(2); 取值： 没有单位的数字（倍数） 如果scale中是一个值，这个值表示宽高都是这个比例进行缩放 ヾ(๑╹◡╹)ﾉ” 图片放大效果（类似于穷游网的效果） 如：穷游网 hover时，让其中的img图片放大 缩放效果默认是以元素中心点放大的，如果需要让元素以特殊的位置放大，可以怎么做呢？ 转换原点（transform-origin） 通过transform-origin可以设置转换的中心原点 代码： transform-origin:center center; 取值： 原点的取值和之前学习的background-position是一样的 方位名词： 水平：left、center、right 垂直：top、center、bottom 坐标点：以元素左上角为原点，水平向右是x轴，垂直向下是y轴 ————————旋转（rotate） 通过rotate可以让元素进行旋转 代码： transform:rotate(90deg); 取值： 角度（deg） 顺时针进行转动 注意点： 也可以通过 transform-origin 属性来设置旋转原点 ヾ(๑╹◡╹)ﾉ” 扑克牌效果平移（translate） 可以通过translate让元素进行平移 代码： 12345678/* 沿着x轴进行平移 */transform: translateX(100px);/* 沿着y轴进行平移 */transform: translateY(100px);/* 沿着x轴和y轴进行移动 */transform: translate(100px,100px); 取值： 可以是具体的数值 可以是百分比 百分比是相对于自身元素的百分比！ 注意点： translate平移不会影响其他盒子的位置，是相对于自己原来的位置进行移动的，类似于相对定位的效果。 ヾ(๑╹◡╹)ﾉ” 让一个盒子水平垂直都居中 之前我们使用定位居中时，是具体通过margin完成效果的。但是当元素的宽高不确定，如由内容撑开时，使用translate会更好点。 ヾ(๑╹◡╹)ﾉ” 2d转换的小结转换的合写问题 之前每种转换都是分开实现的，如果需要让一个盒子同时实现三种转换，就需要使用到转换的合写形式 需求： 一个盒子在页面中居中，当hover到body时，让一个盒子往右平移400px，同时旋转360度，同时宽高都缩小为原来的0.5倍，可以怎么实现？ transform属性只能写一个，所以需要设置一个transform的连写形式。 代码： 1transform: translateX(1000px) rotate(360deg) scale(0.5); 如果先写rotate（360deg）可不可以呢？ 注意点： transform属性值之间需要以空格隔开 rotate属性如果写在第一个，rotate会让坐标轴也一起旋转，坐标轴改变之后会平移的方向！ 写在第一个的属性值会影响坐标轴 ————————3D转换（transform） transform不仅仅可以进行2D转换（平面内转换），还可以进行3D转换（立体的空间） 问题： 2D和3D的区别是什么呢？ 2D是一个平面，一个平面坐标系（只有x轴和y轴） 3D是一个立体的空间，一个立体坐标系（有x轴和y轴还有z轴） 说白了，3D就比2D多出了一个z轴 3D坐标系 实际在浏览器中有一个立体坐标系，用x、y、z分别表示空间的3个维度，三条轴互相垂直。 x轴： 水平向右是x轴正方向 y轴： 垂直向下是y轴正方向 z轴： 做浏览器平面垂直向脸方向是z轴正方向 透视/视距（perspective）需求： 让图片沿着x轴进行旋转，此时会立体旋转，看一下此时图片是往里还是往外旋转的？ 因为电脑显示屏是一个2D的平面，所以直接沿着x轴立体旋转看不出效果。 此时可以通过perspective属性，可以定义眼睛距视图的距离，单位是px。 perspective 属性给父元素设置，可以让其子元素有近大远小的效果。 代码： 1perspective：1000px; 其实和生活中的场景是一样的： 路实质都是一样的宽的，那怎么看出来那边更近呢？近的会大一点，远的会小一点。 房子实质都是一样大的，那怎么看出来右边的更近，左边的更远？近大远小 perspective 的取值：设置的是观察者眼睛离元素初始平面（z=0平面）的距离 如果取值越大，表示距离越远，近大远小的效果就越不明显 如果取值越小，表示距离越近，近大远小的效果就越明显 一般不会给太小，适中即可。 接下来我们主要学习最常用的两个3d转换~ 3d旋转（rotate） rotate直接设置就是2D平面效果。 当rotate沿着x轴或者y轴进行旋转时，此时就是3D的效果 代码： 12/* 让元素沿着x轴旋转 */transform: rotateX(45deg); 12/* 让元素沿着y轴旋转 */transform: rotateY(45deg); 123/* 让元素沿着z轴旋转，就是默认平面的效果，即rotate() */transform: rotateZ(45deg);transform: rotate(45deg); ヾ(๑╹◡╹)ﾉ” 演示3D旋转沿着不同轴旋转的效果 具体旋转的方向可以使用左手法则来判断： 掏出你的左手，左手握拳，伸出大拇指 让大拇指的指向轴的正方向 此时四指弯曲的方向就是图片旋转的方向 当然，其实具体效果不用纠结，写出代码看效果调试即可！ 3d平移（translate） translate属性如果沿着z轴平移也会有3D的效果 代码： 12/* 沿着z轴的正方向移动100px */transform: translateZ(45px); 3d移动的合写：1234/* 如果需要同时设置三个轴方向的平移，可以写成 */transform: translateX(100px) translateY(100px) translateZ(100px);/* 也可以使用3d移动的简写方法 */transform:translate3d(x,y,z); ヾ(๑╹◡╹)ﾉ” 3D立方体效果先是立方体的铺垫： 当一个元素rotateY(45deg)是什么效果？z轴指向哪里？ 当一个元素rotateY(90deg)是什么效果？z轴指向哪里？ 面朝向的方向就是z轴，旋转时，面朝的方向永远是z轴 实现六个面的思路： 先让这个面旋转到对应的方向 往z轴（面朝向）平移到对应的距离即可 ————————整体思路： 整体是一个ul，每一个面是li标签，然后让每一个面沿着不同方向旋转之后移动，组合成立方体 按照下方思路图一步步完成 transform-style 其实perspective是一个伪3D：说白了只是多个一个近大远小的效果而已，但是本质上来说还是一个平面元素 如果需要真正实现3D空间的转换，需要通过transform-style来实现 演示： ul里面两个li100*400，让第二个li标签沿着x轴旋转45deg，此时旋转ul盒子看的效果 默认效果： 默认效果来说发现li标签变短了，看不出3d效果 设置perspective：1000px之后： 设置视距之后只是有了近大远小的视觉效果，但是实际旋转看发现还是一个纸片人，不是真的3d元素 设置transform-style: preserve-3d; 之后： 设置了transform-style: preserve-3d; 元素变成3d元素，是真的3d元素 代码： transform-style:preserve-3d; 取值： flat：子元素在2d平面中显示（默认值） preserve-3d：子元素在3D空间中显示 注意点： transform-style属性同样也是给父元素添加的！！ transform-style与perspective的区别： perspective仅仅只是在平面中模拟出近大远小的效果，并不是真正的3D元素。 transform-style可以让其子元素在一个3D空间中布局，是真正的3D元素 以后真正需要完成真正的3D元素需要使用transform-style属性。如果需要有近大远小的视觉效果，可以加上perspective属性。 ————————ヾ(๑╹◡╹)ﾉ” 作业：3D导航效果 思路： 整体是ul，每个导航是1（100*50），li有两个面，使用a标签表示 通过定位先让两个a重叠，然后通过转换改变a标签面的位置 web前端首先需要沿着x轴旋转90deg，然后沿着z轴直走高度的一半（25） 传智播客 直接沿着z轴直走高度的一半（25）]]></content>
       <tags>
         <tag>授课笔记</tag>
         <tag>移动web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[二倍图对比]]></title>
-    <url>%2F2020%2F02%2F06%2F4-%E4%BA%8C%E5%80%8D%E5%9B%BE%E5%AF%B9%E6%AF%94%2F</url>
-    <content type="text"><![CDATA[二倍图对比 一倍图 二倍图]]></content>
-      <tags>
-        <tag>课堂测试demo</tag>
       </tags>
   </entry>
   <entry>
