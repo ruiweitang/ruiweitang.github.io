@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-11T12:02:53.302Z</updated>
+  <updated>2020-04-10T11:46:16.647Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>升级考试模拟卷</title>
+    <link href="http://yoursite.com/2020/04/10/3-%E5%8D%87%E7%BA%A7%E8%80%83%E8%AF%95%E6%A8%A1%E6%8B%9F%E5%8D%B7/"/>
+    <id>http://yoursite.com/2020/04/10/3-升级考试模拟卷/</id>
+    <published>2020-04-10T02:00:00.000Z</published>
+    <updated>2020-04-10T11:46:16.647Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前端升级考试模拟卷"><a href="#前端升级考试模拟卷" class="headerlink" title="前端升级考试模拟卷"></a>前端升级考试模拟卷</h1><a id="more"></a><h2 id="单选题总分-20"><a href="#单选题总分-20" class="headerlink" title="单选题总分 20"></a>单选题总分 20</h2><p><strong>1.【单选题】</strong></p><p><strong>下列选项中哪个属于 CSS 外联式写法的特点？()</strong></p><p>A： 影响的范围只有当前 html 页面</p><p>B： 影响的范围比较广，整个站点都可以受影响</p><p>C： CSS 与 html 结构没有实现完全分离</p><p>D： 代码可维护性差</p><p><strong>2.【单选题】</strong></p><p><strong>关于 CSS 继承性说法错误的是</strong></p><p>A： h 标签的字体大小不能通过继承修改，如果一定要修改 h 标签的大小直接作用在 h</p><p>标签上面</p><p>B： text-,font-,line-开头的属性都是不可以继承的</p><p>C： div 的高度如果不设置由内容来决定（没有内容那么高度为 0），宽度默认由父元素</p><p>继承过来。</p><p>D： a 标签的颜色不能通过继承修改，如果一定要修改 a 标签的颜色直接作用在 a 标签</p><p>上面</p><p><strong>3.【单选题】</strong></p><p><strong>img 标签里的 alt 属性是</strong></p><p>A： 如果图片加载不出来会显示这个属性中的文字</p><p>B： 介绍这张图片</p><p>C： 以上答案都不对</p><p>D： 显示图片的路径</p><p><strong>4.【单选题】</strong></p><p><strong>关于元素隐藏说法错误的是（）</strong></p><p>A： visibility: hidden 可以将元素隐藏，但是在页面上不占原来的位置</p><p>B： display: none; 可以将元素隐藏</p><p>C： display: none; 在页面不占据位置</p><p>D： overflow:hidden 将超出的部分裁剪掉</p><p><strong>5.【单选题】</strong></p><p><strong>根据这段代码下面哪种写法会选中 p 标签：（ ）</strong></p><p><img src="mdImg/image-20200410193152821.png" alt="image-20200410193152821"></p><p>A： .father p .son</p><p>B： div.father .son</p><p>C： p.father p.son</p><p>D： p .father p .son</p><p><strong>6.【单选题】</strong></p><p><strong>在表格中设置表头单元格用哪个标签？</strong></p><p>A： thead 标签</p><p>B： td 标签</p><p>C： th 标签</p><p>D： caption 标签</p><p><strong>7.【单选题】</strong></p><p><strong>下列定义的 css 中，哪个权重是最低的（）</strong></p><p>A： #game .name</p><p>B： #game .name span</p><p>C： #game div</p><p>D： #game div.name</p><p><strong>8.【单选题】</strong></p><p><strong>HTML 语言中，设置单元格内容与单元格边框之间的空白间距的是（ ）</strong> </p><p>A： <code>&lt;table border=&quot;&quot;&gt;</code></p><p>B： <code>&lt;table cellspacing=&quot;&quot;&gt;</code></p><p>C： <code>&lt;table cellpadding=&quot;&quot;&gt;</code></p><p>D： <code>&lt;table width=&quot;&quot;&gt;</code></p><p><strong>9.【单选题】</strong></p><p><strong>以下全部属于块级元素的是（）</strong></p><p>A： div,p,input,span,img</p><p>B： div,h1,p,img,dl</p><p>C： span,h1,p,img,dl</p><p>D： div,p,form,ul,h1</p><p><strong>10.【单选题】</strong></p><p><strong>要让一个元素不可见且在文档流中不占位，应该使用下面哪个 CSS 规则？</strong></p><p>A： display: none</p><p>B： visibility: hidden</p><p>C： overflow: hidden</p><p>D： opacity: 0</p><h2 id="多选题总分-15"><a href="#多选题总分-15" class="headerlink" title="多选题总分 15"></a>多选题总分 15</h2><p><strong>11.【多选题】</strong></p><p><strong>以下关于 a 标签的说法正确的是（ ）</strong> </p><p>A： link： 链接未被访问的样式。</p><p>B： visited：链接被访问后的样式。</p><p>C： hover：鼠标悬停在链接上的样式。</p><p>D： active：链接未被访问的样式。</p><p><strong>12.【多选题】</strong></p><p><strong>以下选择器语法正确的是 （ ）</strong> </p><p>A： 交集选择器语法是： 选择器 1 选择器 2{属性:值…..} </p><p>B： 并集选择器语法是： 选择器 1,选择器 2{属性:值…..} </p><p>C： 后代选择器语法是： 选择器 1 选择器 2{属性:值…..} </p><p>D： ID 选择器语法是： .ID 名{属性:值…..} </p><p><strong>13.【多选题】</strong></p><p><strong>以下关于内嵌式 CSS 语法描述正确的是 （ ）</strong> </p><p>A： 属性名和属性值之间可以用英文“=”连接</p><p>B： 属性必须要包含在{ }号之中</p><p>C： 属性名和属性值之间用英文“:”连接</p><p>D： 有多个属性时，直接换行就可以</p><p><strong>14.【多选题】</strong></p><p><strong>下列 css 属性描述正确的是（）</strong></p><p>A： font-size：设置字体大小</p><p>B： text-style : 设置文本样式</p><p>C： font-style: 更改文本样式</p><p>D： font-family :设置字体系列</p><p><strong>15.【多选题】</strong></p><p><strong>下列对行内元素和块级元素区别说法正确的是（）</strong></p><p>A： 块级元素会独占一行，默认情况下自动填满父元素的宽度</p><p>B： 行内元素可以包含任何标签，块级元素只可包含文本及其他行内元素</p><p>C： 块级元素可以设置宽度 ,行内元素不可以设置宽高</p><p>D： 行内元素不会独占一行，相邻的行内元素会排在同一行，其宽度随内容的变化而</p><p>变化</p><h2 id="简答题总分-15"><a href="#简答题总分-15" class="headerlink" title="简答题总分 15"></a>简答题总分 15</h2><p><strong>16.【简答题】</strong></p><p><strong>以下代码片段中共有 5 处错误，红框标出的代码存在错误（一个红框中存在一个错误），请</strong></p><p><strong>找出具体的错误并给出修改方案（选中图片后可以直接将图片拖到浏览器中查看）。</strong></p><p><strong>答案格式要求如下：行号，正确代码</strong></p><p><strong>示例如下：</strong></p><p><strong><code>24, &lt;ul class=&quot;w&quot;&gt;</code></strong></p><p><strong>需求： 请运用 html 表格+表单知识实现以下图片效果</strong></p><p><img src="mdImg/image-20200410191522124.png" alt="image-20200410191522124"></p><p><strong>代码</strong></p><p><img src="mdImg/image-20200410191956634.png" alt="image-20200410191956634"></p><hr><h2 id="《代码-实操题素材下载》"><a href="#《代码-实操题素材下载》" class="headerlink" title="《代码+实操题素材下载》"></a><a href="/download/升级考试模拟卷素材.zip">《代码+实操题素材下载》</a></h2><h2 id="代码题总分-20"><a href="#代码题总分-20" class="headerlink" title="代码题总分 20"></a>代码题总分 20</h2><p><strong>17.【代码题】</strong></p><p><strong>本题本质为代码填空，下载试题附件（包含素材，效果图，Html 页面等），为实现效果图展</strong></p><p><strong>示效果，请在附件中的 Html 源代码的空白横线处填写合适的代码块。</strong></p><p>注意事项：</p><p>1、禁止修改已经给出的代码</p><p>2、答案提交方式：新建一个 txt 文本文档，将横线处应该填写的代码复制粘贴过来（不需</p><p>要粘贴其它代码），之后上传这个答案文档</p><p><strong>18.【代码题】</strong></p><p><strong>本题本质为代码填空，下载试题附件（包含素材，效果图，Html 页面等），页面为实现效果</strong></p><p><strong>图展示效果，请在附件中的 Html 源代码的空白横线处填写合适的代码块。</strong></p><p>注意事项：</p><p>1、禁止修改已经给出的代码</p><p>2、答案提交方式：新建一个 txt 文本文档，将横线处应该填写的代码复制粘贴过来（不需</p><p>要粘贴其它代码），之后上传这个答案文档</p><h2 id="实操题总分-30"><a href="#实操题总分-30" class="headerlink" title="实操题总分 30"></a>实操题总分 30</h2><p><strong>【实操题】</strong></p><p><strong>美团打车</strong></p><p>注意事项如下：</p><p>1、下载试题附件（包括试题效果图，图片素材，文字素材等），根据试题提供的素材做出效</p><p>果图展示的页面</p><p>2、答案提交方式：将 images 包、css 文件、html 文件全部放到一个文件夹中，压缩成 zip</p><p>或 rar 格式，之后上传</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前端升级考试模拟卷&quot;&gt;&lt;a href=&quot;#前端升级考试模拟卷&quot; class=&quot;headerlink&quot; title=&quot;前端升级考试模拟卷&quot;&gt;&lt;/a&gt;前端升级考试模拟卷&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="升级考试模拟卷" scheme="http://yoursite.com/tags/%E5%8D%87%E7%BA%A7%E8%80%83%E8%AF%95%E6%A8%A1%E6%8B%9F%E5%8D%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>js基础day06笔记</title>
@@ -363,26 +383,6 @@
   </entry>
   
   <entry>
-    <title>二倍图对比</title>
-    <link href="http://yoursite.com/2020/02/06/4-%E4%BA%8C%E5%80%8D%E5%9B%BE%E5%AF%B9%E6%AF%94/"/>
-    <id>http://yoursite.com/2020/02/06/4-二倍图对比/</id>
-    <published>2020-02-06T02:00:01.000Z</published>
-    <updated>2020-03-11T11:49:13.678Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="二倍图对比"><a href="#二倍图对比" class="headerlink" title="二倍图对比"></a>二倍图对比</h1><a id="more"></a><p>  </p><h1>一倍图</h1><br>  <img src="/images/100.jpg" width="100px" alt="" border="1"><br>  <h1>二倍图</h1><br>  <img src="/images/200.jpg" width="100px" alt="" border="1 "><p></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;二倍图对比&quot;&gt;&lt;a href=&quot;#二倍图对比&quot; class=&quot;headerlink&quot; title=&quot;二倍图对比&quot;&gt;&lt;/a&gt;二倍图对比&lt;/h1&gt;
-    
-    </summary>
-    
-    
-      <category term="课堂测试demo" scheme="http://yoursite.com/tags/%E8%AF%BE%E5%A0%82%E6%B5%8B%E8%AF%95demo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>移动webday01笔记</title>
     <link href="http://yoursite.com/2020/02/06/1-%E7%A7%BB%E5%8A%A8webday01%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2020/02/06/1-移动webday01笔记/</id>
@@ -409,6 +409,26 @@
       <category term="授课笔记" scheme="http://yoursite.com/tags/%E6%8E%88%E8%AF%BE%E7%AC%94%E8%AE%B0/"/>
     
       <category term="移动web" scheme="http://yoursite.com/tags/%E7%A7%BB%E5%8A%A8web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二倍图对比</title>
+    <link href="http://yoursite.com/2020/02/06/4-%E4%BA%8C%E5%80%8D%E5%9B%BE%E5%AF%B9%E6%AF%94/"/>
+    <id>http://yoursite.com/2020/02/06/4-二倍图对比/</id>
+    <published>2020-02-06T02:00:01.000Z</published>
+    <updated>2020-03-11T11:49:13.678Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="二倍图对比"><a href="#二倍图对比" class="headerlink" title="二倍图对比"></a>二倍图对比</h1><a id="more"></a><p>  </p><h1>一倍图</h1><br>  <img src="/images/100.jpg" width="100px" alt="" border="1"><br>  <h1>二倍图</h1><br>  <img src="/images/200.jpg" width="100px" alt="" border="1 "><p></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;二倍图对比&quot;&gt;&lt;a href=&quot;#二倍图对比&quot; class=&quot;headerlink&quot; title=&quot;二倍图对比&quot;&gt;&lt;/a&gt;二倍图对比&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="课堂测试demo" scheme="http://yoursite.com/tags/%E8%AF%BE%E5%A0%82%E6%B5%8B%E8%AF%95demo/"/>
     
   </entry>
   
@@ -613,42 +633,6 @@
 &lt;li style=&quot;list-style: none&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt; 能够说出三种隐藏元素的区别（&lt;strong&gt;内容&lt;/strong&gt;超出隐藏、元素隐藏（&lt;strong&gt;看不见&lt;/strong&gt;）、元素隐藏（&lt;strong&gt;不存在&lt;/strong&gt;））&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt; 。。。。。。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="授课笔记" scheme="http://yoursite.com/tags/%E6%8E%88%E8%AF%BE%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="基础班" scheme="http://yoursite.com/tags/%E5%9F%BA%E7%A1%80%E7%8F%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基础班day09笔记</title>
-    <link href="http://yoursite.com/2019/02/20/1-%E5%9F%BA%E7%A1%80%E7%8F%ADday09%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2019/02/20/1-基础班day09笔记/</id>
-    <published>2019-02-20T02:09:00.000Z</published>
-    <updated>2020-03-11T11:45:45.431Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><blockquote><ul><li style="list-style: none"><input type="checkbox"> 能够完成尚合项目的头部部分</li></ul><ul><li style="list-style: none"><input type="checkbox"> 能够完成尚合的导航部分</li></ul><ul><li style="list-style: none"><input type="checkbox"> 能够完成尚合的产品详情部分</li></ul><ul><li style="list-style: none"><input type="checkbox"> 能够完成尚合的底部部分</li></ul><p>。。。。。。</p></blockquote><a id="more"></a><p><strong>理解上课的知识点……</strong></p><h2 id="版心"><a href="#版心" class="headerlink" title="版心"></a>版心</h2><blockquote><p>宽度固定且水平居中的盒子</p></blockquote><p><strong>为什么要有版心?</strong></p><blockquote><p>因为每台电脑的屏幕不一样大，为了让不同屏幕大小的电脑都能看到页面的主体内容，我们需要把网页的内容约束在版心里。</p></blockquote><p><strong>屏幕大能看到主体内容：</strong></p><p><img src="\images\big.png" alt="big"></p><p><strong>屏幕小也能看到主体内容：</strong></p><p><img src="\images\small.png" alt="small"></p><blockquote><p>因为主要内容都放在版心中，所以能让更多大小的屏幕完整的看到页面的主体内容。</p></blockquote><p><strong>版心代码：</strong></p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*通常版心命名为w*/</span></span><br><span class="line"><span class="selector-class">.w</span> &#123;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">1200px</span>；</span><br><span class="line">    margin：<span class="number">0</span> auto；</span><br><span class="line">&#125;</span><br><span class="line">/----------------------------------------------------/</span><br><span class="line"><span class="comment">/*给主体内容的盒子设置版心，直接加上w这个类即可*/</span></span><br><span class="line">&lt;div class="w"&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><h2 id="常见的布局方式（了解）"><a href="#常见的布局方式（了解）" class="headerlink" title="常见的布局方式（了解）"></a>常见的布局方式（了解）</h2><blockquote><p>注意点：实际项目中，写每个盒子的时候都要判断有没有版心，版心很重要！！</p></blockquote><p><strong>常见的三种布局方式：</strong></p><blockquote><p>了解即可，在之后的项目中会写到对应的布局</p></blockquote><h3 id="一列固定宽度且居中"><a href="#一列固定宽度且居中" class="headerlink" title="一列固定宽度且居中"></a>一列固定宽度且居中</h3><blockquote><p>常见的布局结构，一般每个盒子都设置了版心</p></blockquote><p><img src="\images\yl.jpg" alt="yl"></p><h3 id="两列左窄右宽型"><a href="#两列左窄右宽型" class="headerlink" title="两列左窄右宽型"></a>两列左窄右宽型</h3><blockquote><p>常见的就是banner部分左侧导航，右侧轮播图的效果</p><p>如：<a href="http://www.mi.com" target="_blank"> 小米官网 </a></p></blockquote><p><img src="\images\ll.jpg" alt="ll"></p><h3 id="通栏平均分布型"><a href="#通栏平均分布型" class="headerlink" title="通栏平均分布型"></a>通栏平均分布型</h3><blockquote><p>占满浏览器的一行叫做<strong>通栏</strong>，对于通栏的div，可以不用设置宽度，默认就是独占一行的</p><p> <a href="http://www.smartisan.com/" target="_blank"> 锤子官网 </a></p></blockquote><p><img src="\images\tl.jpg" alt="tl"></p><p><strong>一般布局方式会综合运用：</strong></p><p><img src="\images\常见的布局情况.png" alt="常见的布局情况"></p><h2 id="上课的记录"><a href="#上课的记录" class="headerlink" title="上课的记录"></a>上课的记录</h2><blockquote><p>上课敲的项目首要任务是听懂</p><p>学习的是写页面的步骤，每个知识点都会，不会的是接下来做什么</p><p>如果有记笔记习惯的同学，可以把老师的步骤记下来，然后忘记怎么做的时候根据自己写的步骤看看能不能一步一步做出来</p></blockquote><p><strong>比如：</strong></p><ol><li>页面的顶部区域<ol><li>大盒子需要一个版心</li><li>里面两张图片，分别左右浮动</li><li>图片离上面有距离，给大盒子设置 <code>padding-top</code></li><li>……</li></ol></li></ol><h2 id="尚合项目"><a href="#尚合项目" class="headerlink" title="尚合项目"></a>尚合项目</h2><h3 id="项目搭建"><a href="#项目搭建" class="headerlink" title="项目搭建"></a>项目搭建</h3><blockquote><p>整个项目应该就是一个文件夹，文件夹中放项目中的所有资源（图片、html、css）</p></blockquote><p><strong>步骤：</strong></p><ol><li>新建一个文件夹，作为<strong>项目文件夹</strong> → 一个项目就应该有一个文件夹</li><li>在项目文件夹中新建<strong>images文件夹</strong> → 存放项目相关图片</li><li>在项目文件夹中新建 <strong><code>index.html</code>文件</strong> → 页面文件</li><li>在项目文件夹中新建 <strong><code>index.css</code>文件</strong> → 样式文件</li></ol><h3 id="样式初始化"><a href="#样式初始化" class="headerlink" title="样式初始化"></a>样式初始化</h3><blockquote><p>开始的时候先把项目中<strong>常见的css样式先写好</strong>→样式的初始化</p></blockquote><p><strong>代码：</strong></p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*-----------------------------项目样式的初始化--------------------------------------------*/</span></span><br><span class="line"><span class="comment">/*清除默认的marign和padding*/</span></span><br><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*消除页面中li的小点*/</span></span><br><span class="line"><span class="selector-tag">ul</span> &#123;</span><br><span class="line">  <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*消除a标签默认的下划线*/</span></span><br><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*左浮动的类*/</span></span><br><span class="line"><span class="selector-class">.fl</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: left;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*右浮动的类*/</span></span><br><span class="line"><span class="selector-class">.fr</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*清除浮动的代码*/</span></span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">clear</span>: both;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">visibility</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*版心的样式*/</span></span><br><span class="line"><span class="comment">/*版心就是宽度固定水平居中的盒子*/</span></span><br><span class="line"><span class="selector-class">.w</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">980px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*为了在上面看到下面的标签 最后删掉*/</span></span><br><span class="line"><span class="comment">/*body &#123;</span></span><br><span class="line"><span class="comment">  height: 2000px;</span></span><br><span class="line"><span class="comment">&#125;*/</span></span><br></pre></td></tr></table></figure><h3 id="写代码-´-ω-･-▄︻┻┳══━一"><a href="#写代码-´-ω-･-▄︻┻┳══━一" class="headerlink" title="写代码(　 ´-ω ･)▄︻┻┳══━一"></a>写代码(　 ´-ω ･)▄︻┻┳══━一</h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot; title=&quot;学习目标&quot;&gt;&lt;/a&gt;学习目标&lt;/h2&gt;&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li style=&quot;list-style: none&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt; 能够完成尚合项目的头部部分&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li style=&quot;list-style: none&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt; 能够完成尚合的导航部分&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li style=&quot;list-style: none&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt; 能够完成尚合的产品详情部分&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li style=&quot;list-style: none&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt; 能够完成尚合的底部部分&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;。。。。。。&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
