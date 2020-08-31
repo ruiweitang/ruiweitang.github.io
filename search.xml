@@ -253,7 +253,7 @@
   <entry>
     <title><![CDATA[html5部分新表单效果]]></title>
     <url>%2F2019%2F02%2F14%2F4-html5%E9%83%A8%E5%88%86%E6%96%B0%E8%A1%A8%E5%8D%95%E6%95%88%E6%9E%9C%2F</url>
-    <content type="text"><![CDATA[html5部分新表单效果 &lt;input type=&quot;url&quot; &gt; 输入一个网址，浏览器会自动校验网址的格式，格式不对不能提交！ 请输入一个网址： &lt;input type=&quot;email&quot;&gt; 输入一个邮箱，浏览器会自动校验邮箱格式，格式不对不能提交请输入邮箱：&lt;input type=&quot;date&quot;&gt; 选择一个日期，样式由浏览器默认实现请选择日期：&lt;input type=&quot;tel&quot;&gt; 输入手机号码（只有在移动端点击时会自动弹出数字输入框）请输入手机号码：&lt;input type=&quot;number&quot;&gt; 输入一个数字。请输入数字：]]></content>
+    <content type="text"><![CDATA[html5部分新表单效果 &lt;input type=&quot;url&quot; name=&quot;url&quot;&gt;网址输入框：会校验用户输入格式是否为网址，如果格式不正确无法提交 请输入网址：&lt;input type=&quot;url&quot; name=&quot;email&quot;&gt;邮箱输入框：会校验格式 请输入邮箱：&lt;input type=&quot;url&quot; name=&quot;date&quot;&gt;日期输入框 请输入日期：&lt;input type=&quot;url&quot; name=&quot;time&quot;&gt;时间输入框 请输入时间：&lt;input type=&quot;url&quot; name=&quot;month&quot;&gt;月份输入框 请输入月份：&lt;input type=&quot;url&quot; name=&quot;week&quot;&gt;周输入框 请输入周：&lt;input type=&quot;url&quot; name=&quot;color&quot;&gt;颜色选择框 请选择颜色：&lt;input type=&quot;url&quot; name=&quot;tel&quot;&gt;手机号码输入框 请输入手机号码：&lt;input type=&quot;url&quot; name=&quot;search&quot;&gt;搜索框 请搜索：&lt;input type=&quot;url&quot; name=&quot;number&quot;&gt;数字输入框：只能输入数字类型的数据 请输入数字：]]></content>
       <tags>
         <tag>课堂测试demo</tag>
       </tags>
